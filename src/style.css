@@ -3,3 +3,24 @@
 body {
     background: #1a216d;
 }
+
+@font-face {
+    font-family: "Rodin Pro";
+    src: url("/fonts/FOT-Rodin-Pro-EB.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-rodin: "Rodin Pro", sans-serif;
+
+    --menu-cyan-main: #93f8f9;
+    --menu-cyan-sec: #94e5fc;
+    --menu-cyan-third: #56baeb;
+}
+
+.text-7_5xl {
+    font-size: 5rem;
+    line-height: 0.9;
+}

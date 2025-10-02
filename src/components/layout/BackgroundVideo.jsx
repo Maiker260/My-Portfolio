@@ -36,6 +36,7 @@ export default function BackgroundVideo({ onLoopStart }) {
             >
                 <source src="/videos/Intro.mp4" type="video/mp4" />
             </video>
+
             {/* Loop video (hidden until intro finishes) */}
             <video
                 ref={loopRef}
