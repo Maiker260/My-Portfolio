@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+:root {
+    --color-menu-cyan-main: #93f8f9;
+    --color-menu-cyan-sec: #94e5fc;
+    --color-menu-cyan-third: #56baeb;
+    --color-menu-rose-slc: #f199e3;
+}
+
 body {
     background: #1a216d;
 }
@@ -12,12 +19,37 @@ body {
     font-display: swap;
 }
 
+@layer utilities {
+    .text-menu-cyan-main {
+        color: var(--color-menu-cyan-main);
+    }
+    .text-menu-cyan-sec {
+        color: var(--color-menu-cyan-sec);
+    }
+    .text-menu-cyan-third {
+        color: var(--color-menu-cyan-third);
+    }
+    .hover-bg-menu-rose-slc:hover {
+        background-color: var(--color-menu-rose-slc);
+    }
+    /* .hover-bg-menu-rose-slc {
+        background-color: var(--color-menu-rose-slc);
+    } */
+}
+
 @theme {
     --font-rodin: "Rodin Pro", sans-serif;
+}
 
-    --menu-cyan-main: #93f8f9;
-    --menu-cyan-sec: #94e5fc;
-    --menu-cyan-third: #56baeb;
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .text-7_5xl {

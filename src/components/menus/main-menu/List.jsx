@@ -1,18 +1,56 @@
 import ListOption from "./ListOption.jsx";
 
 function List() {
+    const itemBehindClasses = "-mt-1";
+    const itemInFrontClasses = "mt-5";
+
+    const items = [
+        { name: "PROJECTS", titleType: "main" },
+        {
+            name: "EXPERIENCE",
+            titleType: "third",
+            // wrapper: itemBehindClasses
+        },
+        {
+            name: "SKILLS",
+            titleType: "sec",
+            isRotated: true,
+            // wrapper: itemInFrontClasses,
+        },
+        {
+            name: "ABOUT ME",
+            titleType: "main",
+            isRotated: true,
+        },
+        {
+            name: "DOWNLOAD CV",
+            titleType: "third",
+
+            // wrapper: itemBehindClasses,
+        },
+        {
+            name: "CONTACT",
+            isRotated: true,
+            titleType: "sec",
+            // wrapper: itemInFrontClasses,
+        },
+    ];
+
+    const total = items.length;
+    const stagger = 90; // delay between each item in ms
+
     return (
-        <section className="flex flex-col gap-1 ml-20">
-            <ListOption name={"PROJECTS"} titleType={"main"} isRotated />
-            <div className="ml-20 mt-3 -z-10">
-                <ListOption name={"EXPERIENCE"} titleType={"third"} />
-            </div>
-            <div className="relative -top-5">
-                <ListOption name={"SKILLS"} titleType={"sec"} isRotated />
-                <ListOption name={"ABOUT ME"} titleType={"main"} isRotated />
-            </div>
-            <ListOption name={"CONTACT"} titleType={"third"} />
-            <ListOption name={"DOWNLOAD RESUME"} titleType={"sec"} isRotated />
+        <section className="flex flex-col gap-2 relative top-2/4 left-1/13">
+            {items.map((item, i) => {
+                // bottom element appears first
+                const delay = `${800 + (total - 1 - i) * stagger}ms`;
+
+                return (
+                    <div key={item.name} className={item.wrapper ?? ""}>
+                        <ListOption {...item} delay={delay} />
+                    </div>
+                );
+            })}
         </section>
     );
 }

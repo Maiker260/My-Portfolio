@@ -17,7 +17,7 @@ export default function BackgroundVideo({ onLoopStart }) {
                     loopVideo.play();
                 }
                 if (onLoopStart) {
-                    onLoopStart(); // notify parent (App)
+                    onLoopStart();
                 }
             };
         }
@@ -49,7 +49,6 @@ export default function BackgroundVideo({ onLoopStart }) {
             >
                 <source src="/videos/BLoop.mp4" type="video/mp4" />
             </video>
-            {/* <div className="absolute inset-0 bg-black/10"></div>{" "} */}
         </div>
     );
 }
