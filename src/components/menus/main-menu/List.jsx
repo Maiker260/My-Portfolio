@@ -1,21 +1,16 @@
 import ListOption from "./ListOption.jsx";
 
 function List() {
-    const itemBehindClasses = "-mt-1";
-    const itemInFrontClasses = "mt-5";
-
     const items = [
         { name: "PROJECTS", titleType: "main" },
         {
             name: "EXPERIENCE",
             titleType: "third",
-            // wrapper: itemBehindClasses
         },
         {
             name: "SKILLS",
             titleType: "sec",
             isRotated: true,
-            // wrapper: itemInFrontClasses,
         },
         {
             name: "ABOUT ME",
@@ -25,14 +20,11 @@ function List() {
         {
             name: "DOWNLOAD CV",
             titleType: "third",
-
-            // wrapper: itemBehindClasses,
         },
         {
             name: "CONTACT",
             isRotated: true,
             titleType: "sec",
-            // wrapper: itemInFrontClasses,
         },
     ];
 
@@ -40,14 +32,15 @@ function List() {
     const stagger = 90; // delay between each item in ms
 
     return (
-        <section className="flex flex-col gap-2 relative top-2/4 left-1/13">
+        <section className="flex flex-col gap-2 items-center -rotate-4">
             {items.map((item, i) => {
                 // bottom element appears first
-                const delay = `${800 + (total - 1 - i) * stagger}ms`;
+                // const delay = `${800 + (total - 1 - i) * stagger}ms`;
+                const delay = `${650 + (total - 1 - i) * stagger}ms`;
 
                 return (
                     <div key={item.name} className={item.wrapper ?? ""}>
-                        <ListOption {...item} delay={delay} />
+                        <ListOption {...item} delay={delay} index={i} />
                     </div>
                 );
             })}

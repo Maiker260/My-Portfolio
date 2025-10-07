@@ -4,7 +4,9 @@
     --color-menu-cyan-main: #93f8f9;
     --color-menu-cyan-sec: #94e5fc;
     --color-menu-cyan-third: #56baeb;
-    --color-menu-rose-slc: #f199e3;
+    --color-menu-rose-select: #ca8ec9;
+    --color-menu-white-select: white;
+    --color-menu-red-select: #e83324;
 }
 
 body {
@@ -29,12 +31,15 @@ body {
     .text-menu-cyan-third {
         color: var(--color-menu-cyan-third);
     }
-    .hover-bg-menu-rose-slc:hover {
-        background-color: var(--color-menu-rose-slc);
+    .hover-bg-menu-rose-select {
+        background-color: var(--color-menu-rose-select);
     }
-    /* .hover-bg-menu-rose-slc {
-        background-color: var(--color-menu-rose-slc);
-    } */
+    .hover-bg-menu-white-select {
+        background-color: var(--color-menu-white-select);
+    }
+    .hover-text-menu-red-select {
+        color: var(--color-menu-red-select);
+    }
 }
 
 @theme {
