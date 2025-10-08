@@ -7,6 +7,8 @@
     --color-menu-rose-select: #ca8ec9;
     --color-menu-white-select: white;
     --color-menu-red-select: #e83324;
+    --color-menu-blue-icons: #3f7ce1;
+    --color-menu-light-blue-border: #93e6ec;
 }
 
 body {
@@ -25,20 +27,35 @@ body {
     .text-menu-cyan-main {
         color: var(--color-menu-cyan-main);
     }
+    .group:hover .group-hover\:text-menu-cyan-main {
+        color: var(--color-menu-cyan-main);
+    }
     .text-menu-cyan-sec {
         color: var(--color-menu-cyan-sec);
     }
     .text-menu-cyan-third {
         color: var(--color-menu-cyan-third);
     }
+    .hover-text-menu-red-select {
+        color: var(--color-menu-red-select);
+    }
+
+    .group:hover .group-hover\:bg-menu-cyan-main {
+        background-color: var(--color-menu-cyan-main);
+    }
+
     .hover-bg-menu-rose-select {
         background-color: var(--color-menu-rose-select);
     }
     .hover-bg-menu-white-select {
         background-color: var(--color-menu-white-select);
     }
-    .hover-text-menu-red-select {
-        color: var(--color-menu-red-select);
+    .bg-menu-blue-icons {
+        background-color: var(--color-menu-blue-icons);
+    }
+
+    .border-menu-blue {
+        border-color: var(--color-menu-light-blue-border);
     }
 }
 
@@ -60,4 +77,12 @@ body {
 .text-7_5xl {
     font-size: 5rem;
     line-height: 0.9;
+}
+
+.-bottom-7_5 {
+    bottom: -30px;
+}
+
+.right-1_5 {
+    right: 6px;
 }

@@ -14,7 +14,7 @@ function ListOption({ name, titleType, delay, index }) {
                     textRef.current.getBoundingClientRect();
                 setSize({ width, height });
             }
-        }, 100); // match animation duration
+        }, 100);
 
         return () => clearTimeout(timeout);
     }, []);

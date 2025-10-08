@@ -37,7 +37,7 @@ function MenuItemHoverEffect({ size, index, name }) {
                     top: "-70px",
                 }}
             >
-                {/* Red text (normal size, centered in triangle) */}
+                {/* Red text (normal size, centered in triangle) and inner triangle */}
                 <span
                     className="absolute -left-6 hover-text-menu-red-select text-7_5xl font-rodin tracking-[-0.12em] whitespace-nowrap"
                     style={{
