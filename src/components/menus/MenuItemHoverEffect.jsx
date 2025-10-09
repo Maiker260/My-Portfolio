@@ -20,15 +20,6 @@ function MenuItemHoverEffect({ size, index, name }) {
 
     return (
         <>
-            {/* Back Triangle */}
-            <span
-                className={innerTriangleTWStyle}
-                style={{
-                    ...innerTriangleStyle,
-                    zIndex: 20 - index * 2 - 1,
-                }}
-            />
-
             {/* Triangle in Front */}
             <span
                 className="absolute left-6 flex items-center justify-center pointer-events-none z-30 hover-bg-menu-rose-select"
@@ -46,7 +37,7 @@ function MenuItemHoverEffect({ size, index, name }) {
                 >
                     {name}
                     <span
-                        className={`${innerTriangleTWStyle} opacity-70 -z-10`}
+                        className={`${innerTriangleTWStyle} opacity-90 -z-10`}
                         style={{
                             ...innerTriangleStyle,
                         }}

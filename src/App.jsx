@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import BackgroundVideo from "./components/layout/BackgroundVideo";
 import List from "./components/menus/main-menu/List.jsx";
-import { motion as Motion } from "motion/react";
 import SocialMediaIcons from "./components/menus/main-menu/SocialMediaIcons.jsx";
+import Intro from "./components/menus/main-menu/animations/Intro.jsx";
+import MainTitle from "./components/menus/main-menu/MainTitle.jsx";
 
 export default function App() {
     const [showContent, setShowContent] = useState(false);
@@ -27,36 +28,20 @@ export default function App() {
                 }`}
             >
                 <div className="flex justify-between items-center w-full h-lvh p-8">
-                    <div className="self-start border-2 border-black">
-                        <div className="p-5">
-                            <h1 className="text-black">MY PORTFOLIO</h1>
-                        </div>
-                    </div>
+                    <section className="self-start h-fit">
+                        <Intro showContent={showContent} compon={MainTitle} />
+                    </section>
 
-                    {/* Bouncing Effect when loading the List */}
-                    <Motion.div
-                        initial={{ y: "-20%", opacity: 0 }}
-                        animate={
-                            showContent
-                                ? { y: "10%", opacity: 1 }
-                                : { y: "0", opacity: 0 }
-                        }
-                        transition={{
-                            duration: 0.5,
-                            ease: [0.33, 1, 0.68, 1],
-                        }}
-                        className="relative flex flex-col items-center translate-x-12"
-                    >
-                        <List />
-                    </Motion.div>
+                    <Intro showContent={showContent} compon={List} />
 
-                    {/* <div className="w-fit self-start"> */}
-                    <div className="w-fit h-full flex flex-col justify-between">
-                        <SocialMediaIcons />
+                    <section className="w-1/16 h-full flex flex-col justify-between">
+                        <SocialMediaIcons showContent={showContent} />
                         <div>
-                            <p>Select a Skill</p>
+                            <p className="text-sm ">
+                                {/* Inspired by the design of Persona 3 Reload. */}
+                            </p>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </main>
         </div>

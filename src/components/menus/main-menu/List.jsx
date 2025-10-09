@@ -1,6 +1,6 @@
 import ListOption from "./ListOption.jsx";
 
-function List() {
+function List({ showContent }) {
     const items = [
         { name: "PROJECTS", titleType: "main" },
         {
@@ -29,18 +29,24 @@ function List() {
     ];
 
     const total = items.length;
-    const stagger = 90; // delay between each item in ms
+
+    // delay between each item in ms
+    const stagger = 90;
 
     return (
-        <section className="flex flex-col gap-2 items-center -rotate-4">
+        <section className="flex flex-col text-center gap-2 -rotate-4 ">
             {items.map((item, i) => {
                 // bottom element appears first
-                // const delay = `${800 + (total - 1 - i) * stagger}ms`;
                 const delay = `${650 + (total - 1 - i) * stagger}ms`;
 
                 return (
                     <div key={item.name} className={item.wrapper ?? ""}>
-                        <ListOption {...item} delay={delay} index={i} />
+                        <ListOption
+                            {...item}
+                            delay={delay}
+                            index={i}
+                            showContent={showContent}
+                        />
                     </div>
                 );
             })}

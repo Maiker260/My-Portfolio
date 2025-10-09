@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import MenuItemHoverEffect from "../MenuItemHoverEffect.jsx";
 
-function ListOption({ name, titleType, delay, index }) {
+function ListOption({ name, titleType, delay, index, showContent }) {
     const [isHovered, setIsHovered] = useState(false);
 
     const textRef = useRef(null);
@@ -40,7 +40,7 @@ function ListOption({ name, titleType, delay, index }) {
                 </span>
 
                 {/* Show hover effect in the List Option */}
-                {isHovered && size.width > 0 && (
+                {showContent && isHovered && size.width > 0 && (
                     <MenuItemHoverEffect
                         size={size}
                         index={index}

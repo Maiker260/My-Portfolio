@@ -4,7 +4,7 @@
     --color-menu-cyan-main: #93f8f9;
     --color-menu-cyan-sec: #94e5fc;
     --color-menu-cyan-third: #56baeb;
-    --color-menu-rose-select: #ca8ec9;
+    --color-menu-rose-select: #ed7cd4;
     --color-menu-white-select: white;
     --color-menu-red-select: #e83324;
     --color-menu-blue-icons: #3f7ce1;
@@ -54,6 +54,28 @@ body {
         background-color: var(--color-menu-blue-icons);
     }
 
+    .bg-menu-blue-icons-gradient {
+        background: linear-gradient(
+            155deg,
+            transparent 20%,
+            var(--color-menu-blue-icons) 60%
+        );
+    }
+    .bg-menu-blue-icons-gradient-middle {
+        background: linear-gradient(
+            to bottom,
+            #4c80de 20%,
+            var(--color-menu-blue-icons) 100%
+        );
+    }
+    .bg-menu-blue-icons-gradient-inverted {
+        background: linear-gradient(
+            180deg,
+            var(--color-menu-blue-icons) 100%,
+            transparent 100%
+        );
+    }
+
     .border-menu-blue {
         border-color: var(--color-menu-light-blue-border);
     }
@@ -71,6 +93,28 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Chatgpt */
+@keyframes dropBounce {
+    0% {
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(calc(var(--i) * 8.5rem + 1.8rem));
+        opacity: 1;
+    }
+    55% {
+        transform: translateY(calc(var(--i) * 8.5rem - 0.4rem));
+    }
+    70% {
+        transform: translateY(calc(var(--i) * 8.5rem + 0.2rem));
+    }
+    100% {
+        transform: translateY(calc(var(--i) * 8.5rem));
+        opacity: 1;
     }
 }
 
