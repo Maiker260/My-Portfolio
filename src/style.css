@@ -1,13 +1,28 @@
 @import "tailwindcss";
 
 :root {
-    --color-menu-cyan-main: #93f8f9;
-    --color-menu-cyan-sec: #94e5fc;
-    --color-menu-cyan-third: #56baeb;
-    --color-menu-rose-select: #ed7cd4;
-    --color-menu-white-select: white;
-    --color-menu-red-select: #e83324;
+    /* Text */
+    --color-text-menu-cyan-main: #93f8f9;
+    --color-text-menu-cyan-sec: #94e5fc;
+    --color-text-menu-cyan-third: #56baeb;
+
+    --color-text-details-main: #fff;
+    --color-text-details-secund: #3a3a3a;
+
+    /* Selected Option */
+    --color-select-menu-rose: #ed7cd4;
+    --color-select-menu-white: #fff;
+    --color-text-select-menu-red: #e83324;
+
+    /* Icons */
     --color-menu-blue-icons: #3f7ce1;
+
+    /* Background */
+    --color-bg-details-main: #3f7ce1;
+    --color-bg-details-secund: #131313;
+    --color-bg-details-third: #f3f1f2;
+
+    /* Border */
     --color-menu-light-blue-border: #93e6ec;
 }
 
@@ -24,32 +39,46 @@ body {
 }
 
 @layer utilities {
+    /* Text */
     .text-menu-cyan-main {
-        color: var(--color-menu-cyan-main);
+        color: var(--color-text-menu-cyan-main);
     }
     .group:hover .group-hover\:text-menu-cyan-main {
-        color: var(--color-menu-cyan-main);
+        color: var(--color-text-menu-cyan-main);
     }
     .text-menu-cyan-sec {
-        color: var(--color-menu-cyan-sec);
+        color: var(--color-text-menu-cyan-sec);
     }
     .text-menu-cyan-third {
-        color: var(--color-menu-cyan-third);
-    }
-    .hover-text-menu-red-select {
-        color: var(--color-menu-red-select);
+        color: var(--color-text-menu-cyan-third);
     }
 
     .group:hover .group-hover\:bg-menu-cyan-main {
-        background-color: var(--color-menu-cyan-main);
+        background-color: var(--color-text-menu-cyan-main);
     }
 
+    .color-text-details-main {
+        color: var(--color-text-details-main);
+    }
+
+    .color-text-details-secund {
+        color: var(--color-text-details-secund);
+    }
+
+    /* Selected Option */
+
+    .hover-text-menu-red-select {
+        color: var(--color-text-select-menu-red);
+    }
     .hover-bg-menu-rose-select {
-        background-color: var(--color-menu-rose-select);
+        background-color: var(--color-select-menu-rose);
     }
     .hover-bg-menu-white-select {
-        background-color: var(--color-menu-white-select);
+        background-color: var(--color-select-menu-white);
     }
+
+    /* Icons */
+
     .bg-menu-blue-icons {
         background-color: var(--color-menu-blue-icons);
     }
@@ -76,6 +105,19 @@ body {
         );
     }
 
+    /* Background */
+
+    .color-bg-details-main {
+        background-color: var(--color-bg-details-main);
+    }
+    .color-bg-details-secund {
+        background-color: var(--color-bg-details-secund);
+    }
+    .color-bg-details-third {
+        background-color: var(--color-bg-details-third);
+    }
+
+    /* Border */
     .border-menu-blue {
         border-color: var(--color-menu-light-blue-border);
     }
@@ -118,6 +160,7 @@ body {
     }
 }
 
+/* Custom Classes */
 .text-7_5xl {
     font-size: 5rem;
     line-height: 0.9;

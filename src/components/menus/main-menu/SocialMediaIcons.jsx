@@ -18,7 +18,7 @@ function SocialMediaIcons({ showContent }) {
                         // Last icon first
                         "--i": icons.length - 1 - index,
                         animation: showContent
-                            ? `dropBounce 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards ${
+                            ? `dropBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards ${
                                   index * 0.3
                               }s`
                             : "none",
