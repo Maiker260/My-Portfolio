@@ -6,7 +6,7 @@
     --color-text-menu-cyan-sec: #94e5fc;
     --color-text-menu-cyan-third: #56baeb;
 
-    --color-text-details-main: #fff;
+    --color-text-details-main: #f3f1f2;
     --color-text-details-secund: #3a3a3a;
 
     /* Selected Option */
@@ -18,9 +18,10 @@
     --color-menu-blue-icons: #3f7ce1;
 
     /* Background */
-    --color-bg-details-main: #3f7ce1;
+    --color-bg-details-main: #56baeb;
     --color-bg-details-secund: #131313;
     --color-bg-details-third: #f3f1f2;
+    --color-bg-details-fourth: #3a3a3a;
 
     /* Border */
     --color-menu-light-blue-border: #93e6ec;
@@ -116,6 +117,22 @@ body {
     .color-bg-details-third {
         background-color: var(--color-bg-details-third);
     }
+    .color-bg-details-fourth {
+        background-color: var(--color-bg-details-fourth);
+    }
+
+    .color-bg-details-secund-gradient {
+        background: linear-gradient(to top right, #6de9fc 30%, #183ebd);
+    }
+
+    .color-bg-details-third-gradient {
+        background: linear-gradient(
+            to top right,
+            #0511b6 10%,
+            #183ebd 25%,
+            #479af6
+        );
+    }
 
     /* Border */
     .border-menu-blue {
@@ -138,7 +155,6 @@ body {
     }
 }
 
-/* Chatgpt */
 @keyframes dropBounce {
     0% {
         transform: translateY(-5rem);
