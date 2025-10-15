@@ -6,8 +6,9 @@ const routes = [
         path: "/",
         element: <MainPage />,
     },
+    // ADD THE PROJECT LIST SELECTOR
     {
-        path: "/projects",
+        path: "/projects/:id",
         element: <Projects />,
     },
 ];

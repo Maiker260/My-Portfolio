@@ -1,6 +1,17 @@
 import SkillIconList from "./SkillIconList.jsx";
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
+import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
 
 function DiagonalTopBox() {
+    const { id } = useParams();
+    const projectData = useContext(ProjectDataContext);
+    const project = projectData[Number(id)];
+
+    if (!project) return <p>Project not found</p>;
+
+    const { name, type, skills } = project;
+
     return (
         <section className="relative overflow-hidden color-bg-details-third h-[35vh]">
             {/* Diagonal background */}
@@ -22,16 +33,15 @@ function DiagonalTopBox() {
                 <div className="absolute bottom-[20%] left-[10%] sm:bottom-[15%] sm:left-[12%] md:bottom-[35%] md:left-[5%] transform -rotate-7 origin-top-left">
                     {/* <div className="absolute inset-0 flex flex-col justify-end items-start px-[10%] pb-[10%] transform -rotate-10 origin-top-left"> */}
                     <h1 className="text-[8vw] sm:text-7xl color-text-details-secund">
-                        BACKEND
+                        {type}
                     </h1>
-                    <h2 className="mt-6 text-[5vw] sm:text-5xl font-bold color-text-details-main">
-                        <span className="text-[#416dc8]">P</span>
-                        roject Name
+                    <h2 className="mt-6 text-[5vw] sm:text-5xl font-bold color-text-details-main color-text-details-third">
+                        {name}
                     </h2>
                 </div>
                 {/* Icons */}
                 <div className="absolute inset-0">
-                    <SkillIconList />
+                    <SkillIconList icons={skills} />
                 </div>
             </div>
         </section>

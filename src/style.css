@@ -8,6 +8,7 @@
 
     --color-text-details-main: #f3f1f2;
     --color-text-details-secund: #3a3a3a;
+    --color-text-details-third: #65dcfb;
 
     /* Selected Option */
     --color-select-menu-rose: #ed7cd4;
@@ -22,6 +23,7 @@
     --color-bg-details-secund: #131313;
     --color-bg-details-third: #f3f1f2;
     --color-bg-details-fourth: #3a3a3a;
+    --color-bg-details-fifth: #65dcfb;
 
     /* Border */
     --color-menu-light-blue-border: #93e6ec;
@@ -64,6 +66,10 @@ body {
 
     .color-text-details-secund {
         color: var(--color-text-details-secund);
+    }
+
+    .color-text-details-third {
+        color: var(--color-text-details-third);
     }
 
     /* Selected Option */
@@ -121,6 +127,10 @@ body {
         background-color: var(--color-bg-details-fourth);
     }
 
+    .color-bg-details-fifth {
+        background-color: var(--color-bg-details-fifth);
+    }
+
     .color-bg-details-secund-gradient {
         background: linear-gradient(to top right, #6de9fc 30%, #183ebd);
     }
@@ -131,6 +141,15 @@ body {
             #0511b6 10%,
             #183ebd 25%,
             #479af6
+        );
+    }
+
+    .color-bg-details-fifth-gradient {
+        background: linear-gradient(
+            to right,
+            transparent 1%,
+            var(--color-bg-details-fifth),
+            transparent 99%
         );
     }
 
