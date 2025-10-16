@@ -16,13 +16,13 @@ function MenuItemHoverEffect({ size, index, name }) {
     };
 
     const innerTriangleTWStyle =
-        "absolute pointer-events-none hover-bg-menu-white-select";
+        "absolute pointer-events-none bg-menu-select-white";
 
     return (
         <>
             {/* Triangle in Front */}
             <span
-                className="absolute left-6 flex items-center justify-center pointer-events-none z-30 hover-bg-menu-rose-select"
+                className="absolute left-6 flex items-center justify-center pointer-events-none z-30 bg-menu-select-rose"
                 style={{
                     ...triangleStyle,
                     top: "-70px",
@@ -30,7 +30,7 @@ function MenuItemHoverEffect({ size, index, name }) {
             >
                 {/* Red text (normal size, centered in triangle) and inner triangle */}
                 <span
-                    className="absolute -left-6 hover-text-menu-red-select text-7_5xl font-rodin tracking-[-0.12em] whitespace-nowrap"
+                    className="absolute -left-6 text-menu-select-red text-7_5xl font-rodin tracking-[-0.12em] whitespace-nowrap"
                     style={{
                         top: "70px",
                     }}

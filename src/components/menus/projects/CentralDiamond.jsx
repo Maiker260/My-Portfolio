@@ -1,7 +1,9 @@
-import { OpenInNew } from "../../icons/OpenInNew.jsx";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
+import { OpenInNew } from "../../icons/OpenInNew.jsx";
+import ImageCarousel from "../../layout/ImageCarousel.jsx";
 
 function CentralDiamond() {
     const { id } = useParams();
@@ -10,7 +12,7 @@ function CentralDiamond() {
 
     if (!project) return <p>Project not found</p>;
 
-    const { screenshots } = project;
+    const { screenshots, livePreviewURL } = project;
 
     return (
         <section className="absolute -top-22 -right-30 h-[120%] w-[70vw] flex items-center justify-center z-20">
@@ -37,42 +39,27 @@ function CentralDiamond() {
                         }}
                     >
                         <div
-                            className="relative flex items-center justify-center overflow-hidden"
+                            className="relative w-[75%] h-[50%] aspect-square flex items-center justify-center overflow-hidden"
                             style={{
-                                width: "75%",
-                                height: "50%",
-                                aspectRatio: "1 / 1",
                                 clipPath:
                                     "polygon(19% 0%, 81% 0%, 101% 30%, 101% 70%, 81% 100%, 19% 100%, 0% 72%, 0% 28%)",
                             }}
                         >
-                            {/* NEED TO CREATE A CARRUSEL TO SHOW ALL THE IMAGES */}
-                            {screenshots.map((image) => (
-                                <img
-                                    src={image.src}
-                                    alt={image.alt}
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                />
-                            ))}
+                            <ImageCarousel screenshots={screenshots} />
                         </div>
 
-                        {/* Banner */}
-                        <div className="absolute bottom-[18%] left-[25%] w-[60%] h-[5%] color-bg-details-fifth-gradient z-50 -rotate-12 text-neutral-800 flex justify-center items-center">
-                            <OpenInNew className="absolute -top-[70%] left-[48%] w-12 fill-[#65dcfb] bg-black rounded-full p-1 border border-[#65dcfb] cursor-pointer hover:fill-amber-300" />
-                            <span
-                                className="font-rodin text-5xl relative z-20"
-                                style={{
-                                    textShadow: `
-                                        2px 2px 0 #65dcfb,
-                                        -2px 2px 0 #65dcfb,
-                                        2px -2px 0 #65dcfb,
-                                        -2px -2px 0 #65dcfb
-                                    `,
-                                }}
-                            >
-                                MORE INFO
+                        {/* Bottom Banner */}
+                        <Link
+                            to={livePreviewURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="absolute bottom-[18%] left-[25%] w-[60%] h-[5%] color-bg-details-fifth-gradient z-50 -rotate-12  flex justify-center items-center group"
+                        >
+                            <OpenInNew className="absolute -top-[70%] left-[48%] w-12 fill-icons bg-black rounded-full p-1 border border-main cursor-pointer group-hover:fill-select-icons" />
+                            <span className="font-rodin text-5xl relative z-20 text-neutral-800 text-shadow-main group-hover:color-text-details-third group-hover:text-shadow-secund group-hover:cursor-pointer">
+                                LIVE DEMO
                             </span>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

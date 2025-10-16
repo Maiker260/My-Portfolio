@@ -1,9 +1,9 @@
-import SkillIconList from "./SkillIconList.jsx";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
+import SkillIconList from "./SkillIconList.jsx";
 
-function DiagonalTopBox() {
+function DiagonalTopBox({ hoveredSkill, setHoveredSkill }) {
     const { id } = useParams();
     const projectData = useContext(ProjectDataContext);
     const project = projectData[Number(id)];
@@ -41,7 +41,11 @@ function DiagonalTopBox() {
                 </div>
                 {/* Icons */}
                 <div className="absolute inset-0">
-                    <SkillIconList icons={skills} />
+                    <SkillIconList
+                        skills={skills}
+                        hoveredSkill={hoveredSkill}
+                        setHoveredSkill={setHoveredSkill}
+                    />
                 </div>
             </div>
         </section>
