@@ -12,6 +12,12 @@ function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
 
     const { skills, codeURL } = project;
 
+    // Always make sure to create 8 items to keep the grid.
+    const filledSkills = [
+        ...skills,
+        ...Array(Math.max(0, 8 - skills.length)).fill({ name: "NONE" }),
+    ];
+
     const hoverGridClasses = (skill, index) => {
         const columns = 2;
         const hasColor = (Math.floor(index / columns) + index) % 2 === 0;
@@ -31,9 +37,9 @@ function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
                 <div className="grid grid-cols-2 grid-rows-5 w-full h-full">
                     {/* Top Bar */}
                     <div className="relative mb-2 color-text-details-third col-span-2 font-rodin flex justify-center content-center items-center">
-                        {/* Line behind the text */}
+                        {/* Line behind the Title */}
                         <div className="absolute w-full h-2 color-bg-details-fifth flex justify-center items-center overflow-hidden"></div>
-                        {/* Text */}
+                        {/* Title */}
                         <div className="relative z-10 flex justify-center items-center h-full">
                             <span className="absolute text-5xl px-8 bg-black z-40 color-text-details-third">
                                 SKILLS<span className="text-3xl">&</span>TOOLS
@@ -41,22 +47,24 @@ function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
                         </div>
                     </div>
                     {/* Grid */}
-                    {skills.map((skill, index) => (
+                    {filledSkills.map((skill, index) => (
                         <div
                             key={skill.name}
-                            className={`${hoverGridClasses(
-                                skill,
-                                index
-                            )} w-full h-full flex justify-center items-center font-rodin hover:cursor-pointer rounded`}
+                            className={`${hoverGridClasses(skill, index)} 
+                            ${
+                                skill.name === "NONE" &&
+                                "pointer-events-none text-[#5c5c5c]"
+                            } w-full h-full text-lg flex justify-center items-center font-rodin hover:cursor-pointer rounded`}
                             onMouseEnter={() => setHoveredSkill(skill.name)}
                             onMouseLeave={() => setHoveredSkill(null)}
                         >
-                            {hoveredSkill === skill.name ? (
-                                <div className="flex justify-center items-center w-full h-full bg-menu-select-white rounded">
+                            {hoveredSkill === skill.name &&
+                            skill.name !== "NONE" ? (
+                                <p className="flex justify-center items-center w-full h-full bg-menu-select-white rounded">
                                     {skill.name}
-                                </div>
+                                </p>
                             ) : (
-                                skill.name
+                                <p>{skill.name}</p>
                             )}
                         </div>
                     ))}
@@ -69,11 +77,13 @@ function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
                     rel="noopener noreferrer"
                     className="group"
                 >
-                    <div className="p-2 color-bg-details-secund flex gap-2 items-center rounded text-2xl group-hover:color-bg-details-fifth">
-                        <span className=" group-hover:text-neutral">Code</span>
+                    <div className="p-2 color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-fifth">
+                        <span className="transition group-hover:text-neutral">
+                            Code
+                        </span>
                         <OpenInNew
                             className={
-                                "w-8 h-8 fill-select-icons group-hover:color-icons-neutral"
+                                "w-8 h-8 fill-select-icons transition group-hover:color-icons-neutral"
                             }
                         />
                     </div>

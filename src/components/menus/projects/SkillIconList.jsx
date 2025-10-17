@@ -1,12 +1,12 @@
 import { Github } from "../../icons/Github.jsx";
 
-function SkillIconList({ skills, hoveredSkill, setHoveredSkill }) {
+function SkillIconList({ skills, hoveredSkill, setHoveredSkill, className }) {
     return (
-        <article className="flex gap-4 items-center absolute bottom-5 left-24 transform -rotate-8 origin-bottom-left">
+        <article className={className}>
             {skills.map(({ name, icon: Icon }, index) => (
                 <div
                     key={index}
-                    className="w-10 h-10 rounded-full bg-main-color-details flex items-center justify-center hover:cursor-pointer"
+                    className="w-full h-full max-w-[60px] rounded-full bg-main-color-details flex items-center justify-center hover:cursor-pointer"
                     title={name}
                     onMouseEnter={() => setHoveredSkill(name)}
                     onMouseLeave={() => setHoveredSkill(null)}
@@ -16,9 +16,9 @@ function SkillIconList({ skills, hoveredSkill, setHoveredSkill }) {
                             ${
                                 hoveredSkill === name
                                     ? "color-select-icons scale-[120%] border-2 border-white"
-                                    : "color-icons"
+                                    : "color-icons border-4 border-[#183ebd]"
                             }
-                         pointer-events-none color-bg-details-secund rounded-full p-1 `}
+                           pointer-events-none color-bg-details-secund rounded-full p-1`}
                     />
                 </div>
             ))}

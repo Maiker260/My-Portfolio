@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import ListOption from "./ListOption.jsx";
 
 function List({ showContent }) {
     const items = [
-        { name: "PROJECTS", titleType: "main" },
+        { name: "PROJECTS", titleType: "main", url: "/projects/0" },
         {
             name: "EXPERIENCE",
             titleType: "third",
@@ -10,12 +11,10 @@ function List({ showContent }) {
         {
             name: "SKILLS",
             titleType: "sec",
-            isRotated: true,
         },
         {
             name: "ABOUT ME",
             titleType: "main",
-            isRotated: true,
         },
         {
             name: "DOWNLOAD CV",
@@ -23,7 +22,6 @@ function List({ showContent }) {
         },
         {
             name: "CONTACT",
-            isRotated: true,
             titleType: "sec",
         },
     ];
@@ -40,14 +38,18 @@ function List({ showContent }) {
                 const delay = `${650 + (total - 1 - i) * stagger}ms`;
 
                 return (
-                    <div key={item.name} className={item.wrapper ?? ""}>
+                    <Link
+                        to={item.url}
+                        key={item.name}
+                        className={item.wrapper ?? ""}
+                    >
                         <ListOption
                             {...item}
                             delay={delay}
                             index={i}
                             showContent={showContent}
                         />
-                    </div>
+                    </Link>
                 );
             })}
         </section>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ImageCarousel({ screenshots }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,8 +15,18 @@ function ImageCarousel({ screenshots }) {
         );
     };
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentIndex((prevIndex) =>
+                prevIndex === screenshots.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, [screenshots.length]);
+
     return (
-        <article className="relative w-full h-64 md:h-96 overflow-hidden rounded-lg">
+        <article className="relative w-full h-96 overflow-hidden rounded-lg">
             {/* Slides */}
             {screenshots.map((image, index) => (
                 <div
