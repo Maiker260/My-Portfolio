@@ -16,7 +16,7 @@ function SkillIconList({ skills, hoveredSkill, setHoveredSkill, className }) {
                             ${
                                 hoveredSkill === name
                                     ? "color-select-icons scale-[120%] border-2 border-white"
-                                    : "color-icons border-4 border-[#183ebd]"
+                                    : "color-icons border-4 border-[#0c27b7]"
                             }
                            pointer-events-none color-bg-details-secund rounded-full p-1`}
                     />

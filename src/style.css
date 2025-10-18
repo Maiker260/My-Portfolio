@@ -216,10 +216,14 @@ body {
 
     .color-bg-details-third-gradient {
         background: linear-gradient(
-            to top right,
-            var(--color-bg-details-sixth) 10%,
-            #183ebd 25%,
-            #479af6
+            to right,
+            #0104b0,
+            #0c27b7,
+            #1d49bf,
+            #2c66c9,
+            #3d87df,
+            #62d4fa 90%,
+            #86fcfd 95%
         );
     }
 
