@@ -2,15 +2,21 @@ import SkillIconList from "./SkillIconList.jsx";
 import { useContext } from "react";
 import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
 import { useParams, useNavigate } from "react-router-dom";
-import { testProjectData } from "../../../services/data/Projects.jsx";
+import { projectData } from "../../../services/data/Projects.js";
+import AnimatedBump from "../../animations/AnimatedBump.jsx";
 
-function TextTop({ hoveredSkill, setHoveredSkill }) {
+function TextTop({
+    hoveredSkill,
+    setHoveredSkill,
+    buttonPressed,
+    setButtonPressed,
+}) {
     const { id } = useParams();
     const navigate = useNavigate();
-    const totalProjects = testProjectData.length;
+    const totalProjects = projectData.length;
 
-    const projectData = useContext(ProjectDataContext);
-    const project = projectData[Number(id)];
+    const projectDataFetched = useContext(ProjectDataContext);
+    const project = projectDataFetched[Number(id)];
 
     if (!project) return <p>Project not found</p>;
 
@@ -29,27 +35,36 @@ function TextTop({ hoveredSkill, setHoveredSkill }) {
     };
 
     return (
-        <div className="absolute origin-top-left top-[14vh] left-[5%] h-[35%] w-[35vw] bg-red z-50 -rotate-8 flex flex-col gap-8">
+        <div className="absolute origin-top-left top-[14vh] left-[5%] h-[35%] w-[35vw] bg-red z-50 -rotate-8 flex flex-col gap-8 font-rodin">
             {/* Rotated Text */}
             <div className="ml-3 h-fit flex items-center gap-10">
                 <button
                     className="flex gap-1 text-4xl text-white group transition hover:cursor-pointer hover:scale-110"
-                    onClick={() => changeProject(Number(id) - 1)}
+                    onClick={() => {
+                        setButtonPressed("prev");
+                        changeProject(Number(id) - 1);
+                    }}
                 >
                     <span>&#10094;</span>
                     <h2>Prev</h2>
                 </button>
-                <div>
+                <AnimatedBump
+                    buttonPressed={buttonPressed}
+                    setButtonPressed={setButtonPressed}
+                >
                     <h2 className="text-6xl sm:text-4xl md:text-5xl color-text-details-secund opacity-80">
                         {type}
                     </h2>
                     <h1 className="mt-1 text-7xl sm:text5xl md:text-6xl font-bold color-text-details-main color-text-details-third">
                         {name}
                     </h1>
-                </div>
+                </AnimatedBump>
                 <button
                     className="flex gap-1 text-4xl text-white group transition hover:cursor-pointer hover:scale-110"
-                    onClick={() => changeProject(Number(id) + 1)}
+                    onClick={() => {
+                        setButtonPressed("next");
+                        changeProject(Number(id) + 1);
+                    }}
                 >
                     <h2>Next</h2>
                     <span>&#10095;</span>
@@ -57,14 +72,17 @@ function TextTop({ hoveredSkill, setHoveredSkill }) {
             </div>
 
             {/* Icons */}
-            <div>
+            <AnimatedBump
+                buttonPressed={buttonPressed}
+                setButtonPressed={setButtonPressed}
+            >
                 <SkillIconList
                     skills={skills}
                     hoveredSkill={hoveredSkill}
                     setHoveredSkill={setHoveredSkill}
                     className={"flex gap-4 items-center"}
                 />
-            </div>
+            </AnimatedBump>
         </div>
     );
 }

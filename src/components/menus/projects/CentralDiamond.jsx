@@ -5,7 +5,7 @@ import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
 import { OpenInNew } from "../../icons/OpenInNew.jsx";
 import ImageCarousel from "../../layout/ImageCarousel.jsx";
 
-function CentralDiamond() {
+function CentralDiamond({ buttonPressed, setButtonPressed }) {
     const { id } = useParams();
     const projectData = useContext(ProjectDataContext);
     const project = projectData[Number(id)];
@@ -45,7 +45,11 @@ function CentralDiamond() {
                                     "polygon(19% 0%, 81% 0%, 101% 30%, 101% 70%, 81% 100%, 19% 100%, 0% 72%, 0% 28%)",
                             }}
                         >
-                            <ImageCarousel screenshots={screenshots} />
+                            <ImageCarousel
+                                screenshots={screenshots}
+                                buttonPressed={buttonPressed}
+                                setButtonPressed={setButtonPressed}
+                            />
                         </div>
 
                         {/* Bottom Banner */}

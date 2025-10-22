@@ -1,6 +1,6 @@
 import { Github } from "../../components/icons/Github.jsx";
 
-export const testProjectData = [
+export const projectData = [
     {
         name: "My Blog",
         type: "Full-Stack",
@@ -33,12 +33,13 @@ export const testProjectData = [
             { name: "TESTI5", icon: Github },
             { name: "TESTI6", icon: Github },
             { name: "TESTI7", icon: Github },
+            { name: "TESTI8", icon: Github },
         ],
         screenshots: [
-            { src: "/test/preview.png", alt: "Screenshot1" },
-            { src: "/test/preview2.png", alt: "Screenshot2" },
             { src: "/test/preview3.png", alt: "Screenshot3" },
             { src: "/test/preview4.png", alt: "Screenshot4" },
+            { src: "/test/preview.png", alt: "Screenshot1" },
+            { src: "/test/preview2.png", alt: "Screenshot2" },
         ],
         livePreviewURL: "https://my-blog-805.pages.dev/",
         codeURL: "https://github.com/Maiker260/My-Blog",
@@ -52,14 +53,12 @@ export const testProjectData = [
             { name: "TESTI2222", icon: Github },
             { name: "TESTI4222", icon: Github },
             { name: "TESTI5222", icon: Github },
-            { name: "TESTI6222", icon: Github },
-            { name: "TESTI7222", icon: Github },
         ],
         screenshots: [
-            { src: "/test/preview.png", alt: "Screenshot1" },
             { src: "/test/preview2.png", alt: "Screenshot2" },
-            { src: "/test/preview3.png", alt: "Screenshot3" },
+            { src: "/test/preview.png", alt: "Screenshot1" },
             { src: "/test/preview4.png", alt: "Screenshot4" },
+            { src: "/test/preview3.png", alt: "Screenshot3" },
         ],
         livePreviewURL: "https://my-blog-805.pages.dev/",
         codeURL: "https://github.com/Maiker260/My-Blog",

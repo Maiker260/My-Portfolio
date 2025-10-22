@@ -214,7 +214,7 @@ body {
         background: linear-gradient(to top right, #6de9fc 30%, #183ebd);
     }
 
-    .color-bg-details-third-gradient {
+    .color-bg-details-third-gradient-right {
         background: linear-gradient(
             to right,
             #0104b0,
@@ -224,6 +224,19 @@ body {
             #3d87df,
             #62d4fa 90%,
             #86fcfd 95%
+        );
+    }
+
+    .color-bg-details-third-gradient-top {
+        background: linear-gradient(
+            to top,
+            #0104b0,
+            #0c27b7,
+            #1d49bf,
+            #2c66c9,
+            #3d87df,
+            #62d4fa 90%,
+            #86fcfd
         );
     }
 

@@ -10,7 +10,7 @@ function DiagonalTopBox() {
             >
                 {/* Diagonal Border Line */}
                 <div
-                    className="absolute inset-0 color-bg-details-third-gradient"
+                    className="absolute inset-0 color-bg-details-third-gradient-right"
                     style={{
                         clipPath:
                             "polygon(0px 85%, 100% 12%, 100% 26%, 0px 100%)",

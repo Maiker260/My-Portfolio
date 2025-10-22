@@ -2,8 +2,14 @@ import { useParams, Link } from "react-router-dom";
 import { useContext } from "react";
 import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
 import { OpenInNew } from "../../icons/OpenInNew.jsx";
+import AnimatedBump from "../../animations/AnimatedBump.jsx";
 
-function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
+function SkillDetailsBox({
+    hoveredSkill,
+    setHoveredSkill,
+    buttonPressed,
+    setButtonPressed,
+}) {
     const { id } = useParams();
     const projectData = useContext(ProjectDataContext);
     const project = projectData[Number(id)];
@@ -32,7 +38,11 @@ function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
     };
 
     return (
-        <article className="absolute top-[55%] left-0 h-[30%] w-[45vw] ml-7 border-3 border-main color-bg-details-secund z-50 p-2 origin-top-left text-white">
+        <AnimatedBump
+            buttonPressed={buttonPressed}
+            setButtonPressed={setButtonPressed}
+            className="absolute top-[55%] left-0 h-[30%] w-[45vw] ml-7 border-3 border-main color-bg-details-secund z-50 p-2 origin-top-left text-white"
+        >
             <article className="w-full h-full">
                 <div className="grid grid-cols-2 grid-rows-5 w-full h-full">
                     {/* Top Bar */}
@@ -49,12 +59,12 @@ function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
                     {/* Grid */}
                     {filledSkills.map((skill, index) => (
                         <div
-                            key={skill.name}
+                            key={skill.name + index}
                             className={`${hoverGridClasses(skill, index)} 
                             ${
                                 skill.name === "NONE" &&
                                 "pointer-events-none text-[#5c5c5c]"
-                            } w-full h-full text-lg flex justify-center items-center font-rodin hover:cursor-pointer rounded`}
+                            } w-full h-full text-lg flex justify-center items-center font-rodin rounded`}
                             onMouseEnter={() => setHoveredSkill(skill.name)}
                             onMouseLeave={() => setHoveredSkill(null)}
                         >
@@ -70,7 +80,7 @@ function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
                     ))}
                 </div>
             </article>
-            <div className="w-full mt-10 flex justify-center color-text-details-third font-rodin  ">
+            <div className="w-full mt-10 flex justify-center color-text-details-third font-rodin">
                 <Link
                     to={codeURL}
                     target="_blank"
@@ -89,7 +99,7 @@ function SkillDetailsBox({ hoveredSkill, setHoveredSkill }) {
                     </div>
                 </Link>
             </div>
-        </article>
+        </AnimatedBump>
     );
 }
 

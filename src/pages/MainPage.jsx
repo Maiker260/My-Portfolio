@@ -38,7 +38,7 @@ function MainPage() {
                         <SocialMediaIcons showContent={showContent} />
                         <div>
                             <p className="text-sm ">
-                                {/* Inspired by the design of Persona 3 Reload. */}
+                                {/* Inspired by Persona 3 Reload. */}
                             </p>
                         </div>
                     </section>

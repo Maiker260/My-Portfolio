@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import AnimatedBump from "../animations/AnimatedBump.jsx";
 
-function ImageCarousel({ screenshots }) {
+function ImageCarousel({ screenshots, buttonPressed, setButtonPressed }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const prevSlide = () => {
@@ -26,7 +27,11 @@ function ImageCarousel({ screenshots }) {
     }, [screenshots.length]);
 
     return (
-        <article className="relative w-full h-96 overflow-hidden rounded-lg">
+        <AnimatedBump
+            buttonPressed={buttonPressed}
+            setButtonPressed={setButtonPressed}
+            className="relative w-full h-96 overflow-hidden rounded-lg"
+        >
             {/* Slides */}
             {screenshots.map((image, index) => (
                 <div
@@ -79,7 +84,7 @@ function ImageCarousel({ screenshots }) {
                     />
                 ))}
             </div>
-        </article>
+        </AnimatedBump>
     );
 }
 

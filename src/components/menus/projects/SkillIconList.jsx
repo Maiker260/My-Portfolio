@@ -1,12 +1,10 @@
-import { Github } from "../../icons/Github.jsx";
-
 function SkillIconList({ skills, hoveredSkill, setHoveredSkill, className }) {
     return (
         <article className={className}>
             {skills.map(({ name, icon: Icon }, index) => (
                 <div
                     key={index}
-                    className="w-full h-full max-w-[60px] rounded-full bg-main-color-details flex items-center justify-center hover:cursor-pointer"
+                    className="w-full h-full max-w-[60px] rounded-full bg-main-color-details flex items-center justify-center"
                     title={name}
                     onMouseEnter={() => setHoveredSkill(name)}
                     onMouseLeave={() => setHoveredSkill(null)}
