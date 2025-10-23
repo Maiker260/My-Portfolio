@@ -10,6 +10,8 @@
     --color-text-details-secund: #3a3a3a;
     --color-text-details-third: #65dcfb;
 
+    --color-text-details-fourth: #98fcfe;
+
     --color-text-neutral: #262626;
 
     /* Selected Option */
@@ -30,6 +32,8 @@
     --color-bg-details-fourth: #3a3a3a;
     --color-bg-details-fifth: #65dcfb;
     --color-bg-details-sixth: #0511b6;
+    --color-bg-details-seventh: #98fcfe;
+    --color-bg-details-eight: #0e0e50;
 
     --color-bg-details-neutral: #262626;
 
@@ -87,6 +91,10 @@ body {
 
     .color-text-details-third {
         color: var(--color-text-details-third);
+    }
+
+    .color-text-details-fourth {
+        color: var(--color-text-details-fourth);
     }
 
     .group:hover .group-hover\:color-text-details-third {
@@ -180,12 +188,15 @@ body {
     .color-bg-details-main {
         background-color: var(--color-bg-details-main);
     }
+
     .color-bg-details-secund {
         background-color: var(--color-bg-details-secund);
     }
+
     .color-bg-details-third {
         background-color: var(--color-bg-details-third);
     }
+
     .color-bg-details-fourth {
         background-color: var(--color-bg-details-fourth);
     }
@@ -200,6 +211,14 @@ body {
 
     .color-bg-details-sixth {
         background-color: var(--color-bg-details-sixth);
+    }
+
+    .color-bg-details-seventh {
+        background-color: var(--color-bg-details-seventh);
+    }
+
+    .color-bg-details-eight {
+        background-color: var(--color-bg-details-eight);
     }
 
     .color-bg-details-neutral {
@@ -307,4 +326,8 @@ body {
 
 .right-1_5 {
     right: 6px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar in Chrome, Safari*/
 }

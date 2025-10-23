@@ -3,7 +3,7 @@ import ListOption from "./ListOption.jsx";
 
 function List({ showContent }) {
     const items = [
-        { name: "PROJECTS", titleType: "main", url: "/projects/0" },
+        { name: "PROJECTS", titleType: "main", url: "/projects" },
         {
             name: "EXPERIENCE",
             titleType: "third",

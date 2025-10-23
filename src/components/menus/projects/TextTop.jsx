@@ -2,8 +2,8 @@ import SkillIconList from "./SkillIconList.jsx";
 import { useContext } from "react";
 import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
 import { useParams, useNavigate } from "react-router-dom";
-import { projectData } from "../../../services/data/Projects.js";
 import AnimatedBump from "../../animations/AnimatedBump.jsx";
+import { creatorData } from "../../../services/data/creatorData.js";
 
 function TextTop({
     hoveredSkill,
@@ -13,7 +13,7 @@ function TextTop({
 }) {
     const { id } = useParams();
     const navigate = useNavigate();
-    const totalProjects = projectData.length;
+    const totalProjects = creatorData.projects.length;
 
     const projectDataFetched = useContext(ProjectDataContext);
     const project = projectDataFetched[Number(id)];

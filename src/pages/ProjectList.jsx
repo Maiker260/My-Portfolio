@@ -12,7 +12,7 @@ function ProjectList() {
             />
             <List
                 className={
-                    "absolute top-[15%] left-[4%] h-[80%] w-[40vw] border-3 z-50 p-4 origin-top-left"
+                    "absolute top-[10%] left-[4%] h-[78%] w-[40vw] z-50 p-4 origin-top-left"
                 }
             />
         </div>

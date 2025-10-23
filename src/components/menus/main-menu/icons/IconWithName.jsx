@@ -4,7 +4,9 @@ function IconWithName({ icon: IconComponent, name }) {
     return (
         <div className="flex flex-col relative cursor-pointer group hover:scale-105 rotate-5">
             <div className="bg-menu-blue-icons-gradient w-20 h-20 p-2 shrink-0 grow-0 flex items-center justify-center rounded-full border-3 border-menu-blue relative group-hover:color-select-icons">
-                <IconComponent className={"rounded ml-1 -rotate-20"} />
+                <IconComponent
+                    className={"rounded -rotate-20 w-[85%] h-[85%]"}
+                />
 
                 {/* Cover the border where the text box will touch it */}
                 <div className="absolute bottom-1 right-1_5 w-11 h-2 bg-menu-blue-icons rotate-[-20deg] rounded-t-[25%] z-20"></div>
