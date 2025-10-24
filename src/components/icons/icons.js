@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiLinkedin } from "react-icons/fi";
 import { LuGithub } from "react-icons/lu";
 
 import {

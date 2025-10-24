@@ -48,10 +48,11 @@ function SkillDetailsBox({
                     {/* Top Bar */}
                     <div className="relative mb-2 color-text-details-third col-span-2 font-rodin flex justify-center content-center items-center">
                         {/* Line behind the Title */}
-                        <div className="absolute w-full h-2 color-bg-details-fifth flex justify-center items-center overflow-hidden"></div>
+                        <div className="absolute w-full h-2 color-bg-details-seventh flex justify-center items-center overflow-hidden"></div>
                         {/* Title */}
                         <div className="relative z-10 flex justify-center items-center h-full">
                             <span className="absolute text-5xl px-8 bg-black z-40 color-text-details-third">
+                                {/* <span className="absolute text-5xl px-8 bg-black z-40 color-text-details-fourth"> */}
                                 SKILLS<span className="text-3xl">&</span>TOOLS
                             </span>
                         </div>
@@ -80,14 +81,15 @@ function SkillDetailsBox({
                     ))}
                 </div>
             </article>
-            <div className="w-full mt-10 flex justify-center color-text-details-third font-rodin">
+            <div className="w-full mt-10 flex justify-center  font-rodin">
                 <Link
                     to={codeURL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group"
                 >
-                    <div className="p-2 color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-fifth">
+                    <div className="p-2 color-text-details-third color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-fifth">
+                        {/* <div className="p-2 color-text-details-fourth color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-seventh"> */}
                         <span className="transition group-hover:text-neutral">
                             Code
                         </span>

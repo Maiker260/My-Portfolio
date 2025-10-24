@@ -56,6 +56,7 @@ function TextTop({
                         {type}
                     </h2>
                     <h1 className="mt-1 text-7xl sm:text5xl md:text-6xl font-bold color-text-details-main color-text-details-third">
+                        {/* <h1 className="mt-1 text-7xl sm:text5xl md:text-6xl font-bold color-text-details-main color-text-details-fourth"> */}
                         {name}
                     </h1>
                 </AnimatedBump>

@@ -29,10 +29,13 @@ function MainPage() {
             >
                 <div className="flex justify-between items-center w-full h-lvh p-8">
                     <section className="self-start h-fit">
-                        <Intro showContent={showContent} compon={MainTitle} />
+                        <Intro
+                            showContent={showContent}
+                            component={MainTitle}
+                        />
                     </section>
 
-                    <Intro showContent={showContent} compon={List} />
+                    <Intro showContent={showContent} component={List} />
 
                     <section className="w-1/16 h-full flex flex-col justify-between">
                         <SocialMediaIcons showContent={showContent} />

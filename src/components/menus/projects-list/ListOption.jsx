@@ -48,7 +48,7 @@ function ListOption({ project, index }) {
                         </span>
                     </div>
                     {/* Bottom */}
-                    <span className="border color-bg-details-seventh text-center text-xl group-hover:text-white group-hover:bg-black">
+                    <span className="border color-bg-details-seventh text-center text-2xl group-hover:text-white group-hover:bg-black">
                         {type}
                     </span>
                 </div>

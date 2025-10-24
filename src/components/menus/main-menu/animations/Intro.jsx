@@ -1,6 +1,6 @@
 import { motion as Motion } from "motion/react";
 
-function Intro({ showContent, compon: AnimatedComp }) {
+function Intro({ showContent, component: AnimatedComp }) {
     return (
         /* Bouncing Effect when loading the List */
         <Motion.div

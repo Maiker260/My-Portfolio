@@ -6,6 +6,8 @@ import CentralDiamond from "../components/menus/projects/CentralDiamond.jsx";
 import SkillDetailsBox from "../components/menus/projects/SkillDetailsBox.jsx";
 import TextTop from "../components/menus/projects/TextTop.jsx";
 import { creatorData } from "../services/data/creatorData.js";
+import NavigationSection from "../components/menus/NavigationSection.jsx";
+import Intro from "../components/menus/projects/animations/intro.jsx";
 
 function Projects() {
     const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -33,6 +35,14 @@ function Projects() {
                     buttonPressed={buttonPressed}
                     setButtonPressed={setButtonPressed}
                 />
+                <Intro start={{ x: "20%" }} end={{ x: "0" }}>
+                    <NavigationSection
+                        className={"absolute bottom-8 right-3 z-50"}
+                        hasBlackButton
+                        hasHomeButton
+                        backTo={"/projects"}
+                    />
+                </Intro>
             </main>
         </ProjectDataContext.Provider>
     );
