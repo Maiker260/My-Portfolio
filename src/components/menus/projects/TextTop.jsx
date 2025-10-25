@@ -37,7 +37,8 @@ function TextTop({
     return (
         <div className="absolute origin-top-left top-[14vh] left-[5%] h-[35%] w-[35vw] bg-red z-50 -rotate-8 flex flex-col gap-8 font-rodin">
             {/* Rotated Text */}
-            <div className="ml-3 h-fit flex items-center gap-10">
+            {/* NEED TO FIX THE SIZE ISSUE */}
+            <div className="ml-3 h-fit w-full flex items-center gap-10">
                 <button
                     className="flex gap-1 text-4xl text-white group transition hover:cursor-pointer hover:scale-110"
                     onClick={() => {
@@ -51,11 +52,12 @@ function TextTop({
                 <AnimatedBump
                     buttonPressed={buttonPressed}
                     setButtonPressed={setButtonPressed}
+                    className={"h-full"}
                 >
                     <h2 className="text-6xl sm:text-4xl md:text-5xl color-text-details-secund opacity-80">
                         {type}
                     </h2>
-                    <h1 className="mt-1 text-7xl sm:text5xl md:text-6xl font-bold color-text-details-main color-text-details-third">
+                    <h1 className="mt-1 text-3xl sm:text5xl md:text-6xl font-bold color-text-details-main color-text-details-third">
                         {/* <h1 className="mt-1 text-7xl sm:text5xl md:text-6xl font-bold color-text-details-main color-text-details-fourth"> */}
                         {name}
                     </h1>

@@ -1,6 +1,7 @@
-import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAws, FaCss3Alt } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { LuGithub } from "react-icons/lu";
+import { RiJavascriptFill } from "react-icons/ri";
 
 import {
     SiTailwindcss,
@@ -10,6 +11,7 @@ import {
     SiPassport,
     SiWebpack,
     SiPostgresql,
+    SiEjs,
 } from "react-icons/si";
 
 export const icons = {
@@ -25,4 +27,7 @@ export const icons = {
     Postgresql: SiPostgresql,
     Linkedin: FiLinkedin,
     Github: LuGithub,
+    EJS: SiEjs,
+    Javascript: RiJavascriptFill,
+    CSS: FaCss3Alt,
 };
