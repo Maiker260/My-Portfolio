@@ -1,6 +1,6 @@
 import { motion as Motion } from "motion/react";
 
-function Intro({ showContent, component: AnimatedComp }) {
+function Intro({ showContent, component: AnimatedComp, ...rest }) {
     return (
         /* Bouncing Effect when loading the List */
         <Motion.div
@@ -14,7 +14,7 @@ function Intro({ showContent, component: AnimatedComp }) {
             }}
             className={`relative flex flex-col items-center`}
         >
-            <AnimatedComp showContent={showContent} />
+            <AnimatedComp showContent={showContent} {...rest} />
         </Motion.div>
     );
 }

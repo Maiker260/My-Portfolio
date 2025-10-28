@@ -15,13 +15,13 @@ export const projectData = [
         ],
         screenshots: [
             {
-                src: "/screenshots/file-uploader/CreateFolderForm.png",
-                alt: "CreateFolderForm",
+                src: "/screenshots/file-uploader/Login-SignUp.png",
+                alt: "Login-SignUp",
             },
             { src: "/screenshots/file-uploader/Home.png", alt: "Home" },
             {
-                src: "/screenshots/file-uploader/Login-SignUp.png",
-                alt: "Login-SignUp",
+                src: "/screenshots/file-uploader/CreateFolderForm.png",
+                alt: "CreateFolderForm",
             },
             {
                 src: "/screenshots/file-uploader/UploadFileForm.png",
@@ -44,16 +44,16 @@ export const projectData = [
             { name: "Passport.js", icon: icons["Passport.js"] },
         ],
         screenshots: [
+            { src: "/screenshots/my-blog/Admin-Main.png", alt: "Admin-Main" },
             {
                 src: "/screenshots/my-blog/Admin-Editor.png",
                 alt: "Admin-Editor",
             },
-            { src: "/screenshots/my-blog/Admin-Main.png", alt: "Admin-Main" },
+            { src: "/screenshots/my-blog/Public-Main.png", alt: "Public-Main" },
             {
                 src: "/screenshots/my-blog/Public-Article.png",
                 alt: "Public-Article",
             },
-            { src: "/screenshots/my-blog/Public-Main.png", alt: "Public-Main" },
         ],
         livePreviewURL: "https://my-blog-805.pages.dev/",
         codeURL: "https://github.com/Maiker260/My-Blog",
@@ -67,12 +67,12 @@ export const projectData = [
             { name: "CSS", icon: icons.CSS },
         ],
         screenshots: [
+            { src: "/screenshots/shopping-cart/Home.png", alt: "Home" },
             { src: "/screenshots/shopping-cart/Cart.png", alt: "Cart" },
             {
                 src: "/screenshots/shopping-cart/Categories.png",
                 alt: "Categories",
             },
-            { src: "/screenshots/shopping-cart/Home.png", alt: "Home" },
             { src: "/screenshots/shopping-cart/Search.png", alt: "Search" },
         ],
         livePreviewURL: "https://shopping-cart-c43.pages.dev/",
@@ -107,12 +107,12 @@ export const projectData = [
             { name: "Webpack", icon: icons.Webpack },
         ],
         screenshots: [
+            { src: "/screenshots/to-do-list/Home.png", alt: "Home" },
             { src: "/screenshots/to-do-list/NewTask.png", alt: "NewTask" },
             {
                 src: "/screenshots/to-do-list/TaskInfo.png",
                 alt: "TaskInfo",
             },
-            { src: "/screenshots/to-do-list/Home.png", alt: "Home" },
         ],
         livePreviewURL: "https://maiker260.github.io/To-Do-List/",
         codeURL: "https://github.com/Maiker260/To-Do-List",

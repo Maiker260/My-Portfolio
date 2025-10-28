@@ -2,12 +2,16 @@ import ListOption from "./ListOption.jsx";
 import { creatorData } from "../../../services/data/creatorData.js";
 import Intro from "./animations/intro.jsx";
 
-function List({ className }) {
+function List({ className, isAnimationDisable }) {
     const projects = creatorData.projects;
 
     return (
         <article className={className}>
-            <Intro start={{ x: "-20%" }} end={{ x: "0" }}>
+            <Intro
+                start={{ x: "-20%" }}
+                end={{ x: "0" }}
+                isAnimationDisable={isAnimationDisable}
+            >
                 <div className="h-full w-full flex flex-col gap-2 ">
                     <h1 className="text-6xl color-text-details-main font-extrabold tracking-[-0.06em]">
                         LIST
@@ -19,6 +23,7 @@ function List({ className }) {
                                 delay={index}
                                 start={{ x: "-20%" }}
                                 end={{ x: "0" }}
+                                isAnimationDisable={isAnimationDisable}
                             >
                                 <ListOption project={project} index={index} />
                             </Intro>

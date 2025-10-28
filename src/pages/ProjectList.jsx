@@ -1,8 +1,12 @@
+import { useLocation } from "react-router-dom";
 import List from "../components/menus/projects-list/List.jsx";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
 import Intro from "../components/menus/projects-list/animations/intro.jsx";
 
 function ProjectList() {
+    const location = useLocation();
+    const isTransition = location.state?.cameFromTransition || false;
+
     return (
         <div className="relative min-h-screen overflow-hidden color-bg-details-third-gradient-top font-rodin">
             <div
@@ -20,8 +24,13 @@ function ProjectList() {
                 className={
                     "absolute top-[10%] left-[4%] h-[78%] w-[40vw] z-50 p-4 origin-top-left"
                 }
+                isAnimationDisable={isTransition}
             />
-            <Intro start={{ x: "20%" }} end={{ x: "0" }}>
+            <Intro
+                start={{ x: "20%" }}
+                end={{ x: "0" }}
+                isAnimationDisable={isTransition}
+            >
                 <NavigationSection
                     className={"absolute bottom-8 right-3"}
                     hasText

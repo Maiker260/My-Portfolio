@@ -35,9 +35,8 @@ function TextTop({
     };
 
     return (
-        <div className="absolute origin-top-left top-[14vh] left-[5%] h-[35%] w-[35vw] bg-red z-50 -rotate-8 flex flex-col gap-8 font-rodin">
+        <div className="absolute origin-top-left top-[14vh] left-[5%] h-[35%] bg-red z-50 -rotate-8 flex flex-col gap-8 font-rodin">
             {/* Rotated Text */}
-            {/* NEED TO FIX THE SIZE ISSUE */}
             <div className="ml-3 h-fit w-full flex items-center gap-10">
                 <button
                     className="flex gap-1 text-4xl text-white group transition hover:cursor-pointer hover:scale-110"

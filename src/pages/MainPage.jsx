@@ -4,9 +4,14 @@ import Intro from "../components/menus/main-menu/animations/Intro.jsx";
 import MainTitle from "../components/menus/main-menu/MainTitle.jsx";
 import BackgroundVideo from "../components/layout/BackgroundVideo.jsx";
 import SocialMediaIcons from "../components/menus/main-menu/SocialMediaIcons.jsx";
+import Transition from "../components/menus/main-menu/animations/Transition.jsx";
+import { pageComponents } from "../services/data/pageComponents.js";
 
 function MainPage() {
     const [showContent, setShowContent] = useState(false);
+    const [showTransition, setShowTransition] = useState(false);
+    const [nextContent, setNextContent] = useState(null);
+    const [nextUrl, setNextUrl] = useState(null);
 
     useEffect(() => {
         // Delay to visually align list with intro animation
@@ -35,7 +40,14 @@ function MainPage() {
                         />
                     </section>
 
-                    <Intro showContent={showContent} component={List} />
+                    <Intro
+                        showContent={showContent}
+                        component={List}
+                        showTransition={showTransition}
+                        setShowTransition={setShowTransition}
+                        setNextContent={setNextContent}
+                        setNextUrl={setNextUrl}
+                    />
 
                     <section className="w-1/16 h-full flex flex-col justify-between">
                         <SocialMediaIcons showContent={showContent} />
@@ -47,6 +59,12 @@ function MainPage() {
                     </section>
                 </div>
             </main>
+            {showTransition && (
+                <Transition
+                    nextUrl={nextUrl}
+                    NextPage={nextContent ? pageComponents[nextContent] : null}
+                />
+            )}
         </div>
     );
 }
