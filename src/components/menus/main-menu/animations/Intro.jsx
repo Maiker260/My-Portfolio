@@ -1,6 +1,21 @@
 import { motion as Motion } from "motion/react";
 
-function Intro({ showContent, component: AnimatedComp, ...rest }) {
+function Intro({
+    showContent,
+    component: Children,
+    cameFromTransition,
+    ...rest
+}) {
+    if (cameFromTransition) {
+        return (
+            <Children
+                showContent={showContent}
+                isAnimationDisable={cameFromTransition}
+                {...rest}
+            />
+        );
+    }
+
     return (
         /* Bouncing Effect when loading the List */
         <Motion.div
@@ -14,7 +29,7 @@ function Intro({ showContent, component: AnimatedComp, ...rest }) {
             }}
             className={`relative flex flex-col items-center`}
         >
-            <AnimatedComp showContent={showContent} {...rest} />
+            <Children showContent={showContent} {...rest} />
         </Motion.div>
     );
 }

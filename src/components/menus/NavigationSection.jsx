@@ -1,5 +1,6 @@
-import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useContext } from "react";
+import { MainPageContext } from "../../context/mainPageContext.jsx";
+import { useNavigate } from "react-router-dom";
 import { BackButton } from "../icons/BackButton.jsx";
 import { Home } from "../icons/Home.jsx";
 
@@ -10,13 +11,20 @@ function NavigationSection({
     hasHomeButton,
     description,
     backTo = null,
+    parentSection = null,
 }) {
     const navigate = useNavigate();
+    const { setBackHomeTransition, setCurrentPage } =
+        useContext(MainPageContext);
 
     useEffect(() => {
         const handleBKey = (e) => {
             if (e.key.toLowerCase() === "b") {
-                if (backTo) {
+                if (backTo === "/") {
+                    setCurrentPage(parentSection);
+                    setBackHomeTransition(true);
+                    navigate(backTo);
+                } else {
                     navigate(backTo);
                 }
             }
@@ -24,7 +32,30 @@ function NavigationSection({
 
         window.addEventListener("keydown", handleBKey);
         return () => window.removeEventListener("keydown", handleBKey);
-    }, [navigate, backTo]);
+    }, [
+        navigate,
+        setBackHomeTransition,
+        setCurrentPage,
+        backTo,
+        parentSection,
+    ]);
+
+    const handleBackButton = (e) => {
+        if (backTo === "/") {
+            e.preventDefault();
+            setCurrentPage(parentSection);
+            setBackHomeTransition(true);
+            navigate(backTo);
+        } else {
+            navigate(backTo);
+        }
+    };
+
+    const handleHomeButton = (e) => {
+        e.preventDefault();
+        setBackHomeTransition(false);
+        navigate("/");
+    };
 
     return (
         <article
@@ -41,19 +72,19 @@ function NavigationSection({
             )}
             <div className="flex items-center gap-4 self-end pr-8 w-fit text-shadow-back-info">
                 {hasHomeButton && (
-                    <Link
-                        to={"/"}
+                    <button
+                        onClick={handleHomeButton}
                         className="flex items-center gap-0.5 text-2xl hover:scale-110 hover:cursor-pointer"
                     >
                         <div className="bg-black w-7 h-7 p-1.5 rounded-full flex items-center justify-center">
                             <Home className={`w-fit fill-white`} />
                         </div>
                         Home
-                    </Link>
+                    </button>
                 )}
-                <Link
-                    to={backTo}
+                <button
                     className="flex items-center gap-0.5 text-2xl hover:scale-110 hover:cursor-pointer"
+                    onClick={handleBackButton}
                 >
                     <BackButton
                         className={`w-7 ${
@@ -61,7 +92,7 @@ function NavigationSection({
                         } `}
                     />
                     Back
-                </Link>
+                </button>
             </div>
         </article>
     );

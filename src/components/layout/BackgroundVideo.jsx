@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 
-export default function BackgroundVideo({ onLoopStart }) {
+export default function BackgroundVideo({ isAnimationDisable }) {
     const introRef = useRef(null);
     const loopRef = useRef(null);
     const [showLoop, setShowLoop] = useState(false);
@@ -9,25 +9,29 @@ export default function BackgroundVideo({ onLoopStart }) {
         const introVideo = introRef.current;
         const loopVideo = loopRef.current;
 
-        if (introVideo) {
+        if (introVideo && !isAnimationDisable) {
             introVideo.play();
             introVideo.onended = () => {
                 setShowLoop(true);
                 if (loopVideo) {
                     loopVideo.play();
                 }
-                if (onLoopStart) {
-                    onLoopStart();
-                }
             };
+        } else {
+            setShowLoop(true);
+            if (loopVideo) {
+                loopVideo.play();
+            }
         }
-    }, [onLoopStart]);
+    }, [isAnimationDisable]);
 
     return (
         <div className="absolute inset-0 -z-10 overflow-hidden">
             {/* Intro video (plays once) */}
+
             <video
                 ref={introRef}
+                preload="metadata"
                 className={`w-full h-full object-cover transition-opacity duration-700 ${
                     showLoop ? "opacity-0" : "opacity-100"
                 }`}

@@ -18,34 +18,40 @@ export const creatorData = {
     infoList: [
         {
             name: "PROJECTS",
-            titleType: "main",
-            url: "/projects",
             component: "Projects",
+            url: "/projects",
+            titleType: "main",
         },
         {
             name: "EXPERIENCE",
             component: "Experience",
+            url: "/experience",
+
             titleType: "third",
         },
         {
             name: "SKILLS",
             component: "Skills",
+            url: "/skills",
             titleType: "sec",
         },
         {
             name: "ABOUT ME",
             component: "AboutMe",
+            url: "/aboutme",
             titleType: "main",
         },
         {
             // EDUCATION????
             name: "DOWNLOAD CV",
             component: "DownloadCV",
+            url: "/downloadcv",
             titleType: "third",
         },
         {
             name: "CONTACT",
             component: "Contact",
+            url: "/contact",
             titleType: "sec",
         },
     ],

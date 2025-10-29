@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
 import ListOption from "./ListOption.jsx";
 import { creatorData } from "../../../services/data/creatorData.js";
 
-function List({ showContent, setShowTransition, setNextContent, setNextUrl }) {
+function List({
+    showContent,
+    setShowTransition,
+    setNextContent,
+    setNextUrl,
+    isAnimationDisable,
+}) {
     const menuList = creatorData.infoList;
     const total = menuList.length;
     const stagger = 90;
@@ -22,18 +27,16 @@ function List({ showContent, setShowTransition, setNextContent, setNextUrl }) {
                     const delay = `${650 + (total - 1 - i) * stagger}ms`;
 
                     return (
-                        <Link
-                            to={item.url}
-                            key={item.name}
-                            onClick={(e) => handleClick(e, item)}
-                        >
+                        <button key={item.name}>
                             <ListOption
+                                onClick={(e) => handleClick(e, item)}
                                 {...item}
                                 delay={delay}
                                 index={i}
                                 showContent={showContent}
+                                isAnimationDisable={isAnimationDisable}
                             />
-                        </Link>
+                        </button>
                     );
                 })}
             </section>

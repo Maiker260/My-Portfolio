@@ -330,6 +330,27 @@ body {
     }
 }
 
+@keyframes transitionNextPage {
+    0% {
+        mask-size: 50px;
+    }
+
+    100% {
+        mask-size: 1100vh;
+    }
+}
+
+@keyframes transitionToHomePage {
+    0% {
+        mask-size: 1100vh;
+    }
+
+    100% {
+        mask-size: 0px;
+        display: none;
+    }
+}
+
 /* Custom Classes */
 .text-7_5xl {
     font-size: 5rem;

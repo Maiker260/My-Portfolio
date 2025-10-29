@@ -3,12 +3,13 @@ import List from "../components/menus/projects-list/List.jsx";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
 import Intro from "../components/menus/projects-list/animations/intro.jsx";
 
-function ProjectList() {
+function ProjectList({ disableIntro }) {
     const location = useLocation();
-    const isTransition = location.state?.cameFromTransition || false;
+    const isTransition =
+        location.state?.cameFromTransition || disableIntro || false;
 
     return (
-        <div className="relative min-h-screen overflow-hidden color-bg-details-third-gradient-top font-rodin">
+        <article className="relative min-h-screen overflow-hidden color-bg-details-third-gradient-top font-rodin">
             <div
                 className="relative min-h-screen overflow-hidden color-bg-details-third"
                 style={{
@@ -36,9 +37,10 @@ function ProjectList() {
                     hasText
                     description={"Which Project do you want to view?"}
                     backTo={"/"}
+                    parentSection={"Projects"}
                 />
             </Intro>
-        </div>
+        </article>
     );
 }
 

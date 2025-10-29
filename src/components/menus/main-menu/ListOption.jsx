@@ -1,7 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import MenuItemHoverEffect from "../MenuItemHoverEffect.jsx";
 
-function ListOption({ name, titleType, delay, index, showContent }) {
+function ListOption({
+    name,
+    titleType,
+    delay,
+    index,
+    showContent,
+    isAnimationDisable,
+    onClick,
+}) {
     const [isHovered, setIsHovered] = useState(false);
 
     const textRef = useRef(null);
@@ -19,17 +27,22 @@ function ListOption({ name, titleType, delay, index, showContent }) {
         return () => clearTimeout(timeout);
     }, []);
 
+    const listClasses = isAnimationDisable
+        ? `font-rodin text-menu-cyan-${titleType} tracking-[-0.12em] hover:text-black`
+        : `font-rodin text-menu-cyan-${titleType} opacity-0 animate-[fade-up_600ms_linear_forwards] tracking-[-0.12em] hover:text-black`;
+
     return (
         <div
             className="relative inline-block cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={onClick}
         >
             <div className="relative inline-block font-bold text-7_5xl leading-none">
                 {/* Black base text */}
                 <span
                     ref={textRef}
-                    className={`font-rodin text-menu-cyan-${titleType} opacity-0 animate-[fade-up_600ms_linear_forwards] tracking-[-0.12em] hover:text-black`}
+                    className={listClasses}
                     style={{
                         zIndex: 20 - index * 2,
                         position: "relative",
