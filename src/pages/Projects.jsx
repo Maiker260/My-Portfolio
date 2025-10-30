@@ -18,23 +18,41 @@ function Projects() {
         <ProjectDataContext.Provider value={projects}>
             <main className="relative min-h-screen color-bg-details-third overflow-hidden">
                 <DiagonalTopBox />
-                <TextTop
-                    hoveredSkill={hoveredSkill}
-                    setHoveredSkill={setHoveredSkill}
-                    buttonPressed={buttonPressed}
-                    setButtonPressed={setButtonPressed}
-                />
+
+                <Intro
+                    start={{ y: "-100%" }}
+                    end={{ y: "0" }}
+                    className={
+                        "absolute origin-top-left top-[10vh] left-[5%] h-[35%]"
+                    }
+                >
+                    <TextTop
+                        hoveredSkill={hoveredSkill}
+                        setHoveredSkill={setHoveredSkill}
+                        buttonPressed={buttonPressed}
+                        setButtonPressed={setButtonPressed}
+                    />
+                </Intro>
+
                 <DiagonalBottomBox />
                 <CentralDiamond
                     buttonPressed={buttonPressed}
                     setButtonPressed={setButtonPressed}
                 />
-                <SkillDetailsBox
-                    hoveredSkill={hoveredSkill}
-                    setHoveredSkill={setHoveredSkill}
-                    buttonPressed={buttonPressed}
-                    setButtonPressed={setButtonPressed}
-                />
+
+                <Intro
+                    start={{ y: "150%" }}
+                    end={{ y: "0" }}
+                    className="absolute top-[55%] left-0 h-[30%] w-[45vw] ml-7 border-3 border-main color-bg-details-secund z-50 p-2 origin-top-left text-white"
+                >
+                    <SkillDetailsBox
+                        hoveredSkill={hoveredSkill}
+                        setHoveredSkill={setHoveredSkill}
+                        buttonPressed={buttonPressed}
+                        setButtonPressed={setButtonPressed}
+                    />
+                </Intro>
+
                 <Intro start={{ x: "20%" }} end={{ x: "0" }}>
                     <NavigationSection
                         className={"absolute bottom-8 right-3 z-50"}

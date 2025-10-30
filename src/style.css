@@ -351,6 +351,16 @@ body {
     }
 }
 
+@keyframes breath {
+    0%,
+    100% {
+        box-shadow: 0 0 10px 4px var(--color-bg-details-sixth);
+    }
+    50% {
+        box-shadow: 0 0 25px 8px var(--color-bg-details-sixth);
+    }
+}
+
 /* Custom Classes */
 .text-7_5xl {
     font-size: 5rem;

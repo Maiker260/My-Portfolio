@@ -15,6 +15,40 @@ export const creatorData = {
         },
     ],
     projects: projectData,
+    experience: [
+        {
+            name: "First Job",
+            title: "Technical Support",
+            years: 3,
+            logo: "",
+            description: "My previous Technical Support job",
+            responsabilities: "",
+        },
+        {
+            name: "Second Job",
+            title: "Call Centero",
+            years: 5,
+            logo: "",
+            description: "My previous job in a call center",
+            responsabilities: "",
+        },
+        {
+            name: "Sdecond Job",
+            title: "Call Centero",
+            years: 5,
+            logo: "",
+            description: "My previous job in a call center",
+            responsabilities: "",
+        },
+        {
+            name: "Secoand Job",
+            title: "Call Centero",
+            years: 5,
+            logo: "",
+            description: "My previous job in a call center",
+            responsabilities: "",
+        },
+    ],
     infoList: [
         {
             name: "PROJECTS",
@@ -26,7 +60,6 @@ export const creatorData = {
             name: "EXPERIENCE",
             component: "Experience",
             url: "/experience",
-
             titleType: "third",
         },
         {

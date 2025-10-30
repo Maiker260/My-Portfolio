@@ -1,46 +1,16 @@
-import { useLocation } from "react-router-dom";
-import List from "../components/menus/projects-list/List.jsx";
-import NavigationSection from "../components/menus/NavigationSection.jsx";
-import Intro from "../components/menus/projects-list/animations/intro.jsx";
+import ListSelector from "../components/menus/ListSelector/ListSelector.jsx";
+import { creatorData } from "../services/data/creatorData.js";
 
 function ProjectList({ disableIntro }) {
-    const location = useLocation();
-    const isTransition =
-        location.state?.cameFromTransition || disableIntro || false;
+    const projects = creatorData.projects;
 
     return (
-        <article className="relative min-h-screen overflow-hidden color-bg-details-third-gradient-top font-rodin">
-            <div
-                className="relative min-h-screen overflow-hidden color-bg-details-third"
-                style={{
-                    clipPath:
-                        "polygon(70% 0, 100% 0, 100% 45%, 65% 100%, 0 100%, 0 97%)",
-                }}
-            >
-                <h2 className="color-text-details-fifth tracking-[-0.1em] text-9xl absolute bottom-[30%] right-0 -rotate-42 pointer-events-none">
-                    PROJECTS
-                </h2>
-            </div>
-            <List
-                className={
-                    "absolute top-[10%] left-[4%] h-[78%] w-[40vw] z-50 p-4 origin-top-left"
-                }
-                isAnimationDisable={isTransition}
-            />
-            <Intro
-                start={{ x: "20%" }}
-                end={{ x: "0" }}
-                isAnimationDisable={isTransition}
-            >
-                <NavigationSection
-                    className={"absolute bottom-8 right-3"}
-                    hasText
-                    description={"Which Project do you want to view?"}
-                    backTo={"/"}
-                    parentSection={"Projects"}
-                />
-            </Intro>
-        </article>
+        <ListSelector
+            name={"Projects"}
+            data={projects}
+            disableIntro={disableIntro}
+            guideMessage={"Which Project do you want to view?"}
+        />
     );
 }
 

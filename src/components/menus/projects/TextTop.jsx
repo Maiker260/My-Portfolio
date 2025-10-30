@@ -35,7 +35,7 @@ function TextTop({
     };
 
     return (
-        <div className="absolute origin-top-left top-[14vh] left-[5%] h-[35%] bg-red z-50 -rotate-8 flex flex-col gap-8 font-rodin">
+        <div className="relative z-50 -rotate-8 flex flex-col gap-8 font-rodin">
             {/* Rotated Text */}
             <div className="ml-3 h-fit w-full flex items-center gap-10">
                 <button

@@ -1,15 +1,19 @@
 import { motion as Motion } from "motion/react";
 
-function Intro({ children, start, end }) {
+function Intro({ children, start, end, className }) {
+    const animationClasses = className
+        ? className
+        : "relative flex flex-col items-center";
+
     return (
         <Motion.div
             initial={{ ...start, opacity: 0 }}
             animate={{ ...end, opacity: 1 }}
             transition={{
-                duration: 0.4,
+                duration: 0.5,
                 ease: [0.33, 1, 0.68, 1],
             }}
-            className={`relative flex flex-col items-center`}
+            className={animationClasses}
         >
             {children}
         </Motion.div>

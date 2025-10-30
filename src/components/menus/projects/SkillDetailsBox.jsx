@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
 import { OpenInNew } from "../../icons/OpenInNew.jsx";
 import AnimatedBump from "../../animations/AnimatedBump.jsx";
+import Intro from "./animations/intro.jsx";
 
 function SkillDetailsBox({
     hoveredSkill,
@@ -41,7 +42,7 @@ function SkillDetailsBox({
         <AnimatedBump
             buttonPressed={buttonPressed}
             setButtonPressed={setButtonPressed}
-            className="absolute top-[55%] left-0 h-[30%] w-[45vw] ml-7 border-3 border-main color-bg-details-secund z-50 p-2 origin-top-left text-white"
+            className={"w-full h-full"}
         >
             <article className="w-full h-full">
                 <div className="grid grid-cols-2 grid-rows-5 w-full h-full">

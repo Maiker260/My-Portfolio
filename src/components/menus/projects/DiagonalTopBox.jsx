@@ -1,6 +1,7 @@
 function DiagonalTopBox() {
     return (
         <section className="relative overflow-hidden color-bg-details-third h-[35vh]">
+            {/* <section className="relative overflow-hidden color-bg-details-third h-[35vh]"> */}
             {/* Diagonal background */}
             <div
                 className="absolute inset-0 color-bg-details-secund color-text-details-main overflow-hidden"

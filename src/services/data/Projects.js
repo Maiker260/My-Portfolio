@@ -4,7 +4,7 @@ export const projectData = [
     // NEED ORGANIZE THE DATA
     {
         name: "File Uploader",
-        type: "Full-Stack",
+        title: "Full-Stack",
         skills: [
             { name: "Node.js", icon: icons["Node.js"] },
             { name: "Express", icon: icons.Express },
@@ -33,7 +33,7 @@ export const projectData = [
     },
     {
         name: "My Blog",
-        type: "Full-Stack",
+        title: "Full-Stack",
         skills: [
             { name: "React", icon: icons.React },
             { name: "Tailwind", icon: icons.Tailwind },
@@ -60,7 +60,7 @@ export const projectData = [
     },
     {
         name: "Shopping Cart",
-        type: "Front-End",
+        title: "Front-End",
         skills: [
             { name: "React", icon: icons.React },
             { name: "JavaScript", icon: icons.Javascript },
@@ -80,7 +80,7 @@ export const projectData = [
     },
     {
         name: "Members Only",
-        type: "Back-End",
+        title: "Back-End",
         skills: [
             { name: "Node.js", icon: icons["Node.js"] },
             { name: "Express", icon: icons.Express },
@@ -100,7 +100,7 @@ export const projectData = [
     },
     {
         name: "To-Do List",
-        type: "Front-End",
+        title: "Front-End",
         skills: [
             { name: "JavaScript", icon: icons.Javascript },
             { name: "CSS", icon: icons.CSS },

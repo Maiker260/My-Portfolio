@@ -1,6 +1,11 @@
+import ExperienceList from "../../pages/ExperienceList.jsx";
 import ProjectList from "../../pages/ProjectList.jsx";
 
 export const pageComponents = {
     Projects: ProjectList,
-    // NEED TO ADD THE REST
+    Experience: ExperienceList,
+    // Skills: Skills,
+    // AboutMe: AboutMe,
+    // DownloadCv: DownloadCv,
+    // Contact: Contact
 };
