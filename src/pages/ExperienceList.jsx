@@ -12,12 +12,6 @@ function ExperienceList({ disableIntro }) {
             hasCard={true}
             disableIntro={disableIntro}
         />
-        // NEED TO ADD THIS TO THE EXPERIENCE ITEM PAGE
-        // <img
-        //             src="/other/card.png"
-        //             alt="card"
-        //             className="absolute top-1/2 left-1/2 -translate-x-[10%] -translate-y-[120%] w-full max-w-[10vw] shadow-[0_0_15px_3px_#0511b6] animate-[breath_2s_ease-in-out_infinite]"
-        //         />
     );
 }
 

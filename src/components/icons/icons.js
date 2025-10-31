@@ -2,6 +2,7 @@ import { FaReact, FaNodeJs, FaAws, FaCss3Alt } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { LuGithub } from "react-icons/lu";
 import { RiJavascriptFill } from "react-icons/ri";
+import { MdOutlineArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 import {
     SiTailwindcss,
@@ -30,4 +31,7 @@ export const icons = {
     EJS: SiEjs,
     Javascript: RiJavascriptFill,
     CSS: FaCss3Alt,
+
+    BackArrow: MdOutlineArrowBackIos,
+    ForwardArrow: MdArrowForwardIos,
 };

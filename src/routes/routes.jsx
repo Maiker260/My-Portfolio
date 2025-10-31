@@ -2,6 +2,7 @@ import MainPage from "../pages/MainPage.jsx";
 import Projects from "../pages/Projects.jsx";
 import ProjectList from "../pages/ProjectList.jsx";
 import ExperienceList from "../pages/ExperienceList.jsx";
+import Experiences from "../pages/Experiences.jsx";
 
 const routes = [
     {
@@ -19,6 +20,10 @@ const routes = [
     {
         path: "/experience",
         element: <ExperienceList />,
+    },
+    {
+        path: "/experience/:id",
+        element: <Experiences />,
     },
     {
         path: "/skills",

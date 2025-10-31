@@ -6,7 +6,7 @@ function Intro({ children, start, end, className }) {
         : "relative flex flex-col items-center";
 
     return (
-        <Motion.div
+        <Motion.article
             initial={{ ...start, opacity: 0 }}
             animate={{ ...end, opacity: 1 }}
             transition={{
@@ -16,7 +16,7 @@ function Intro({ children, start, end, className }) {
             className={animationClasses}
         >
             {children}
-        </Motion.div>
+        </Motion.article>
     );
 }
 

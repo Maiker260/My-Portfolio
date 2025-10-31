@@ -35,6 +35,7 @@
     --color-bg-details-sixth: #0511b6;
     --color-bg-details-seventh: #98fcfe;
     --color-bg-details-eight: #0e0e50;
+    --color-bg-details-nineth: #183291;
 
     --color-bg-details-neutral: #262626;
 
@@ -50,6 +51,14 @@ body {
 @font-face {
     font-family: "Rodin Pro";
     src: url("/fonts/FOT-Rodin-Pro-EB.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Skip STD B";
+    src: url("/fonts/FOT-Skip-Std-B.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -237,6 +246,10 @@ body {
         background-color: var(--color-bg-details-eight);
     }
 
+    .color-bg-details-nineth {
+        background-color: var(--color-bg-details-nineth);
+    }
+
     .color-bg-details-neutral {
         background-color: var(--color-bg-details-neutral);
     }
@@ -296,6 +309,7 @@ body {
 
 @theme {
     --font-rodin: "Rodin Pro", sans-serif;
+    --font-skipstdb: "Skip STD B", sans-serif;
 }
 
 @keyframes fade-up {

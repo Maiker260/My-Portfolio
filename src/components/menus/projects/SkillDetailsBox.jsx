@@ -82,7 +82,7 @@ function SkillDetailsBox({
                     ))}
                 </div>
             </article>
-            <div className="w-full mt-10 flex justify-center  font-rodin">
+            <div className="w-full mt-10 flex justify-center font-rodin">
                 <Link
                     to={codeURL}
                     target="_blank"
@@ -90,7 +90,6 @@ function SkillDetailsBox({
                     className="group"
                 >
                     <div className="p-2 color-text-details-third color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-fifth">
-                        {/* <div className="p-2 color-text-details-fourth color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-seventh"> */}
                         <span className="transition group-hover:text-neutral">
                             Code
                         </span>
