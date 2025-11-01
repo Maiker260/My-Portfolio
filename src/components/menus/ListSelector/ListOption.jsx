@@ -21,7 +21,7 @@ function ListOption({ item, index }) {
         <Link
             to={`${index}`}
             className={`relative flex flex-col h-fit w-[90%] snap-start group hover:cursor-pointer`}
-            style={{ marginLeft: `${(index + 1) * 0.5}em` }}
+            style={{ marginLeft: `${(index + 1) * 1}em` }}
         >
             {/* External Container used for Hover */}
             <div
@@ -34,7 +34,7 @@ function ListOption({ item, index }) {
             {/* Inner Container */}
             <div
                 ref={innerRef}
-                className="transition absolute top-1 -left-2 w-full h-fit px-4 pb-2 color-bg-details-eight group-hover:bg-white group-hover:text-black"
+                className="transition absolute top-1 -left-2 w-full h-fit px-4 py-2 color-bg-details-eight group-hover:bg-white group-hover:text-black"
                 style={{
                     clipPath: "polygon(0 0, 99% 0, 100% 100%, 1% 100%)",
                 }}

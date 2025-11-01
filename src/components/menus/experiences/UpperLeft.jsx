@@ -4,7 +4,7 @@ import { OpenInNew } from "../../icons/OpenInNew.jsx";
 function UpperLeft() {
     return (
         <section className="flex flex-col h-full w-full font-rodin">
-            <h1 className="relative top-0 text-7xl tracking-[-0.1em] leading-[0.9] align-top p-0 select-none text-white">
+            <h1 className="relative top-0 left-5 text-7xl tracking-[-0.1em] leading-[0.9] align-top p-0 select-none text-white">
                 EXPERIENCE
             </h1>
             <div className=" relative w-full h-full">
@@ -37,11 +37,13 @@ function UpperLeft() {
                         <section className="bg-white font-skipstdb">
                             <div className="flex justify-center items-center pl-4 pr-8 py-7 ">
                                 <h2 className="text-5xl w-full text-center">
-                                    VMware
+                                    Sykes
                                 </h2>
                                 <div className="flex gap-3 w-auto items-center">
                                     <span className="text-3xl">Years</span>
-                                    <span className="text-6xl">5</span>
+                                    <span className="text-6xl font-rodin">
+                                        5
+                                    </span>
                                 </div>
                             </div>
                         </section>
