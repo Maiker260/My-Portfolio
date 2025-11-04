@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import AnimatedBump from "../../animations/AnimatedBump.jsx";
 import { creatorData } from "../../../services/data/creatorData.js";
 import ItemNavButton from "../../ItemNavButton.jsx";
+import { changeItem } from "../../../utils/changeItem.js";
 
 function TextTop({
     hoveredSkill,
@@ -23,27 +24,18 @@ function TextTop({
 
     const { name, title, skills } = project;
 
-    // Less than 0, go to the last project, if reaches the last project, then, go to the first project.
-    const changeProject = (page) => {
-        const projectId =
-            page < 0
-                ? Number(totalProjects - 1)
-                : page > Number(totalProjects - 1)
-                ? 0
-                : page;
-
-        navigate(`/projects/${projectId}`);
-    };
-
     return (
         <div className="relative z-50 -rotate-8 flex flex-col gap-8 font-rodin">
             {/* Rotated Text */}
             <div className="ml-3 h-fit w-full flex items-center gap-10">
                 <ItemNavButton
-                    name={"prev"}
+                    name="prev"
                     setButtonPressed={setButtonPressed}
                     id={id}
-                    changeItem={changeProject}
+                    totalItems={totalProjects}
+                    navigate={navigate}
+                    changeItem={changeItem}
+                    location={"projects"}
                 />
                 <AnimatedBump
                     buttonPressed={buttonPressed}
@@ -61,7 +53,10 @@ function TextTop({
                     name={"next"}
                     setButtonPressed={setButtonPressed}
                     id={id}
-                    changeItem={changeProject}
+                    totalItems={totalProjects}
+                    navigate={navigate}
+                    changeItem={changeItem}
+                    location={"projects"}
                 />
             </div>
 

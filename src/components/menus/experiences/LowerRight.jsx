@@ -1,12 +1,14 @@
-function LowerRight() {
+function LowerRight({ id, data }) {
+    const job = data[id];
+
     return (
         <article
             className="flex flex-col gap-2 w-full h-full color-bg-details-tenth px-12 pt-2 pb-4 font-skipstdb"
             style={{ clipPath: "polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)" }}
         >
             <div>
-                <h2 className="text-5xl color-text-details-fourth">
-                    Mi Trabajito
+                <h2 className="text-3xl color-text-details-fourth">
+                    {job.title}
                 </h2>
             </div>
             <div>

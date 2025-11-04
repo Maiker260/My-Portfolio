@@ -17,7 +17,6 @@ function TransitionNextPage({ NextPage, nextUrl }) {
     }, []);
 
     const handleSecondTransition = () => {
-        // NEED TO SHOW THE LIST ANIMATION ONLY ONCE WHEN CHANGING PAGE
         if (nextUrl) navigate(nextUrl, { state: { cameFromTransition: true } });
     };
 

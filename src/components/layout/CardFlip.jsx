@@ -1,17 +1,48 @@
+import { useState, useEffect } from "react";
 import { motion as Motion } from "motion/react";
 
-function CardFlip({ className }) {
+function CardFlip({
+    className,
+    id,
+    data,
+    buttonPressed,
+    changeContent,
+    setChangeContent,
+}) {
+    const [rotation, setRotation] = useState(180);
+    const [showFront, setShowFront] = useState(true);
+    const [job, setJob] = useState(data[id]);
+
+    useEffect(() => {
+        if (!changeContent) return;
+
+        setRotation((prev) => prev + (buttonPressed === "next" ? 180 : -180));
+
+        setTimeout(() => {
+            setShowFront(false);
+
+            const nextImg = new Image();
+            nextImg.src = `/companyLogos/${data[id].logo}`;
+            nextImg.onload = () => setJob(data[id]);
+        }, 400);
+
+        setTimeout(() => {
+            setShowFront(true);
+            setChangeContent(false);
+        }, 600);
+    }, [changeContent, buttonPressed, id, data, setChangeContent]);
+
     return (
         <div
-            className={`relative ${className}`}
+            className={`relative w-full h-full ${className}`}
             style={{
                 perspective: "1000px",
             }}
         >
             <Motion.div
                 initial={{ rotateY: 0 }}
-                animate={{ rotateY: 180 }}
-                transition={{ duration: 1.3 }}
+                animate={{ rotateY: rotation }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 style={{
                     transformStyle: "preserve-3d",
                 }}
@@ -19,7 +50,7 @@ function CardFlip({ className }) {
             >
                 {/* BACK SIDE */}
                 <div
-                    className="absolute w-full h-full rounded-xl backface-hidden shadow-[0_0_15px_3px_#0511b6] animate-[breath_2s_ease-in-out_infinite]"
+                    className="absolute w-full h-full rounded-xl backface-hidden animate-[breath_2s_ease-in-out_infinite]"
                     style={{
                         backfaceVisibility: "hidden",
                     }}
@@ -27,23 +58,27 @@ function CardFlip({ className }) {
                     <img
                         src="/other/card.png"
                         alt="card back"
-                        className="rounded-xl perspective-distant shadow-[0_0_15px_3px_#0511b6] animate-[breath_2s_ease-in-out_infinite]"
+                        draggable={false}
+                        className="rounded-xl w-full h-full object-cover"
                     />
                 </div>
 
                 {/* FRONT SIDE */}
                 <div
-                    className="absolute w-full h-full rounded-xl backface-hidden shadow-[0_0_15px_3px_#0511b6] animate-[breath_2s_ease-in-out_infinite]"
+                    className="absolute w-full h-full p-2 bg-white rounded-xl backface-hidden animate-[breath_2s_ease-in-out_infinite]"
                     style={{
                         transform: "rotateY(180deg)",
                         backfaceVisibility: "hidden",
                     }}
                 >
-                    <img
-                        src="/companyLogos/mcdonalds-logo.jpg"
-                        alt="card front"
-                        className="rounded-xl perspective-distant shadow-[0_0_15px_3px_#0511b6] animate-[breath_2s_ease-in-out_infinite]"
-                    />
+                    {showFront && (
+                        <img
+                            src={`/companyLogos/${job.logo}`}
+                            alt="card front"
+                            draggable={false}
+                            className="w-full h-full object-contain rounded-xl"
+                        />
+                    )}
                 </div>
             </Motion.div>
         </div>

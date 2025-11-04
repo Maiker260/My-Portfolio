@@ -373,10 +373,10 @@ body {
 @keyframes breath {
     0%,
     100% {
-        box-shadow: 0 0 10px 4px var(--color-bg-details-sixth);
+        box-shadow: 0 0 10px 4px var(--color-bg-details-nineth);
     }
     50% {
-        box-shadow: 0 0 25px 8px var(--color-bg-details-sixth);
+        box-shadow: 0 0 25px 8px var(--color-bg-details-nineth);
     }
 }
 

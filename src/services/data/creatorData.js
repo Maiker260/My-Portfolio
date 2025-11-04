@@ -1,5 +1,6 @@
 import { icons } from "../../components/icons/icons.js";
 import { projectData } from "./Projects.js";
+import { experienceData } from "./experiences.js";
 
 export const creatorData = {
     contact: [
@@ -15,40 +16,7 @@ export const creatorData = {
         },
     ],
     projects: projectData,
-    experience: [
-        {
-            name: "First Job",
-            title: "Technical Support",
-            years: 3,
-            logo: "",
-            description: "My previous Technical Support job",
-            responsabilities: "",
-        },
-        {
-            name: "Second Job",
-            title: "Call Centero",
-            years: 5,
-            logo: "",
-            description: "My previous job in a call center",
-            responsabilities: "",
-        },
-        {
-            name: "Sdecond Job",
-            title: "Call Centero",
-            years: 5,
-            logo: "",
-            description: "My previous job in a call center",
-            responsabilities: "",
-        },
-        {
-            name: "Secoand Job",
-            title: "Call Centero",
-            years: 5,
-            logo: "",
-            description: "My previous job in a call center",
-            responsabilities: "",
-        },
-    ],
+    experience: experienceData,
     infoList: [
         {
             name: "PROJECTS",

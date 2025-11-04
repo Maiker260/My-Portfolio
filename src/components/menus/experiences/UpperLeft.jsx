@@ -1,7 +1,19 @@
+import { Link, useNavigate } from "react-router-dom";
 import ItemNavButton from "../../ItemNavButton.jsx";
 import { OpenInNew } from "../../icons/OpenInNew.jsx";
+import { changeItem } from "../../../utils/changeItem.js";
 
-function UpperLeft() {
+function UpperLeft({
+    id,
+    data,
+    setButtonPressed,
+    totalExperiences,
+    setChangeContent,
+}) {
+    const navigate = useNavigate();
+
+    const job = data[id];
+
     return (
         <section className="flex flex-col h-full w-full font-rodin">
             <h1 className="relative top-0 left-5 text-7xl tracking-[-0.1em] leading-[0.9] align-top p-0 select-none text-white">
@@ -31,18 +43,40 @@ function UpperLeft() {
                         }}
                     >
                         <section className="bg-black flex justify-between pl-4 pr-8 py-3">
-                            <ItemNavButton name={"prev"} />
-                            <ItemNavButton name={"next"} />
+                            <ItemNavButton
+                                name={"prev"}
+                                setButtonPressed={setButtonPressed}
+                                id={id}
+                                totalItems={totalExperiences}
+                                navigate={navigate}
+                                changeItem={changeItem}
+                                location={"experience"}
+                                moreActions={() => {
+                                    setChangeContent(true);
+                                }}
+                            />
+                            <ItemNavButton
+                                name={"next"}
+                                setButtonPressed={setButtonPressed}
+                                id={id}
+                                totalItems={totalExperiences}
+                                navigate={navigate}
+                                changeItem={changeItem}
+                                location={"experience"}
+                                moreActions={() => {
+                                    setChangeContent(true);
+                                }}
+                            />
                         </section>
                         <section className="bg-white font-skipstdb">
                             <div className="flex justify-center items-center pl-4 pr-8 py-7 ">
                                 <h2 className="text-5xl w-full text-center">
-                                    Sykes
+                                    {job.name}
                                 </h2>
                                 <div className="flex gap-3 w-auto items-center">
                                     <span className="text-3xl">Years</span>
                                     <span className="text-6xl font-rodin">
-                                        5
+                                        {job.years}
                                     </span>
                                 </div>
                             </div>
@@ -50,7 +84,7 @@ function UpperLeft() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center gap-6 p-4 px-6">
+            <div className="flex flex-col items-center gap-6 p-4 px-13">
                 <ul className="flex flex-col gap-4">
                     <li className="text-white text-2xl text-balance leading-7 font-skipstdb">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -66,8 +100,8 @@ function UpperLeft() {
                     </li>
                 </ul>
                 <div className="w-full flex justify-center font-rodin">
-                    <button
-                        // to={codeURL}
+                    <Link
+                        to={job.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group hover:cursor-pointer"
@@ -82,7 +116,7 @@ function UpperLeft() {
                                 }
                             />
                         </div>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>
