@@ -36,6 +36,7 @@ function Experiences() {
                     data={experiences}
                     totalExperiences={totalExperiences}
                     setButtonPressed={setButtonPressed}
+                    changeContent={changeContent}
                     setChangeContent={setChangeContent}
                 />
             </Intro>
@@ -45,13 +46,18 @@ function Experiences() {
                 end={{ x: "0" }}
                 className={"absolute bottom-18 right-40 h-[20vh] w-[35vw]"}
             >
-                <LowerRight id={id} data={experiences} />
+                <LowerRight
+                    id={id}
+                    data={experiences}
+                    changeContent={changeContent}
+                    setChangeContent={setChangeContent}
+                />
             </Intro>
 
             <Intro
                 start={{ scale: 0, opacity: 0 }}
                 end={{ scale: 1, opacity: 1 }}
-                className="absolute top-1/2 left-1/2 -translate-x-[15%] -translate-y-[80%] rotate-10 w-3xs h-96 rounded-xl"
+                className="absolute top-1/2 left-1/2 -translate-x-[15%] -translate-y-[70%] rotate-10 w-3xs h-96 rounded-xl"
             >
                 <CardFlip
                     id={id}

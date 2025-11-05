@@ -42,7 +42,9 @@ function SkillDetailsBox({
         <AnimatedBump
             buttonPressed={buttonPressed}
             setButtonPressed={setButtonPressed}
-            className={"w-full h-full"}
+            className={
+                "w-full h-full  ml-7 border-3 border-main color-bg-details-secund p-2 origin-top-left text-white"
+            }
         >
             <article className="w-full h-full">
                 <div className="grid grid-cols-2 grid-rows-5 w-full h-full">
@@ -53,8 +55,8 @@ function SkillDetailsBox({
                         {/* Title */}
                         <div className="relative z-10 flex justify-center items-center h-full">
                             <span className="absolute text-5xl px-8 bg-black z-40 color-text-details-third">
-                                {/* <span className="absolute text-5xl px-8 bg-black z-40 color-text-details-fourth"> */}
-                                SKILLS<span className="text-3xl">&</span>TOOLS
+                                SKILLS<span className="text-3xl">&</span>
+                                TOOLS
                             </span>
                         </div>
                     </div>
@@ -82,6 +84,7 @@ function SkillDetailsBox({
                     ))}
                 </div>
             </article>
+            {/* Github button */}
             <div className="w-full mt-10 flex justify-center font-rodin">
                 <Link
                     to={codeURL}

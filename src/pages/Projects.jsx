@@ -43,7 +43,7 @@ function Projects() {
                 <Intro
                     start={{ y: "150%" }}
                     end={{ y: "0" }}
-                    className="absolute top-[55%] left-0 h-[30%] w-[45vw] ml-7 border-3 border-main color-bg-details-secund z-50 p-2 origin-top-left text-white"
+                    className="absolute top-[55%] left-0 h-[30%] w-[45vw] z-50"
                 >
                     <SkillDetailsBox
                         hoveredSkill={hoveredSkill}

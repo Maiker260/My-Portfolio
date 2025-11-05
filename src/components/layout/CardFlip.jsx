@@ -9,9 +9,9 @@ function CardFlip({
     changeContent,
     setChangeContent,
 }) {
+    const [job, setJob] = useState(data[id]);
     const [rotation, setRotation] = useState(180);
     const [showFront, setShowFront] = useState(true);
-    const [job, setJob] = useState(data[id]);
 
     useEffect(() => {
         if (!changeContent) return;
@@ -24,12 +24,12 @@ function CardFlip({
             const nextImg = new Image();
             nextImg.src = `/companyLogos/${data[id].logo}`;
             nextImg.onload = () => setJob(data[id]);
-        }, 400);
+        }, 300);
 
         setTimeout(() => {
             setShowFront(true);
             setChangeContent(false);
-        }, 600);
+        }, 300);
     }, [changeContent, buttonPressed, id, data, setChangeContent]);
 
     return (
@@ -42,7 +42,7 @@ function CardFlip({
             <Motion.div
                 initial={{ rotateY: 0 }}
                 animate={{ rotateY: rotation }}
-                transition={{ duration: 1, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 style={{
                     transformStyle: "preserve-3d",
                 }}
