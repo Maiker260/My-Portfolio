@@ -30,7 +30,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
                 name={name}
                 data={data}
                 className={
-                    "absolute top-[10%] left-[4%] h-[78%] w-[40vw] z-50 p-4 origin-top-left font-skipstdb"
+                    "absolute top-[7%] left-[4%] h-[78%] w-[40vw] z-50 p-4 origin-top-left font-skipstdb"
                 }
                 isAnimationDisable={isTransition}
             />

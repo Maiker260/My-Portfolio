@@ -95,7 +95,7 @@ function UpperLeft({
                     </div>
                 </div>
                 <div className="flex flex-col items-center gap-6 p-4 px-13">
-                    <ul className="flex flex-col gap-4">
+                    <ul className="flex flex-col gap-6">
                         {job.responsabilities &&
                             job.responsabilities.map(
                                 (responsability, index) => (

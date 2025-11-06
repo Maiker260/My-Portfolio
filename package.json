@@ -16,7 +16,9 @@
         "react-dom": "^19.1.1",
         "react-icons": "^5.5.0",
         "react-router-dom": "^7.9.4",
-        "roman-numerals": "^0.3.2"
+        "react-slick": "^0.31.0",
+        "roman-numerals": "^0.3.2",
+        "slick-carousel": "^1.8.1"
     },
     "devDependencies": {
         "@eslint/js": "^9.36.0",
