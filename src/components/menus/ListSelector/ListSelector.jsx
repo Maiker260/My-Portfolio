@@ -10,7 +10,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
     const titleName = name.toUpperCase();
 
     return (
-        <main className="relative min-h-screen overflow-hidden color-bg-details-third-gradient-top font-rodin">
+        <main className="relative min-h-screen overflow-hidden color-bg-details-third-gradient-top">
             <div
                 className="relative min-h-screen overflow-hidden color-bg-details-third"
                 style={{
@@ -19,7 +19,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
                 }}
             >
                 <h2
-                    className={`color-text-details-fifth tracking-[-0.1em] ${
+                    className={`color-text-details-fifth font-rodin tracking-[-0.1em] ${
                         name === "Experience" ? "text-8xl" : "text-9xl"
                     } absolute bottom-[30%] right-0 -rotate-42 select-none`}
                 >
@@ -30,7 +30,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
                 name={name}
                 data={data}
                 className={
-                    "absolute top-[7%] left-[4%] h-[78%] w-[40vw] z-50 p-4 origin-top-left font-skipstdb"
+                    "absolute top-[7%] left-[4%] h-[78%] w-[40vw] z-50 p-4 origin-top-left"
                 }
                 isAnimationDisable={isTransition}
             />

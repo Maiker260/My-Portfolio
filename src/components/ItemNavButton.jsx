@@ -1,10 +1,12 @@
 import { icons } from "./icons/icons.js";
 
 function ItemNavButton({
+    id,
     name,
+    isFlipping = null,
+    setIsFlipping = () => {},
     setButtonPressed,
     changeItem,
-    id,
     totalItems,
     navigate,
     location,
@@ -23,9 +25,12 @@ function ItemNavButton({
                 name === "next" && "flex-row-reverse"
             } items-center text-4xl text-white group transition hover:cursor-pointer hover:scale-110 `}
             onClick={() => {
-                setButtonPressed(name);
-                changeItem(page, totalItems, navigate, location);
-                moreActions();
+                if (!isFlipping) {
+                    setIsFlipping(true);
+                    setButtonPressed(name);
+                    changeItem(page, totalItems, navigate, location);
+                    moreActions();
+                }
             }}
         >
             <NavSymbol />

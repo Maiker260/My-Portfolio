@@ -9,6 +9,7 @@ import { creatorData } from "../services/data/creatorData.js";
 
 function Experiences() {
     const [buttonPressed, setButtonPressed] = useState(false);
+    const [isFlipping, setIsFlipping] = useState(false);
     const [changeContent, setChangeContent] = useState(false);
 
     const { id } = useParams();
@@ -38,6 +39,8 @@ function Experiences() {
                     setButtonPressed={setButtonPressed}
                     changeContent={changeContent}
                     setChangeContent={setChangeContent}
+                    setIsFlipping={setIsFlipping}
+                    isFlipping={isFlipping}
                 />
             </Intro>
 
@@ -62,9 +65,11 @@ function Experiences() {
                 <CardFlip
                     id={id}
                     data={experiences}
+                    isFlipping={isFlipping}
                     buttonPressed={buttonPressed}
                     changeContent={changeContent}
                     setChangeContent={setChangeContent}
+                    setIsFlipping={setIsFlipping}
                 />
             </Intro>
 

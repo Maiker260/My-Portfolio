@@ -11,6 +11,8 @@ function UpperLeft({
     totalExperiences,
     changeContent,
     setChangeContent,
+    isFlipping,
+    setIsFlipping,
 }) {
     const navigate = useNavigate();
 
@@ -54,9 +56,11 @@ function UpperLeft({
                         >
                             <section className="bg-black flex justify-between pl-4 pr-8 py-3">
                                 <ItemNavButton
-                                    name={"prev"}
-                                    setButtonPressed={setButtonPressed}
                                     id={id}
+                                    name={"prev"}
+                                    isFlipping={isFlipping}
+                                    setIsFlipping={setIsFlipping}
+                                    setButtonPressed={setButtonPressed}
                                     totalItems={totalExperiences}
                                     navigate={navigate}
                                     changeItem={changeItem}
@@ -66,9 +70,11 @@ function UpperLeft({
                                     }}
                                 />
                                 <ItemNavButton
-                                    name={"next"}
-                                    setButtonPressed={setButtonPressed}
                                     id={id}
+                                    name={"next"}
+                                    isFlipping={isFlipping}
+                                    setIsFlipping={setIsFlipping}
+                                    setButtonPressed={setButtonPressed}
                                     totalItems={totalExperiences}
                                     navigate={navigate}
                                     changeItem={changeItem}

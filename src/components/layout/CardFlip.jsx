@@ -8,6 +8,8 @@ function CardFlip({
     buttonPressed,
     changeContent,
     setChangeContent,
+    setIsFlipping,
+    isFlipping,
 }) {
     const [job, setJob] = useState(data[id]);
     const [rotation, setRotation] = useState(180);
@@ -45,6 +47,9 @@ function CardFlip({
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 style={{
                     transformStyle: "preserve-3d",
+                }}
+                onAnimationComplete={() => {
+                    setIsFlipping(false);
                 }}
                 className="w-full h-full"
             >

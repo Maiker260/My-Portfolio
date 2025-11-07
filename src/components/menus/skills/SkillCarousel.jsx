@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { skillCarouselSettings } from "../../../utils/skillCarouselSettings.js";
 import { creatorData } from "../../../services/data/creatorData.js";
@@ -6,22 +6,18 @@ import { creatorData } from "../../../services/data/creatorData.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function SkillCarousel() {
+function SkillCarousel({ setCurrentSkill, currentSlide, setCurrentSlide }) {
     const sliderRef = useRef(null);
     const skills = creatorData.skills;
-    const [currentSlide, setCurrentSlide] = useState(0);
+
+    useEffect(() => {
+        sliderRef.current?.slickGoTo(currentSlide);
+    }, [currentSlide]);
 
     const settings = {
-        ...skillCarouselSettings((i) => (
-            <button className="skill-card w-20 h-85 p-6 flex items-center bg-white justify-center cursor-pointer">
-                <img
-                    src={`/skillsLogos/${skills[i].img}`}
-                    alt={`${skills[i].name} image`}
-                    className="w-full h-full object-contain transition"
-                />
-            </button>
-        )),
+        ...skillCarouselSettings,
         beforeChange: (_, next) => {
+            setCurrentSkill(skills[next]);
             setCurrentSlide(next);
         },
     };
@@ -57,11 +53,11 @@ function SkillCarousel() {
 
     return (
         <section className="w-full flex justify-center items-center py-8">
-            <div className="w-full max-w-[50vw]">
+            <div className="w-full max-w-[60vw]">
                 <Slider ref={sliderRef} {...settings} className="relative">
                     {skills.map((skill, index) => (
                         <div key={index} className=" px-4">
-                            <div className="skill-card h-85 p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer">
+                            <div className="skill-card h-95 p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer">
                                 {renderSlideButton(index)}
                                 <img
                                     src={`/skillsLogos/${skill.img}`}
