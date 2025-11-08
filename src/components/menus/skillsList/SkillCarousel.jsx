@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import { skillCarouselSettings } from "../../../utils/skillCarouselSettings.js";
 import { creatorData } from "../../../services/data/creatorData.js";
@@ -6,8 +7,14 @@ import { creatorData } from "../../../services/data/creatorData.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function SkillCarousel({ setCurrentSkill, currentSlide, setCurrentSlide }) {
+function SkillCarousel({
+    currentSkill,
+    setCurrentSkill,
+    currentSlide,
+    setCurrentSlide,
+}) {
     const sliderRef = useRef(null);
+    const navigate = useNavigate();
     const skills = creatorData.skills;
 
     useEffect(() => {
@@ -51,13 +58,24 @@ function SkillCarousel({ setCurrentSkill, currentSlide, setCurrentSlide }) {
         return null;
     };
 
+    const handleClick = (skill, index) => {
+        if (skill === currentSkill.name) {
+            navigate(`${index}`);
+        }
+    };
+
     return (
         <section className="w-full flex justify-center items-center py-8">
-            <div className="w-full max-w-[60vw]">
+            <div className="w-full max-w-[65vw]">
                 <Slider ref={sliderRef} {...settings} className="relative">
                     {skills.map((skill, index) => (
                         <div key={index} className=" px-4">
-                            <div className="skill-card h-95 p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer">
+                            <div
+                                className="skill-card h-96 p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer"
+                                onClick={() => {
+                                    handleClick(skill.name, index);
+                                }}
+                            >
                                 {renderSlideButton(index)}
                                 <img
                                     src={`/skillsLogos/${skill.img}`}

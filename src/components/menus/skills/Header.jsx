@@ -1,7 +1,11 @@
-function Header({ classname }) {
+function Header({ skill, classname }) {
     return (
         <header>
-            <h1 className="text-6xl text-white tracking-[-0.08em]">SKILLS</h1>
+            <h1
+                className={`text-6xl text-white font-rodin tracking-[-0.08em] ${classname}`}
+            >
+                {skill.toUpperCase()}
+            </h1>
         </header>
     );
 }

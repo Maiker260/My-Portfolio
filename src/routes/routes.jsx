@@ -3,6 +3,7 @@ import Projects from "../pages/Projects.jsx";
 import ProjectList from "../pages/ProjectList.jsx";
 import ExperienceList from "../pages/ExperienceList.jsx";
 import Experiences from "../pages/Experiences.jsx";
+import SkillsList from "../pages/SkillsList.jsx";
 import Skills from "../pages/Skills.jsx";
 
 const routes = [
@@ -28,6 +29,10 @@ const routes = [
     },
     {
         path: "/skills",
+        element: <SkillsList />,
+    },
+    {
+        path: "/skills/:id",
         element: <Skills />,
     },
     {

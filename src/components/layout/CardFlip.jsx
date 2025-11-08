@@ -9,7 +9,6 @@ function CardFlip({
     changeContent,
     setChangeContent,
     setIsFlipping,
-    isFlipping,
 }) {
     const [job, setJob] = useState(data[id]);
     const [rotation, setRotation] = useState(180);
