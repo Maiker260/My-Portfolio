@@ -10,7 +10,7 @@ function CardFlip({
     setChangeContent,
     setIsFlipping,
 }) {
-    const [job, setJob] = useState(data[id]);
+    const [frontImageData, setFrontImageData] = useState(data[id]);
     const [rotation, setRotation] = useState(180);
     const [showFront, setShowFront] = useState(true);
 
@@ -23,8 +23,8 @@ function CardFlip({
             setShowFront(false);
 
             const nextImg = new Image();
-            nextImg.src = `/companyLogos/${data[id].logo}`;
-            nextImg.onload = () => setJob(data[id]);
+            nextImg.src = data[id].logo;
+            nextImg.onload = () => setFrontImageData(data[id]);
         }, 300);
 
         setTimeout(() => {
@@ -77,7 +77,7 @@ function CardFlip({
                 >
                     {showFront && (
                         <img
-                            src={`/companyLogos/${job.logo}`}
+                            src={frontImageData.logo}
                             alt="card front"
                             draggable={false}
                             className="w-full h-full object-contain rounded-xl"

@@ -39,17 +39,16 @@ export const creatorData = {
             titleType: "sec",
         },
         {
+            name: "EDUCATION",
+            component: "Education",
+            url: "/education",
+            titleType: "third",
+        },
+        {
             name: "ABOUT ME",
             component: "AboutMe",
             url: "/aboutme",
             titleType: "main",
-        },
-        {
-            // EDUCATION????
-            name: "DOWNLOAD CV",
-            component: "DownloadCV",
-            url: "/downloadcv",
-            titleType: "third",
         },
         {
             name: "CONTACT",

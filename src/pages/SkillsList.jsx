@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
+import { MainPageContext } from "../context/mainPageContext.jsx";
 import Intro from "../components/menus/skillsList/animations/Intro.jsx";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
 import Header from "../components/menus/skillsList/Header.jsx";
@@ -10,11 +11,25 @@ import SkillCarouselPaging from "../components/menus/skillsList/SkillCarouselPag
 
 function SkillsList({ disableIntro }) {
     const location = useLocation();
-    const isTransition =
-        location.state?.cameFromTransition || disableIntro || false;
+    const [isTransition, setIsTransition] = useState(
+        () => location.state?.cameFromTransition || disableIntro || false
+    );
+
+    const { setSkillSelectedData, skillSelectedData } =
+        useContext(MainPageContext);
+
+    useEffect(() => {
+        if (isTransition) {
+            setIsTransition(false);
+        }
+    }, [isTransition]);
 
     const skills = creatorData.skills;
-    const [currentSkill, setCurrentSkill] = useState(skills[0]);
+
+    const [currentSkill, setCurrentSkill] = useState(
+        skillSelectedData || skills[0]
+    );
+
     const [currentSlide, setCurrentSlide] = useState(0);
 
     return (
@@ -33,6 +48,7 @@ function SkillsList({ disableIntro }) {
                 setCurrentSkill={setCurrentSkill}
                 currentSlide={currentSlide}
                 setCurrentSlide={setCurrentSlide}
+                setSkillSelectedData={setSkillSelectedData}
             />
             <Intro
                 start={{ x: "100%" }}

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import List from "./List.jsx";
 import NavigationSection from "../NavigationSection.jsx";
@@ -5,8 +6,16 @@ import Intro from "./animations/Intro.jsx";
 
 function ListSelector({ name, data, guideMessage, disableIntro }) {
     const location = useLocation();
-    const isTransition =
-        location.state?.cameFromTransition || disableIntro || false;
+    const [isTransition, setIsTransition] = useState(
+        () => location.state?.cameFromTransition || disableIntro || false
+    );
+
+    useEffect(() => {
+        if (isTransition) {
+            setIsTransition(false);
+        }
+    }, [isTransition]);
+
     const titleName = name.toUpperCase();
 
     return (

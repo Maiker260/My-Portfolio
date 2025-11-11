@@ -6,7 +6,7 @@ export const pageComponents = {
     Projects: ProjectList,
     Experience: ExperienceList,
     Skills: SkillsList,
+    // Education: Education,
     // AboutMe: AboutMe,
-    // DownloadCv: DownloadCv,
     // Contact: Contact
 };

@@ -3,10 +3,11 @@ function SkillCarouselPaging({
     currentSkill,
     setCurrentSlide = () => {},
     changeCurrentSkill = () => {},
+    isCardFlipping = false,
     className,
 }) {
     const cardSelectedClasses = (name) =>
-        name === currentSkill ? "opacity-100" : "opacity-60";
+        name === currentSkill ? "opacity-100" : "opacity-60 hover:opacity-80";
 
     return (
         <section className={`flex gap-3 w-fit ${className}`}>
@@ -17,9 +18,10 @@ function SkillCarouselPaging({
                         skill
                     )} rounded-md flex items-center bg-white justify-center cursor-pointer`}
                     onClick={() => {
-                        setCurrentSlide(i);
-                        changeCurrentSkill(i);
-                        // console.log(currentSkill);
+                        if (!isCardFlipping) {
+                            setCurrentSlide(i);
+                            changeCurrentSkill(i);
+                        }
                     }}
                 >
                     <img

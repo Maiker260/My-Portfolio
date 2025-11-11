@@ -5,4 +5,6 @@ export const MainPageContext = createContext({
     setBackHomeTransition: () => {},
     currentPage: null,
     setCurrentPage: () => {},
+    skillSelectedData: {},
+    setSkillSelectedData: () => {},
 });

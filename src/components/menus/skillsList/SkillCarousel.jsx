@@ -12,6 +12,7 @@ function SkillCarousel({
     setCurrentSkill,
     currentSlide,
     setCurrentSlide,
+    setSkillSelectedData,
 }) {
     const sliderRef = useRef(null);
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ function SkillCarousel({
         ...skillCarouselSettings,
         beforeChange: (_, next) => {
             setCurrentSkill(skills[next]);
+            setSkillSelectedData(skills[next]);
             setCurrentSlide(next);
         },
     };

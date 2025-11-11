@@ -11,8 +11,10 @@ function Skills() {
     const navigate = useNavigate();
     const { id } = useParams();
     const allSkills = creatorData.skills;
-    const skill = creatorData.skills[id];
-    const [currentSkillCard, setCurrentSkillCard] = useState("javascript");
+    const skill = allSkills[id];
+    const [skillSelected, setSkillSelected] = useState(skill.abilities[0]);
+    const [isCardFlipping, setIsCardFlipping] = useState(false);
+    const [changeContent, setChangeContent] = useState(false);
 
     const changeCurrentSkill = (i) => {
         navigate(`/skills/${i}`);
@@ -20,16 +22,21 @@ function Skills() {
 
     return (
         <main className="relative min-h-screen flex flex-col overflow-hidden color-bg-details-third-gradient-top">
-            <Intro start={{ x: "-60%" }} end={{ x: "0" }}>
+            <Intro id={id} start={{ x: "-60%" }} end={{ x: "0" }}>
                 <Header
                     skill={skill.name}
                     classname={"absolute top-20 left-10"}
                 />
             </Intro>
             <SkillsOrbit
+                id={id}
                 skill={skill}
-                currentSkillCard={currentSkillCard}
-                setCurrentSkillCard={setCurrentSkillCard}
+                skillSelected={skillSelected}
+                setSkillSelected={setSkillSelected}
+                isCardFlipping={isCardFlipping}
+                setIsCardFlipping={setIsCardFlipping}
+                changeContent={changeContent}
+                setChangeContent={setChangeContent}
             />
 
             <Intro
@@ -41,6 +48,7 @@ function Skills() {
                     skills={allSkills}
                     currentSkill={skill}
                     changeCurrentSkill={changeCurrentSkill}
+                    isCardFlipping={isCardFlipping}
                 />
             </Intro>
 
