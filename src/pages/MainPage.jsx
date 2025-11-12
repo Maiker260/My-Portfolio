@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { MainPageContext } from "../context/mainPageContext.jsx";
+import { MainPageContext } from "../context/MainPageContext.jsx";
 import List from "../components/menus/main-menu/List.jsx";
 import Intro from "../components/menus/main-menu/animations/Intro.jsx";
 import MainTitle from "../components/menus/main-menu/MainTitle.jsx";

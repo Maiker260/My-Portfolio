@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "./routes/routes.jsx";
-import { MainPageContext } from "./context/mainPageContext.jsx";
+import { MainPageContext } from "./context/MainPageContext.jsx";
 import { creatorData } from "./services/data/creatorData.js";
 
 const router = createBrowserRouter(routes);

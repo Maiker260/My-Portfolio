@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { MainPageContext } from "../context/mainPageContext.jsx";
+import { MainPageContext } from "../context/MainPageContext.jsx";
 import Intro from "../components/menus/skillsList/animations/Intro.jsx";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
 import Header from "../components/menus/skillsList/Header.jsx";

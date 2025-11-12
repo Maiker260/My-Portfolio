@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MainPageContext } from "../../../../context/mainPageContext.jsx";
+import { MainPageContext } from "../../../../context/MainPageContext.jsx";
 import { pageComponents } from "../../../../services/data/pageComponents.js";
 
 function TransitionToMainPage() {

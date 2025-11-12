@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { MainPageContext } from "../../context/mainPageContext.jsx";
+import { MainPageContext } from "../../context/MainPageContext.jsx";
 import { useNavigate } from "react-router-dom";
 import { BackButton } from "../icons/BackButton.jsx";
 import { Home } from "../icons/Home.jsx";
