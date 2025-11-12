@@ -25,6 +25,7 @@
     --color-select-icons: #65dcfb;
     --color-menu-blue-icons: #3f7ce1;
     --color-icons-neutral: #262626;
+    --color-icons-light-blue: #98fcfe;
 
     /* Background */
     --color-bg-details-main: #56baeb;
@@ -177,6 +178,10 @@ body {
 
     .group:hover .group-hover\:fill-select-icons {
         fill: var(--color-select-icons);
+    }
+
+    .color-icons-light-blue {
+        fill: var(--color-icons-light-blue);
     }
 
     .bg-menu-blue-icons {

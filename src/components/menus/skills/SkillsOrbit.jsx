@@ -1,10 +1,10 @@
 // FOUND CODE SIMILAR TO THE LIBRARY "REACT PLANET"
+
 import SkillCardFlip from "./SkillCardFlip.jsx";
 import { motion as Motion } from "motion/react";
 import Intro from "./animations/Intro.jsx";
 
 export default function SkillsOrbit({
-    id = null,
     skill,
     skillSelected,
     setSkillSelected,
@@ -12,12 +12,13 @@ export default function SkillsOrbit({
     setIsCardFlipping,
     changeContent,
     setChangeContent,
+    id = null,
 }) {
     const abilities = skill.abilities;
     const size = 600; // logical coordinate space
     const center = size / 2; // center point
     const radius = 250; // orbit radius
-    const circleRadius = 25; // each item's size
+    const circleRadius = 30; // each item's size
     const centerCardSize = { width: 220, height: 320 };
 
     return (
@@ -38,7 +39,12 @@ export default function SkillsOrbit({
 
                     return (
                         <g key={i}>
+                            <clipPath id={`clip-${i}`}>
+                                <circle r={circleRadius * 0.9} cx="0" cy="0" />
+                            </clipPath>
+
                             <Intro
+                                id={id}
                                 tag="g"
                                 start={{
                                     opacity: 0,
@@ -74,6 +80,10 @@ export default function SkillsOrbit({
                                 <Motion.g
                                     key={i}
                                     className={"cursor-pointer relative -z-10"}
+                                    whileHover={{
+                                        scale: 1.1,
+                                        rotate: 5,
+                                    }}
                                     initial={{
                                         x: center,
                                         y: center,
@@ -100,19 +110,19 @@ export default function SkillsOrbit({
                                     <circle
                                         r={circleRadius}
                                         fill={
-                                            isSelected ? "#ff0000" : "#00ff00"
+                                            isSelected ? "#0e0e50" : "#98fcfe"
                                         }
                                     />
-                                    <text
-                                        y={5}
-                                        textAnchor="middle"
-                                        fontSize="16"
-                                        fill="#262626"
-                                        fontWeight="bold"
+                                    <image
+                                        href={item.img}
+                                        width={circleRadius * 1.4}
+                                        height={circleRadius * 1.4}
+                                        x={-circleRadius * 0.7}
+                                        y={-circleRadius * 0.7}
+                                        preserveAspectRatio="xMidYMid meet"
+                                        clipPath={`url(#clip-${i})`}
                                         className="pointer-events-none"
-                                    >
-                                        {item.name}
-                                    </text>
+                                    />
                                 </Motion.g>
                             </Intro>
                         </g>

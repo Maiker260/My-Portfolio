@@ -79,16 +79,18 @@ function SkillCardFlip({
                     }}
                 >
                     {showFront && (
-                        <article className="flex flex-col items-center justify-center h-full gap-4 p-4 text-lg font-semibold color-bg-details-eight text-menu-cyan-main rounded-lg shadow-md">
+                        <article className="flex flex-col items-center justify-center h-full gap-4 p-4 text-lg font-semibold color-bg-details-eight rounded-lg shadow-md">
                             <div className="w-full h-full color-bg-details-seventh p-4 rounded-lg">
                                 <img
-                                    src={frontImageData.logo}
+                                    src={frontImageData}
                                     alt="card front"
                                     draggable={false}
                                     className="w-full h-full object-contain rounded-lg"
                                 />
                             </div>
-                            <span>{skillName}</span>
+                            <span className="text-menu-cyan-main text-center">
+                                {skillName}
+                            </span>
                         </article>
                     )}
                 </div>

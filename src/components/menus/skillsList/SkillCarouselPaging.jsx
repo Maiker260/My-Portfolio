@@ -1,10 +1,12 @@
 function SkillCarouselPaging({
+    className,
     skills,
     currentSkill,
     setCurrentSlide = () => {},
     changeCurrentSkill = () => {},
     isCardFlipping = false,
-    className,
+    setSkillSelected = () => {},
+    setChangeContent = () => {},
 }) {
     const cardSelectedClasses = (name) =>
         name === currentSkill ? "opacity-100" : "opacity-60 hover:opacity-80";
@@ -18,7 +20,9 @@ function SkillCarouselPaging({
                         skill
                     )} rounded-md flex items-center bg-white justify-center cursor-pointer`}
                     onClick={() => {
-                        if (!isCardFlipping) {
+                        if (!isCardFlipping && skill !== currentSkill) {
+                            setSkillSelected(skill.abilities[0]);
+                            setChangeContent(true);
                             setCurrentSlide(i);
                             changeCurrentSkill(i);
                         }

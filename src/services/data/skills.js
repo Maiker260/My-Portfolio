@@ -3,90 +3,72 @@ export const skillsData = [
         name: "Programming",
         img: "programming-icon.png",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat?",
+            "Building efficient, scalable, and maintainable software solutions using modern web technologies.",
         abilities: [
-            { name: "First", img: "/" },
-            { name: "Second", img: "/" },
-            { name: "Third", img: "/" },
-            { name: "Fourth", img: "/" },
-            { name: "Fifth", img: "/" },
-            { name: "Sixth", img: "/" },
-            { name: "Seventh", img: "/" },
+            {
+                name: "React",
+                img: "/skillsLogos/abilities/programming/react.png",
+            },
+            {
+                name: "Javascript",
+                img: "/skillsLogos/abilities/programming/javascript.png",
+            },
+            {
+                name: "Tailwind",
+                img: "/skillsLogos/abilities/programming/tailwind.png",
+            },
+            { name: "CSS", img: "/skillsLogos/abilities/programming/css.png" },
+            {
+                name: "HTML",
+                img: "/skillsLogos/abilities/programming/html.png",
+            },
         ],
     },
     {
         name: "Server Administrator",
         img: "serverAdmin-icon.png",
         description:
-            "Lorem ipsum consectetur adipisicing elit. Dolor sit amet eum, fugiat?",
+            "Managing and securing servers across multiple platforms to ensure reliable, performant, and secure system environments.",
         abilities: [
-            { name: "First", img: "/" },
-            { name: "Second", img: "/" },
-            { name: "Fourth", img: "/" },
-            { name: "Seventh", img: "/" },
-            { name: "Third", img: "/" },
-            { name: "Fifth", img: "/" },
-            { name: "Sixth", img: "/" },
+            {
+                name: "Windows",
+                img: "/skillsLogos/abilities/server-administrator/windows.png",
+            },
+            {
+                name: "Linux",
+                img: "/skillsLogos/abilities/server-administrator/linux.png",
+            },
+            {
+                name: "MacOS",
+                img: "/skillsLogos/abilities/server-administrator/macOS.png",
+            },
+            {
+                name: "Networking",
+                img: "/skillsLogos/abilities/server-administrator/networking.png",
+            },
+            {
+                name: "Virtualization",
+                img: "/skillsLogos/abilities/server-administrator/virtualization.png",
+            },
+            {
+                name: "SSL Certificates",
+                img: "/skillsLogos/abilities/server-administrator/ssl-certificate.png",
+            },
         ],
     },
     {
         name: "Soft Skills",
         img: "softSkills-icon.png",
         description:
-            "Lorem ipsum, consectetur dolor sit amet adipisicing elit. Eum, fugiat?",
+            "Working in collaborative environments where communication, adaptability, and problem-solving drive success.",
         abilities: [
-            { name: "Fourth", img: "/" },
-            { name: "Fifth", img: "/" },
-            { name: "First", img: "/" },
-            { name: "Third", img: "/" },
-            { name: "Seventh", img: "/" },
-            { name: "Sixth", img: "/" },
-            { name: "Second", img: "/" },
-        ],
-    },
-    {
-        name: "Programming",
-        img: "programming-icon.png",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat?",
-        abilities: [
-            { name: "Sixth", img: "/" },
-            { name: "Fourth", img: "/" },
-            { name: "Third", img: "/" },
-            { name: "First", img: "/" },
-            { name: "Fifth", img: "/" },
-            { name: "Seventh", img: "/" },
-            { name: "Second", img: "/" },
-        ],
-    },
-    {
-        name: "Server Administrator",
-        img: "serverAdmin-icon.png",
-        description:
-            "Lorem ipsum consectetur adipisicing elit. Dolor sit amet eum, fugiat?",
-        abilities: [
-            { name: "Fifth", img: "/" },
-            { name: "Second", img: "/" },
-            { name: "First", img: "/" },
-            { name: "Seventh", img: "/" },
-            { name: "Fourth", img: "/" },
-            { name: "Sixth", img: "/" },
-            { name: "Third", img: "/" },
-        ],
-    },
-    {
-        name: "Soft Skills",
-        img: "softSkills-icon.png",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugiat?",
-        abilities: [
-            { name: "Third", img: "/" },
-            { name: "Seventh", img: "/" },
-            { name: "Second", img: "/" },
-            { name: "Fifth", img: "/" },
-            { name: "First", img: "/" },
-            { name: "Sixth", img: "/" },
-            { name: "Fourth", img: "/" },
+            { name: "Communication", img: "/skillsLogos/abilities/" },
+            { name: "Teamwork", img: "/skillsLogos/abilities/" },
+            { name: "Problem Solving", img: "/skillsLogos/abilities/" },
+            { name: "Adaptability", img: "/skillsLogos/abilities/" },
+            { name: "Time Management", img: "/skillsLogos/abilities/" },
+            { name: "Critical Thinking", img: "/skillsLogos/abilities/" },
+            { name: "Leadership", img: "/skillsLogos/abilities/" },
         ],
     },
 ];

@@ -17,8 +17,16 @@ function MiddleTitle({ currentSkill, isAnimationDisable }) {
                 </Intro>
                 <div className="w-[65%] h-1 flex justify-center self-end items-center overflow-hidden bg-white" />
             </div>
-            <div className="w-full relative left-[45%] top-1.5 origin-center">
-                <h3 className="max-w-lg text-xl text-balance">{description}</h3>
+            <div className="w-full relative left-[40%] top-1.5 origin-center">
+                <Intro
+                    key={currentSkill.name}
+                    start={{ x: "25%" }}
+                    end={{ x: "0" }}
+                    className="max-w-lg text-xl text-balance"
+                    isAnimationDisable={isAnimationDisable}
+                >
+                    <li>{description}</li>
+                </Intro>
             </div>
         </section>
     );

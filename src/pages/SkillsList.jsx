@@ -33,23 +33,30 @@ function SkillsList({ disableIntro }) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     return (
-        <main className="relative min-h-screen flex flex-col gap-5 overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen flex flex-col overflow-hidden color-bg-details-third-gradient-top">
             <Intro
                 start={{ x: "-100%" }}
                 end={{ x: "0" }}
                 isAnimationDisable={isTransition}
-                className={"mt-15 px-20 font-rodin"}
+                className={"mt-15 px-10 font-rodin"}
             >
                 <Header />
             </Intro>
-            {/* NEED TO ADD AN ANIMATION TO THE CAROUSEL */}
-            <SkillCarousel
-                currentSkill={currentSkill}
-                setCurrentSkill={setCurrentSkill}
-                currentSlide={currentSlide}
-                setCurrentSlide={setCurrentSlide}
-                setSkillSelectedData={setSkillSelectedData}
-            />
+            <Intro
+                start={{ opacity: 0, scale: 0.5 }}
+                end={{ opacity: 1, scale: 1 }}
+                delay={0.5}
+                isAnimationDisable={isTransition}
+                className="flex justify-center items-center"
+            >
+                <SkillCarousel
+                    currentSkill={currentSkill}
+                    setCurrentSkill={setCurrentSkill}
+                    currentSlide={currentSlide}
+                    setCurrentSlide={setCurrentSlide}
+                    setSkillSelectedData={setSkillSelectedData}
+                />
+            </Intro>
             <Intro
                 start={{ x: "100%" }}
                 end={{ x: "0" }}

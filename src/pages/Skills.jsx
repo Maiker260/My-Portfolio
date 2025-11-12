@@ -25,7 +25,7 @@ function Skills() {
             <Intro id={id} start={{ x: "-60%" }} end={{ x: "0" }}>
                 <Header
                     skill={skill.name}
-                    classname={"absolute top-20 left-10"}
+                    classname={"absolute top-16 left-10"}
                 />
             </Intro>
             <SkillsOrbit
@@ -42,13 +42,15 @@ function Skills() {
             <Intro
                 start={{ x: "-60%" }}
                 end={{ x: "0" }}
-                className={"absolute bottom-8 left-13"}
+                className={"absolute bottom-12 left-13"}
             >
                 <SkillCarouselPaging
                     skills={allSkills}
                     currentSkill={skill}
                     changeCurrentSkill={changeCurrentSkill}
                     isCardFlipping={isCardFlipping}
+                    setSkillSelected={setSkillSelected}
+                    setChangeContent={setChangeContent}
                 />
             </Intro>
 
