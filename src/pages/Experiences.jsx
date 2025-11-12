@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
-import Intro from "../components/menus/projects/animations/intro.jsx";
+import Intro from "../components/menus/projects/animations/Intro.jsx";
 import UpperLeft from "../components/menus/experiences/UpperLeft.jsx";
 import LowerRight from "../components/menus/experiences/LowerRight.jsx";
 import CardFlip from "../components/layout/CardFlip.jsx";

@@ -7,7 +7,7 @@ import SkillDetailsBox from "../components/menus/projects/SkillDetailsBox.jsx";
 import TextTop from "../components/menus/projects/TextTop.jsx";
 import { creatorData } from "../services/data/creatorData.js";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
-import Intro from "../components/menus/projects/animations/intro.jsx";
+import Intro from "../components/menus/projects/animations/Intro.jsx";
 
 function Projects() {
     const [hoveredSkill, setHoveredSkill] = useState(null);

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { ProjectDataContext } from "../../../context/ProjectDataContext.jsx";
 import { OpenInNew } from "../../icons/OpenInNew.jsx";
 import AnimatedBump from "../../animations/AnimatedBump.jsx";
-import Intro from "./animations/intro.jsx";
+import Intro from "./animations/Intro.jsx";
 
 function SkillDetailsBox({
     hoveredSkill,
