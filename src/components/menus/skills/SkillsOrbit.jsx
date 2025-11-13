@@ -4,7 +4,7 @@ import SkillCardFlip from "./SkillCardFlip.jsx";
 import { motion as Motion } from "motion/react";
 import Intro from "./animations/Intro.jsx";
 
-export default function SkillsOrbit({
+function SkillsOrbit({
     skill,
     skillSelected,
     setSkillSelected,
@@ -152,3 +152,5 @@ export default function SkillsOrbit({
         </div>
     );
 }
+
+export default SkillsOrbit;

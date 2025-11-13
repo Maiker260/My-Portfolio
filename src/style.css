@@ -12,6 +12,7 @@
 
     --color-text-details-fourth: #98fcfe;
     --color-text-details-fifth: #a7a7a7;
+    --color-text-details-sixth: #000254;
 
     --color-text-neutral: #262626;
 
@@ -105,6 +106,10 @@ body {
         color: var(--color-text-details-third);
     }
 
+    .group:hover .group-hover\:color-text-details-third {
+        color: var(--color-text-details-third);
+    }
+
     .color-text-details-fourth {
         color: var(--color-text-details-fourth);
     }
@@ -113,8 +118,8 @@ body {
         color: var(--color-text-details-fifth);
     }
 
-    .group:hover .group-hover\:color-text-details-third {
-        color: var(--color-text-details-third);
+    .color-text-details-sixth {
+        color: var(--color-text-details-sixth);
     }
 
     .text-shadow-main {
@@ -184,9 +189,15 @@ body {
         fill: var(--color-icons-light-blue);
     }
 
+    .color-icons-tenth {
+        fill: var(--color-bg-details-tenth);
+    }
+
     .bg-menu-blue-icons {
         background-color: var(--color-menu-blue-icons);
     }
+
+    /* Gradients */
 
     .bg-menu-blue-icons-gradient {
         background: linear-gradient(

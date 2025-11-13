@@ -5,6 +5,7 @@ import ExperienceList from "../pages/ExperienceList.jsx";
 import Experiences from "../pages/Experiences.jsx";
 import SkillsList from "../pages/SkillsList.jsx";
 import Skills from "../pages/Skills.jsx";
+import Education from "../pages/Education.jsx";
 
 const routes = [
     {
@@ -36,15 +37,15 @@ const routes = [
         element: <Skills />,
     },
     {
+        path: "/education",
+        element: <Education />,
+    },
+    {
         path: "/aboutme",
         // element: <AboutMe />,
     },
     {
         path: "/contact",
-        // element: <Contact />,
-    },
-    {
-        path: "/downloadcv",
         // element: <Contact />,
     },
 ];

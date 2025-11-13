@@ -50,11 +50,12 @@ export const creatorData = {
             url: "/aboutme",
             titleType: "main",
         },
-        {
-            name: "CONTACT",
-            component: "Contact",
-            url: "/contact",
-            titleType: "sec",
-        },
+        // ???????????????????????????????
+        // {
+        //     name: "CONTACT",
+        //     component: "Contact",
+        //     url: "/contact",
+        //     titleType: "sec",
+        // },
     ],
 };

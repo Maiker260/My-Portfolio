@@ -36,7 +36,6 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
                 </h2>
             </div>
             <List
-                name={name}
                 data={data}
                 className={
                     "absolute top-[7%] left-[4%] h-[78%] w-[40vw] z-50 p-4 origin-top-left"

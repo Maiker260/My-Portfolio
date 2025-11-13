@@ -35,6 +35,10 @@ export const skillsData = [
                 img: "/skillsLogos/abilities/server-administrator/windows.png",
             },
             {
+                name: "Windows Server",
+                img: "/skillsLogos/abilities/server-administrator/windows-server.png",
+            },
+            {
                 name: "Linux",
                 img: "/skillsLogos/abilities/server-administrator/linux.png",
             },
@@ -62,13 +66,34 @@ export const skillsData = [
         description:
             "Working in collaborative environments where communication, adaptability, and problem-solving drive success.",
         abilities: [
-            { name: "Communication", img: "/skillsLogos/abilities/" },
-            { name: "Teamwork", img: "/skillsLogos/abilities/" },
-            { name: "Problem Solving", img: "/skillsLogos/abilities/" },
-            { name: "Adaptability", img: "/skillsLogos/abilities/" },
-            { name: "Time Management", img: "/skillsLogos/abilities/" },
-            { name: "Critical Thinking", img: "/skillsLogos/abilities/" },
-            { name: "Leadership", img: "/skillsLogos/abilities/" },
+            {
+                name: "Communication",
+                img: "/skillsLogos/abilities/soft-skills/communication.png",
+            },
+            {
+                name: "Teamwork",
+                img: "/skillsLogos/abilities/soft-skills/teamwork.png",
+            },
+            {
+                name: "Problem Solving",
+                img: "/skillsLogos/abilities/soft-skills/problem-solving.png",
+            },
+            {
+                name: "Adaptability",
+                img: "/skillsLogos/abilities/soft-skills/adaptability.png",
+            },
+            {
+                name: "Time Management",
+                img: "/skillsLogos/abilities/soft-skills/time-management.png",
+            },
+            {
+                name: "Critical Thinking",
+                img: "/skillsLogos/abilities/soft-skills/critical-thinking.png",
+            },
+            {
+                name: "Leadership",
+                img: "/skillsLogos/abilities/soft-skills/leadership.png",
+            },
         ],
     },
 ];

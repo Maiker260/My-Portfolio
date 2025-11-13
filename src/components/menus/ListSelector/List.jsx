@@ -1,7 +1,7 @@
 import ListOption from "./ListOption.jsx";
 import Intro from "./animations/Intro.jsx";
 
-function List({ name, data, className, isAnimationDisable }) {
+function List({ data, className, isAnimationDisable }) {
     const items = data;
 
     return (
