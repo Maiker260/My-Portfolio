@@ -2,6 +2,7 @@ import { icons } from "../../components/icons/icons.js";
 import { projectData } from "./Projects.js";
 import { experienceData } from "./experiences.js";
 import { skillsData } from "./skills.js";
+import { educationData } from "./education.js";
 
 export const creatorData = {
     contact: [
@@ -19,6 +20,7 @@ export const creatorData = {
     projects: projectData,
     experience: experienceData,
     skills: skillsData,
+    education: educationData,
     infoList: [
         {
             name: "PROJECTS",

@@ -1,47 +1,33 @@
 import { useState } from "react";
 import EducationListOption from "./EducationListOption.jsx";
+import { creatorData } from "../../../services/data/creatorData.js";
+import EducationInfo from "./EducationInfo.jsx";
 
 function EducationList() {
-    const [optionSelected, setOptionSelected] = useState(
-        "High School Diploma in Dos Cercas no se."
-    );
-
-    const dummyData = [
-        {
-            date: "2024-2027",
-            institution: "Dos Cercas High School",
-            status: "In Progress",
-        },
-        {
-            date: "2023-2026",
-            institution: "Dos Cercas High School",
-            status: "Completed",
-        },
-        {
-            date: "2022-2025",
-            institution: "Dos Cercas High School",
-            status: "Completed",
-        },
-    ];
+    const educationData = creatorData.education;
+    const [optionSelected, setOptionSelected] = useState(null);
 
     return (
-        <article className="absolute top-[30%] left-[5%] flex flex-col gap-20 w-full max-w-[55vw] text-white font-skipstdb">
+        <article className="absolute top-[27%] left-[5%] flex flex-col gap-12 w-full max-w-[60vw] text-white font-skipstdb">
             <div className="flex flex-col gap-1 text-lg italic">
                 <div className="flex select-none text-center">
                     <span className="flex-[1]">Date</span>
-                    <span className="flex-[2]">Institution</span>
+                    <span className="flex-[2]">Field</span>
                     <span className="flex-[1]">Status</span>
                 </div>
                 <ul className="list-none">
-                    {dummyData.map((item, index) => (
-                        <EducationListOption key={index} item={item} />
+                    {educationData.map((item, index) => (
+                        <EducationListOption
+                            key={index}
+                            item={item}
+                            setOptionSelected={setOptionSelected}
+                        />
                     ))}
                 </ul>
             </div>
-            <div className="flex flex-col gap-4 ml-30">
-                <h3 className="text-3xl color-text-details-fourth">Info</h3>
-                <li className="text-xl ml-5">{optionSelected}</li>
-            </div>
+            {optionSelected && (
+                <EducationInfo optionSelected={optionSelected} />
+            )}
         </article>
     );
 }

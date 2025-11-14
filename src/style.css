@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin 'tailwind-scrollbar';
+
 :root {
     /* Text */
     --color-text-menu-cyan-main: #93f8f9;
@@ -408,6 +410,19 @@ body {
 
 .right-1_5 {
     right: 6px;
+}
+
+.scrollbar-visible {
+    overflow-y: scroll !important; /* important! */
+}
+
+/* Force non-overlay scrollbar */
+.scrollbar-visible {
+    scrollbar-color: auto auto; /* Firefox */
+}
+
+.scrollbar-visible::-webkit-scrollbar {
+    -webkit-appearance: scrollbartrack-vertical !important;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
