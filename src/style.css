@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@plugin 'tailwind-scrollbar';
-
 :root {
     /* Text */
     --color-text-menu-cyan-main: #93f8f9;
