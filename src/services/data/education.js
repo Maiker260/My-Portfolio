@@ -17,7 +17,7 @@ export const educationData = [
     },
     {
         date: "2022",
-        field: "Linux Essentials",
+        field: "Linux",
         area: "Course",
         institution: "Sykes Tech Academy",
         status: "Completed",

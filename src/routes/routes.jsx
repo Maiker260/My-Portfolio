@@ -6,6 +6,7 @@ import Experiences from "../pages/Experiences.jsx";
 import SkillsList from "../pages/SkillsList.jsx";
 import Skills from "../pages/Skills.jsx";
 import Education from "../pages/Education.jsx";
+import AboutMe from "../pages/AboutMe.jsx";
 
 const routes = [
     {
@@ -42,7 +43,7 @@ const routes = [
     },
     {
         path: "/aboutme",
-        // element: <AboutMe />,
+        element: <AboutMe />,
     },
     {
         path: "/contact",

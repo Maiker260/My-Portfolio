@@ -2,6 +2,7 @@ import EducationList from "../components/menus/education/EducationList.jsx";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
 import Intro from "../components/menus/education/animations/Intro.jsx";
 
+// NEED TO CREATE AN INTRO ANIMATION
 function Education() {
     return (
         <div className="relative w-full min-h-screen overflow-hidden color-bg-details-third-gradient-top">

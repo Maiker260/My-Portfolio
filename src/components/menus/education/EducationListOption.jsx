@@ -12,7 +12,7 @@ function EducationListOption({ item, setOptionSelected }) {
                     <span
                         className={`w-full max-w-[30%] py-1 px-3 font-bold rounded-sm ${
                             item.status === "In Progress"
-                                ? "bg-green-500"
+                                ? "bg-green-400"
                                 : "color-bg-details-seventh"
                         } color-text-details-sixth select-none group-hover:bg-black group-hover:text-white`}
                     >
