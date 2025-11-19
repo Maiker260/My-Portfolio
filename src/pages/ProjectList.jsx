@@ -2,7 +2,7 @@ import ListSelector from "../components/menus/ListSelector/ListSelector.jsx";
 import { creatorData } from "../services/data/creatorData.js";
 
 function ProjectList({ disableIntro }) {
-    const projects = creatorData.projects;
+    const { projects } = creatorData;
 
     return (
         <ListSelector

@@ -12,7 +12,7 @@ import Intro from "../components/menus/projects/animations/Intro.jsx";
 function Projects() {
     const [hoveredSkill, setHoveredSkill] = useState(null);
     const [buttonPressed, setButtonPressed] = useState(null);
-    const projects = creatorData.projects;
+    const { projects } = creatorData;
 
     return (
         <ProjectDataContext.Provider value={projects}>

@@ -24,7 +24,7 @@ function SkillsList({ disableIntro }) {
         }
     }, [isTransition]);
 
-    const skills = creatorData.skills;
+    const { skills } = creatorData;
 
     const [currentSkill, setCurrentSkill] = useState(
         skillSelectedData || skills[0]

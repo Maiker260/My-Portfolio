@@ -5,6 +5,14 @@ import { skillsData } from "./skills.js";
 import { educationData } from "./education.js";
 
 export const creatorData = {
+    author: {
+        name: "Miker Gutierrez",
+        profileData: [
+            "Experienced Tech Support Engineer with 7+ years of experience in Networking, Server Administration, Troubleshooting, Customer Service, etc.",
+            "My current goal is to keep up my professional career by using my experience while continuing to grow my knowledge and skill set.",
+        ],
+        profilePicture: "/other/testImage.avif",
+    },
     contact: [
         {
             name: "LinkedIn",
@@ -18,7 +26,7 @@ export const creatorData = {
         },
     ],
     projects: projectData,
-    experience: experienceData,
+    experiences: experienceData,
     skills: skillsData,
     education: educationData,
     infoList: [

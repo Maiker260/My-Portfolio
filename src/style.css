@@ -114,6 +114,10 @@ body {
         color: var(--color-text-details-fourth);
     }
 
+    .group:hover .group-hover\:color-text-details-fourth {
+        color: var(--color-text-details-fourth);
+    }
+
     .color-text-details-fifth {
         color: var(--color-text-details-fifth);
     }
@@ -264,6 +268,10 @@ body {
     }
 
     .color-bg-details-nineth {
+        background-color: var(--color-bg-details-nineth);
+    }
+
+    .group:hover .group-hover\:color-bg-details-nineth {
         background-color: var(--color-bg-details-nineth);
     }
 

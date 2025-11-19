@@ -13,7 +13,7 @@ function Experiences() {
     const [changeContent, setChangeContent] = useState(false);
 
     const { id } = useParams();
-    const experiences = creatorData.experience;
+    const { experiences } = creatorData;
     const totalExperiences = experiences.length;
 
     return (
