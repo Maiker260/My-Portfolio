@@ -38,7 +38,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
                     textAnchor="end"
                     fill="currentColor"
                     transform="rotate(-57.5, 100, 70)"
-                    className="text-[6px] color-text-details-fifth font-rodin tracking-[-0.1em] select-none"
+                    className="text-[8px] color-text-details-fifth font-rodin tracking-[-0.1em] select-none"
                 >
                     {titleName}
                 </text>

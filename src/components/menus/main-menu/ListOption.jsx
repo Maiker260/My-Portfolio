@@ -7,6 +7,7 @@ function ListOption({
     delay,
     index,
     showContent,
+    showTransition,
     isAnimationDisable,
     onClick,
 }) {
@@ -28,8 +29,12 @@ function ListOption({
     }, []);
 
     const listClasses = isAnimationDisable
-        ? `font-rodin text-menu-cyan-${titleType} tracking-[-0.12em] hover:text-black`
-        : `font-rodin text-menu-cyan-${titleType} opacity-0 animate-[fade-up_600ms_linear_forwards] tracking-[-0.12em] hover:text-black`;
+        ? `font-rodin text-menu-cyan-${titleType} tracking-[-0.12em] ${
+              !showTransition && "hover:text-black"
+          } `
+        : `font-rodin text-menu-cyan-${titleType} opacity-0 animate-[fade-up_600ms_linear_forwards] tracking-[-0.12em] ${
+              !showTransition && "hover:text-black"
+          }`;
 
     return (
         <div
@@ -53,13 +58,16 @@ function ListOption({
                 </span>
 
                 {/* Show hover effect in the List Option */}
-                {showContent && isHovered && size.width > 0 && (
-                    <MenuItemHoverEffect
-                        size={size}
-                        index={index}
-                        name={name}
-                    />
-                )}
+                {showContent &&
+                    isHovered &&
+                    !showTransition &&
+                    size.width > 0 && (
+                        <MenuItemHoverEffect
+                            size={size}
+                            index={index}
+                            name={name}
+                        />
+                    )}
             </div>
         </div>
     );

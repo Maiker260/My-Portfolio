@@ -3,6 +3,7 @@ import { creatorData } from "../../../services/data/creatorData.js";
 
 function List({
     showContent,
+    showTransition,
     setShowTransition,
     setNextContent,
     setNextUrl,
@@ -13,10 +14,12 @@ function List({
     const stagger = 90;
 
     const handleClick = (e, item) => {
-        e.preventDefault();
-        setNextContent(item.component);
-        setNextUrl(item.url);
-        setShowTransition(true);
+        if (!showTransition) {
+            e.preventDefault();
+            setNextContent(item.component);
+            setNextUrl(item.url);
+            setShowTransition(true);
+        }
     };
 
     return (
@@ -34,6 +37,7 @@ function List({
                                 delay={delay}
                                 index={i}
                                 showContent={showContent}
+                                showTransition={showTransition}
                                 isAnimationDisable={isAnimationDisable}
                             />
                         </button>

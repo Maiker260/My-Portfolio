@@ -38,6 +38,7 @@ function MainPage() {
                         showContent ? "opacity-100" : "opacity-0"
                     }`}
                 >
+                    {/* Left Side */}
                     <div className="flex justify-between items-center w-full h-lvh p-8">
                         <section className="self-start h-fit">
                             <Intro
@@ -47,6 +48,7 @@ function MainPage() {
                             />
                         </section>
 
+                        {/* Middle Side */}
                         <Intro
                             showContent={showContent}
                             component={List}
@@ -57,6 +59,7 @@ function MainPage() {
                             cameFromTransition={backHomeTransition}
                         />
 
+                        {/* Right Side */}
                         <section className="w-1/16 h-full flex flex-col justify-between">
                             <SocialMediaIcons
                                 showContent={showContent}
