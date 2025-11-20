@@ -21,7 +21,7 @@ function TransitionNextPage({ NextPage, nextUrl }) {
     };
 
     return (
-        <div className="fixed inset-0 z-[9999] pointer-events-none overflow-hidden">
+        <div className="fixed w-full max-w-[1920px] mx-auto inset-0 z-[9999] pointer-events-none overflow-hidden">
             {/* First Transition */}
             <Motion.div
                 initial={{ scale: 10, opacity: 0 }}
