@@ -21,7 +21,7 @@ function Skills() {
     };
 
     return (
-        <main className="relative min-h-screen flex flex-col overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto flex flex-col overflow-hidden color-bg-details-third-gradient-top">
             <Intro id={id} start={{ x: "-60%" }} end={{ x: "0" }}>
                 <Header
                     skill={skill.name}

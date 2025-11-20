@@ -5,7 +5,7 @@ function HorizontalBanner({ className }) {
     const { author, contact } = creatorData;
 
     return (
-        <div className={`${className} w-full h-full`}>
+        <div className={`${className} size-full`}>
             <svg
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"

@@ -19,22 +19,32 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
     const titleName = name.toUpperCase();
 
     return (
-        <main className="relative min-h-screen overflow-hidden color-bg-details-third-gradient-top">
-            <div
-                className="relative min-h-screen overflow-hidden color-bg-details-third"
-                style={{
-                    clipPath:
-                        "polygon(70% 0, 100% 0, 100% 45%, 65% 100%, 0 100%, 0 97%)",
-                }}
+        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top">
+            {/* Diagonal White Line with Name */}
+            <svg
+                width="100%"
+                height="100vh"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
             >
-                <h2
-                    className={`color-text-details-fifth font-rodin tracking-[-0.1em] ${
-                        name === "Experience" ? "text-8xl" : "text-9xl"
-                    } absolute bottom-[30%] right-0 -rotate-42 select-none`}
+                <polygon
+                    points="70 0, 100 0, 100 45, 65 100, 0 100, 0 97"
+                    fill="#f3f1f2"
+                />
+
+                <text
+                    x="110"
+                    y="56.5"
+                    textAnchor="end"
+                    fill="currentColor"
+                    transform="rotate(-57.5, 100, 70)"
+                    className="text-[6px] color-text-details-fifth font-rodin tracking-[-0.1em] select-none"
                 >
                     {titleName}
-                </h2>
-            </div>
+                </text>
+            </svg>
+
+            {/* List Info */}
             <List
                 data={data}
                 className={

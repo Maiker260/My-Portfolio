@@ -16,7 +16,7 @@ function Projects() {
 
     return (
         <ProjectDataContext.Provider value={projects}>
-            <main className="relative min-h-screen color-bg-details-third overflow-hidden">
+            <main className="relative min-h-screen w-full max-w-[1920px] mx-auto color-bg-details-third overflow-hidden">
                 <DiagonalTopBox />
 
                 <Intro

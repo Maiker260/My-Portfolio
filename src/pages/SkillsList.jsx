@@ -33,7 +33,7 @@ function SkillsList({ disableIntro }) {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     return (
-        <main className="relative min-h-screen flex flex-col overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto flex flex-col overflow-hidden color-bg-details-third-gradient-top">
             <Intro
                 start={{ x: "-100%" }}
                 end={{ x: "0" }}

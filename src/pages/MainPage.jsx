@@ -31,7 +31,7 @@ function MainPage() {
     return (
         <>
             {backHomeTransition && <TransitionToMainPage />}
-            <div className="relative min-h-screen">
+            <div className="relative min-h-screen max-w-[1920px] mx-auto">
                 <BackgroundVideo isAnimationDisable={backHomeTransition} />
                 <main
                     className={`relative z-10 flex items-center justify-center min-h-screen text-white transition-opacity duration-400 ${

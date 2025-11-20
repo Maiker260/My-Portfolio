@@ -17,16 +17,20 @@ function Experiences() {
     const totalExperiences = experiences.length;
 
     return (
-        <main className="relative min-h-screen overflow-hidden color-bg-details-third-gradient-top font-rodin">
-            {/* NEED TO CREATE AN ANIMATION TO MOVE THE DIV LINE TO THE RIGHT */}
-            <div
-                className="relative min-h-screen overflow-hidden color-bg-details-third"
-                style={{
-                    clipPath:
-                        "polygon(100% 0, 100% 80%, 85% 100%, 10% 100%, 90% 0)",
-                }}
-            />
+        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin">
+            {/* White Background Line */}
+            <svg
+                className="absolute inset-0 size-full overflow-hidden"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+            >
+                <polygon
+                    points="100 0, 100 80, 85 100, 10 100, 90 0"
+                    fill="#f3f1f2"
+                />
+            </svg>
 
+            {/* Job Data */}
             <Intro
                 start={{ x: "-100%" }}
                 end={{ x: "0" }}
@@ -44,6 +48,7 @@ function Experiences() {
                 />
             </Intro>
 
+            {/* Job Description */}
             <Intro
                 start={{ x: "100%" }}
                 end={{ x: "0" }}
@@ -57,6 +62,7 @@ function Experiences() {
                 />
             </Intro>
 
+            {/* Middle Card */}
             <Intro
                 start={{ scale: 0, opacity: 0 }}
                 end={{ scale: 1, opacity: 1 }}

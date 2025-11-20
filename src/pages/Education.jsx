@@ -5,12 +5,12 @@ import Intro from "../components/menus/education/animations/Intro.jsx";
 // NEED TO CREATE AN INTRO ANIMATION
 function Education() {
     return (
-        <div className="relative w-full min-h-screen overflow-hidden color-bg-details-third-gradient-top">
+        <div className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top">
             {/* Big White Parallelogram */}
             <svg
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"
-                className="absolute -inset-[3%] w-[107%] h-[107%]"
+                className="absolute -inset-[3%] size-[107%]"
             >
                 <polygon points="1,19 59,0 79,100 11,100" fill="white" />
             </svg>
@@ -19,7 +19,7 @@ function Education() {
             <svg
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"
-                className="absolute -inset-[1%] w-[101%] h-[101%]"
+                className="absolute -inset-[1%] size-[101%]"
             >
                 <polygon
                     points="0,20 60,0 80,100 10,100"

@@ -7,11 +7,17 @@ import { educationData } from "./education.js";
 export const creatorData = {
     author: {
         name: "Miker Gutierrez",
+        profilePicture: "/other/avatar.png",
         profileData: [
             "Experienced Tech Support Engineer with 7+ years of experience in Networking, Server Administration, Troubleshooting, Customer Service, etc.",
-            "My current goal is to keep up my professional career by using my experience while continuing to grow my knowledge and skill set.",
+            "Over time, I discovered a strong passion for coding and problem-solving. I'm now developing my skills in modern web technologies, including JavaScript, React, and Tailwind, with a focus on building clean, responsive, and user-friendly interfaces.",
         ],
-        profilePicture: "/other/testImage.avif",
+        workingOn: [
+            "Actively exploring opportunities in web development",
+            "Building projects with JavaScript, React, and Tailwind",
+            "Strengthening backend fundamentals with Node.js/Express",
+            "Expanding my portfolio with real-world, problem-solving projects",
+        ],
     },
     contact: [
         {

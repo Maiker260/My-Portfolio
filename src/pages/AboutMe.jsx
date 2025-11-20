@@ -18,7 +18,7 @@ function AboutMe({ disableIntro }) {
     }, [isTransition]);
 
     return (
-        <main className="relative w-full min-h-screen overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top">
             <HorizontalBanner />
 
             <ProfilePicture />
