@@ -225,6 +225,55 @@ body {
         );
     }
 
+    .color-bg-details-third-gradient-right {
+        background: linear-gradient(
+            to right,
+            #0104b0,
+            #0c27b7,
+            #1d49bf,
+            #2c66c9,
+            #3d87df,
+            #62d4fa 90%,
+            #86fcfd 95%
+        );
+    }
+
+    .color-bg-details-third-gradient-top {
+        background: linear-gradient(
+            to top,
+            #0104b0,
+            #0c27b7,
+            #1d49bf,
+            #2c66c9,
+            #3d87df,
+            #62d4fa 90%,
+            #86fcfd
+        );
+    }
+
+    .color-bg-details-fifth-gradient {
+        background: linear-gradient(
+            to right,
+            transparent 1%,
+            var(--color-bg-details-fifth),
+            transparent 99%
+        );
+    }
+
+    .color-bg-details-secund-gradient {
+        background: linear-gradient(to top right, #6de9fc 30%, #183ebd);
+    }
+
+    /* Polygons */
+
+    .fill-details-secund {
+        fill: var(--color-bg-details-secund);
+    }
+
+    .fill-details-third {
+        fill: var(--color-bg-details-third);
+    }
+
     /* Background */
 
     .color-bg-details-main {
@@ -285,45 +334,6 @@ body {
 
     .group:hover .group-hover\:color-bg-details-neutral {
         background-color: var(--color-bg-details-neutral);
-    }
-
-    .color-bg-details-secund-gradient {
-        background: linear-gradient(to top right, #6de9fc 30%, #183ebd);
-    }
-
-    .color-bg-details-third-gradient-right {
-        background: linear-gradient(
-            to right,
-            #0104b0,
-            #0c27b7,
-            #1d49bf,
-            #2c66c9,
-            #3d87df,
-            #62d4fa 90%,
-            #86fcfd 95%
-        );
-    }
-
-    .color-bg-details-third-gradient-top {
-        background: linear-gradient(
-            to top,
-            #0104b0,
-            #0c27b7,
-            #1d49bf,
-            #2c66c9,
-            #3d87df,
-            #62d4fa 90%,
-            #86fcfd
-        );
-    }
-
-    .color-bg-details-fifth-gradient {
-        background: linear-gradient(
-            to right,
-            transparent 1%,
-            var(--color-bg-details-fifth),
-            transparent 99%
-        );
     }
 
     /* Border */

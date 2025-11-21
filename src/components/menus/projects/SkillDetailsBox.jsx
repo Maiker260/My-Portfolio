@@ -49,13 +49,13 @@ function SkillDetailsBox({
             <article className="w-full h-full">
                 <div className="grid grid-cols-2 grid-rows-5 w-full h-full">
                     {/* Top Bar */}
-                    <div className="relative mb-2 color-text-details-third col-span-2 font-rodin flex justify-center content-center items-center">
+                    <div className="relative mb-2 color-text-details-fourth col-span-2 font-rodin flex justify-center content-center items-center">
                         {/* Line behind the Title */}
                         <div className="absolute w-full h-2 color-bg-details-seventh flex justify-center items-center overflow-hidden"></div>
                         {/* Title */}
                         <div className="relative z-10 flex justify-center items-center h-full">
-                            <span className="absolute text-5xl px-8 bg-black z-40 color-text-details-third">
-                                SKILLS<span className="text-3xl">&</span>
+                            <span className="absolute text-[2.3vw] px-8 bg-black z-40 color-text-details-fourth">
+                                SKILLS<span className="text-[2vw]">&</span>
                                 TOOLS
                             </span>
                         </div>
@@ -92,7 +92,7 @@ function SkillDetailsBox({
                     rel="noopener noreferrer"
                     className="group"
                 >
-                    <div className="p-2 color-text-details-third color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-fifth">
+                    <div className="p-2 color-text-details-fourth color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-fifth">
                         <span className="transition group-hover:text-neutral">
                             Code
                         </span>

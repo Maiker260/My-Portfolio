@@ -25,7 +25,7 @@ function TextTop({
     const { name, title, skills } = project;
 
     return (
-        <div className="relative z-50 -rotate-8 flex flex-col gap-8 font-rodin">
+        <div className="relative flex flex-col gap-8 max-w-[50vw] font-rodin z-50">
             {/* Rotated Text */}
             <div className="ml-3 h-fit w-full flex items-center gap-10">
                 <ItemNavButton
@@ -40,12 +40,12 @@ function TextTop({
                 <AnimatedBump
                     buttonPressed={buttonPressed}
                     setButtonPressed={setButtonPressed}
-                    className={"h-full"}
+                    className={"h-full flex flex-col gap-0"}
                 >
-                    <h2 className="text-6xl sm:text-4xl md:text-5xl color-text-details-secund opacity-80">
+                    <h2 className="text-[2vw] color-text-details-secund opacity-80">
                         {title}
                     </h2>
-                    <h1 className="text-3xl sm:text5xl md:text-6xl font-bold color-text-details-main color-text-details-third">
+                    <h1 className="text-[3vw] leading-tight font-bold color-text-details-fourth">
                         {name}
                     </h1>
                 </AnimatedBump>

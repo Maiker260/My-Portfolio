@@ -9,7 +9,7 @@ function HorizontalBanner({ className }) {
             <svg
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"
-                className="absolute -inset-0 w-full h-full"
+                className="absolute -inset-0 size-full"
             >
                 {/* Line Behind Horizontal Banner */}
                 <polygon points="100,20 100,70 0,100 12,48" fill="red" />

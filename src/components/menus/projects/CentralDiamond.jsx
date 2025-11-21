@@ -60,7 +60,7 @@ function CentralDiamond({ buttonPressed, setButtonPressed }) {
                             className="absolute bottom-[18%] left-[25%] w-[60%] h-[5%] color-bg-details-fifth-gradient z-50 -rotate-12  flex justify-center items-center group"
                         >
                             <OpenInNew className="absolute -top-[70%] left-[48%] w-12 fill-icons bg-black rounded-full p-1 border border-main cursor-pointer group-hover:fill-select-icons" />
-                            <span className="font-rodin text-5xl relative z-20 text-neutral-800 text-shadow-main group-hover:color-text-details-third group-hover:text-shadow-secund group-hover:cursor-pointer">
+                            <span className="font-rodin text-[3vw] relative z-20 text-neutral-800 text-shadow-main group-hover:color-text-details-third group-hover:text-shadow-secund group-hover:cursor-pointer">
                                 LIVE DEMO
                             </span>
                         </Link>

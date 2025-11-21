@@ -16,14 +16,17 @@ function Projects() {
 
     return (
         <ProjectDataContext.Provider value={projects}>
-            <main className="relative min-h-screen w-full max-w-[1920px] mx-auto color-bg-details-third overflow-hidden">
+            <main className="relative min-h-screen w-full max-w-[1920px] mx-auto color-bg-details-third-gradient-top overflow-hidden">
+                {/* <main className="relative min-h-screen w-full max-w-[1920px] mx-auto color-bg-details-third overflow-hidden"> */}
+                <DiagonalBottomBox />
+
                 <DiagonalTopBox />
 
                 <Intro
                     start={{ y: "-100%" }}
                     end={{ y: "0" }}
                     className={
-                        "absolute origin-top-left top-[10vh] left-[5%] h-[35%]"
+                        "absolute origin-top-left top-[6vh] left-[5vw] z-50"
                     }
                 >
                     <TextTop
@@ -34,7 +37,6 @@ function Projects() {
                     />
                 </Intro>
 
-                <DiagonalBottomBox />
                 <CentralDiamond
                     buttonPressed={buttonPressed}
                     setButtonPressed={setButtonPressed}
@@ -43,7 +45,7 @@ function Projects() {
                 <Intro
                     start={{ y: "150%" }}
                     end={{ y: "0" }}
-                    className="absolute top-[55%] left-0 h-[30%] w-[45vw] z-50"
+                    className="absolute top-[55%] left-0 h-[30vh] w-[45vw] z-50"
                 >
                     <SkillDetailsBox
                         hoveredSkill={hoveredSkill}
