@@ -16,17 +16,6 @@ function Experiences() {
     const { experiences } = creatorData;
     const totalExperiences = experiences.length;
 
-    // Preload Images
-    useEffect(() => {
-        experiences.forEach((exp) => {
-            const img = new Image();
-            img.src = exp.logo;
-        });
-
-        const back = new Image();
-        back.src = "/other/card.webp";
-    }, [experiences]);
-
     return (
         <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin">
             {/* White Background Line */}
