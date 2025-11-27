@@ -42,10 +42,10 @@ function TextTop({
                     setButtonPressed={setButtonPressed}
                     className={"h-full flex flex-col gap-0"}
                 >
-                    <h2 className="text-[2vw] color-text-details-secund opacity-80">
+                    <h2 className="text-5xl color-text-details-secund opacity-80">
                         {title}
                     </h2>
-                    <h1 className="text-[3vw] leading-tight font-bold color-text-details-fourth">
+                    <h1 className="text-6xl leading-tight font-bold color-text-details-fourth">
                         {name}
                     </h1>
                 </AnimatedBump>

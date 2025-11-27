@@ -10,7 +10,7 @@ export const experienceData = [
             "Deployed, configured, and maintained Windows, macOS, and Linux virtual machines.",
             " Diagnosed and resolved server, guest OS, SSL certificate, and networking issues using CLI tools and Wireshark.",
         ],
-        logo: "/companyLogos/vmware-omnissa-logo.png",
+        logo: "/companyLogos/vmware-omnissa-logo.webp",
         url: "https://www.linkedin.com/in/mikergs26/#:~:text=Experience-,Technical%20Support%20Engineer,-Technical%20Support%20Engineer",
     },
     {
@@ -24,7 +24,7 @@ export const experienceData = [
             "Provided support for technologies and software including VMware ESXi/vCenter, Linux, SSL certificates, Wireshark, LDAP, and other Cisco Collaboration products.",
             "Handled customer cases, including service-impacting issues requiring real-time troubleshooting and resolution.",
         ],
-        logo: "/companyLogos/sykes-logo.png",
+        logo: "/companyLogos/sykes-logo.webp",
         url: "https://www.linkedin.com/in/mikergs26/#:~:text=yr%207%20mos-,Tier%202%20Cisco%20Network%20Engineer,-Tier%202%20Cisco",
     },
     {
@@ -38,7 +38,7 @@ export const experienceData = [
             "Handled escalated and complex technical cases requiring in-depth troubleshooting.",
             "Created detailed technical reports and documented case resolutions for internal use.",
         ],
-        logo: "/companyLogos/concentrix-logo.png",
+        logo: "/companyLogos/concentrix-logo.webp",
         url: "https://www.linkedin.com/in/mikergs26/#:~:text=Heredia%2C%20Costa%20Rica-,T2%20Tech%20Support%20Advisor,-T2%20Tech%20Support",
     },
 ];

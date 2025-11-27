@@ -15,16 +15,16 @@ export const projectData = [
         ],
         screenshots: [
             {
-                src: "/screenshots/file-uploader/Login-SignUp.png",
+                src: "/screenshots/file-uploader/Login-SignUp.webp",
                 alt: "Login-SignUp",
             },
-            { src: "/screenshots/file-uploader/Home.png", alt: "Home" },
+            { src: "/screenshots/file-uploader/Home.webp", alt: "Home" },
             {
-                src: "/screenshots/file-uploader/CreateFolderForm.png",
+                src: "/screenshots/file-uploader/CreateFolderForm.webp",
                 alt: "CreateFolderForm",
             },
             {
-                src: "/screenshots/file-uploader/UploadFileForm.png",
+                src: "/screenshots/file-uploader/UploadFileForm.webp",
                 alt: "UploadFileForm",
             },
         ],
@@ -44,14 +44,17 @@ export const projectData = [
             { name: "Passport.js", icon: icons["Passport.js"] },
         ],
         screenshots: [
-            { src: "/screenshots/my-blog/Admin-Main.png", alt: "Admin-Main" },
+            { src: "/screenshots/my-blog/Admin-Main.webp", alt: "Admin-Main" },
             {
-                src: "/screenshots/my-blog/Admin-Editor.png",
+                src: "/screenshots/my-blog/Admin-Editor.webp",
                 alt: "Admin-Editor",
             },
-            { src: "/screenshots/my-blog/Public-Main.png", alt: "Public-Main" },
             {
-                src: "/screenshots/my-blog/Public-Article.png",
+                src: "/screenshots/my-blog/Public-Main.webp",
+                alt: "Public-Main",
+            },
+            {
+                src: "/screenshots/my-blog/Public-Article.webp",
                 alt: "Public-Article",
             },
         ],
@@ -67,13 +70,13 @@ export const projectData = [
             { name: "CSS", icon: icons.CSS },
         ],
         screenshots: [
-            { src: "/screenshots/shopping-cart/Home.png", alt: "Home" },
-            { src: "/screenshots/shopping-cart/Cart.png", alt: "Cart" },
+            { src: "/screenshots/shopping-cart/Home.webp", alt: "Home" },
+            { src: "/screenshots/shopping-cart/Cart.webp", alt: "Cart" },
             {
-                src: "/screenshots/shopping-cart/Categories.png",
+                src: "/screenshots/shopping-cart/Categories.webp",
                 alt: "Categories",
             },
-            { src: "/screenshots/shopping-cart/Search.png", alt: "Search" },
+            { src: "/screenshots/shopping-cart/Search.webp", alt: "Search" },
         ],
         livePreviewURL: "https://shopping-cart-c43.pages.dev/",
         codeURL: "https://github.com/Maiker260/Shopping-Cart",
@@ -88,12 +91,12 @@ export const projectData = [
             { name: "Passport.js", icon: icons["Passport.js"] },
         ],
         screenshots: [
-            { src: "/screenshots/members-only/Home.png", alt: "Home" },
+            { src: "/screenshots/members-only/Home.webp", alt: "Home" },
             {
-                src: "/screenshots/members-only/Login-SignUp.png",
+                src: "/screenshots/members-only/Login-SignUp.webp",
                 alt: "Login-SignUp",
             },
-            { src: "/screenshots/members-only/Main.png", alt: "Main" },
+            { src: "/screenshots/members-only/Main.webp", alt: "Main" },
         ],
         livePreviewURL: "https://members-only-h8am.onrender.com/",
         codeURL: "https://github.com/Maiker260/Members-Only",
@@ -107,10 +110,10 @@ export const projectData = [
             { name: "Webpack", icon: icons.Webpack },
         ],
         screenshots: [
-            { src: "/screenshots/to-do-list/Home.png", alt: "Home" },
-            { src: "/screenshots/to-do-list/NewTask.png", alt: "NewTask" },
+            { src: "/screenshots/to-do-list/Home.webp", alt: "Home" },
+            { src: "/screenshots/to-do-list/NewTask.webp", alt: "NewTask" },
             {
-                src: "/screenshots/to-do-list/TaskInfo.png",
+                src: "/screenshots/to-do-list/TaskInfo.webp",
                 alt: "TaskInfo",
             },
         ],

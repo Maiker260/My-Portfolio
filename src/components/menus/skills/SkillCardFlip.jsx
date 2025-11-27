@@ -63,7 +63,7 @@ function SkillCardFlip({
                     }}
                 >
                     <img
-                        src="/other/card.png"
+                        src="/other/card.webp"
                         alt="card back"
                         draggable={false}
                         className="rounded-lg w-full h-full object-cover"

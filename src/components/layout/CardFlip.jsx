@@ -60,7 +60,7 @@ function CardFlip({
                     }}
                 >
                     <img
-                        src="/other/card.png"
+                        src="/other/card.webp"
                         alt="card back"
                         draggable={false}
                         className="rounded-xl w-full h-full object-cover"
