@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import SkillsOrbit from "../components/menus/skills/SkillsOrbit.jsx";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
@@ -19,6 +19,20 @@ function Skills() {
     const changeCurrentSkill = (i) => {
         navigate(`/skills/${i}`);
     };
+
+    useEffect(() => {
+        // Preload ability icons
+        creatorData.skills.forEach((skill) => {
+            skill.abilities.forEach((a) => {
+                const img = new Image();
+                img.src = a.img;
+            });
+        });
+
+        // Preload card back image
+        const back = new Image();
+        back.src = "/other/card.webp";
+    }, []);
 
     return (
         <main className="relative min-h-screen w-full max-w-[1920px] mx-auto flex flex-col overflow-hidden color-bg-details-third-gradient-top">

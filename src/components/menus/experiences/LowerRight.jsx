@@ -11,7 +11,7 @@ function LowerRight({ id, data, changeContent, setChangeContent }) {
             className={"h-full"}
         >
             <article
-                className="flex flex-col gap-3 w-full h-full color-bg-details-tenth px-12 pt-2 pb-4 font-skipstdb"
+                className="flex flex-col gap-3 size-full color-bg-details-tenth px-12 pt-2 pb-4 font-skipstdb"
                 style={{
                     clipPath: "polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)",
                 }}

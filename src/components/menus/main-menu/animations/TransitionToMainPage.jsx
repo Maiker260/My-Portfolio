@@ -22,7 +22,7 @@ function TransitionToMainPage() {
                     animation: "transitionToHomePage 0.4s forwards ease-in-out",
                 }}
             >
-                <div className="w-full h-full">
+                <div className="size-full">
                     <PreviousComponent disableIntro />
                 </div>
             </div>

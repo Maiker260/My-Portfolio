@@ -31,7 +31,7 @@ function SkillCarouselPaging({
                     <img
                         src={`/skillsLogos/${skills[i].img}`}
                         alt={`${skills[i].name} image`}
-                        className="w-full h-full object-contain transition"
+                        className="size-full object-contain transition"
                     />
                 </button>
             ))}

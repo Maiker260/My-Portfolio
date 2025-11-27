@@ -12,7 +12,6 @@ function CardFlip({
 }) {
     const [frontImageData, setFrontImageData] = useState(data[id]);
     const [rotation, setRotation] = useState(180);
-    const [showFront, setShowFront] = useState(true);
 
     useEffect(() => {
         if (!changeContent) return;
@@ -20,22 +19,25 @@ function CardFlip({
         setRotation((prev) => prev + (buttonPressed === "next" ? 180 : -180));
 
         setTimeout(() => {
-            setShowFront(false);
-
-            const nextImg = new Image();
-            nextImg.src = data[id].logo;
-            nextImg.onload = () => setFrontImageData(data[id]);
-        }, 300);
+            setFrontImageData(data[id]);
+        }, 210);
 
         setTimeout(() => {
-            setShowFront(true);
             setChangeContent(false);
-        }, 300);
-    }, [changeContent, buttonPressed, id, data, setChangeContent]);
+            setIsFlipping(false);
+        }, 500);
+    }, [
+        changeContent,
+        buttonPressed,
+        id,
+        data,
+        setChangeContent,
+        setIsFlipping,
+    ]);
 
     return (
         <div
-            className={`relative w-full h-full ${className}`}
+            className={`relative size-full ${className}`}
             style={{
                 perspective: "1000px",
             }}
@@ -47,14 +49,11 @@ function CardFlip({
                 style={{
                     transformStyle: "preserve-3d",
                 }}
-                onAnimationComplete={() => {
-                    setIsFlipping(false);
-                }}
-                className="w-full h-full"
+                className="size-full"
             >
                 {/* BACK SIDE */}
                 <div
-                    className="absolute w-full h-full rounded-xl backface-hidden animate-[breath_2s_ease-in-out_infinite]"
+                    className="absolute size-full rounded-xl backface-hidden animate-[breath_2s_ease-in-out_infinite]"
                     style={{
                         backfaceVisibility: "hidden",
                     }}
@@ -63,26 +62,24 @@ function CardFlip({
                         src="/other/card.webp"
                         alt="card back"
                         draggable={false}
-                        className="rounded-xl w-full h-full object-cover"
+                        className="rounded-xl size-full object-cover"
                     />
                 </div>
 
                 {/* FRONT SIDE */}
                 <div
-                    className="absolute w-full h-full p-2 bg-white rounded-xl backface-hidden animate-[breath_2s_ease-in-out_infinite]"
+                    className="absolute size-full p-2 bg-white rounded-xl backface-hidden animate-[breath_2s_ease-in-out_infinite]"
                     style={{
                         transform: "rotateY(180deg)",
                         backfaceVisibility: "hidden",
                     }}
                 >
-                    {showFront && (
-                        <img
-                            src={frontImageData.logo}
-                            alt="card front"
-                            draggable={false}
-                            className="w-full h-full object-contain rounded-xl"
-                        />
-                    )}
+                    <img
+                        src={frontImageData.logo}
+                        alt="card front"
+                        draggable={false}
+                        className="size-full object-contain rounded-xl"
+                    />
                 </div>
             </Motion.div>
         </div>

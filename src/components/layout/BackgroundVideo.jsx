@@ -32,7 +32,7 @@ export default function BackgroundVideo({ isAnimationDisable }) {
             <video
                 ref={introRef}
                 preload="metadata"
-                className={`w-full h-full object-cover transition-opacity duration-700 ${
+                className={`size-full object-cover transition-opacity duration-700 ${
                     showLoop ? "opacity-0" : "opacity-100"
                 }`}
                 muted
@@ -44,7 +44,7 @@ export default function BackgroundVideo({ isAnimationDisable }) {
             {/* Loop video (hidden until intro finishes) */}
             <video
                 ref={loopRef}
-                className={`w-full h-full object-cover absolute inset-0 ${
+                className={`size-full object-cover absolute inset-0 ${
                     showLoop ? "opacity-100" : "opacity-0"
                 }`}
                 muted

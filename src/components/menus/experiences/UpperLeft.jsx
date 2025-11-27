@@ -29,7 +29,7 @@ function UpperLeft({
                 component={"upperLeft"}
                 className={"h-full"}
             >
-                <div className=" relative w-full h-full">
+                <div className=" relative size-full">
                     {/* External Container */}
                     <div
                         className="absolute top-0 left-0 w-[101%] h-full color-bg-details-nineth opacity-70 z-0"
@@ -41,14 +41,14 @@ function UpperLeft({
 
                     {/* Internal Container */}
                     <div
-                        className="relative -top-2 w-full h-full pt-2 pr-2 bg-white z-10"
+                        className="relative -top-2 size-full pt-2 pr-2 bg-white z-10"
                         style={{
                             clipPath:
                                 "polygon(0 0, 100% 0%, 95% 100%, 0% 100%)",
                         }}
                     >
                         <div
-                            className="w-full h-full flex flex-col"
+                            className="size-full flex flex-col"
                             style={{
                                 clipPath:
                                     "polygon(0 0, 100% 0%, 95% 100%, 0% 100%)",

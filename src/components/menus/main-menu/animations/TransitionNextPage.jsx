@@ -49,7 +49,7 @@ function TransitionNextPage({ NextPage, nextUrl }) {
                     }}
                     onAnimationEnd={handleSecondTransition}
                 >
-                    <div className="w-full h-full">
+                    <div className="size-full">
                         <NextPage />
                     </div>
                 </div>

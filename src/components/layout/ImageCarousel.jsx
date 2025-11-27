@@ -30,7 +30,7 @@ function ImageCarousel({ screenshots, buttonPressed, setButtonPressed }) {
         <AnimatedBump
             buttonPressed={buttonPressed}
             setButtonPressed={setButtonPressed}
-            className="relative w-full h-full overflow-hidden rounded-lg"
+            className="relative size-full overflow-hidden rounded-lg"
         >
             {/* Slides */}
             {screenshots.map((image, index) => (
@@ -45,7 +45,7 @@ function ImageCarousel({ screenshots, buttonPressed, setButtonPressed }) {
                     <img
                         src={image.src}
                         alt={image.alt}
-                        className=" w-full h-full object-cover"
+                        className=" size-full object-cover"
                     />
                 </div>
             ))}

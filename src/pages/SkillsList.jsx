@@ -14,9 +14,14 @@ function SkillsList({ disableIntro }) {
     const [isTransition, setIsTransition] = useState(
         () => location.state?.cameFromTransition || disableIntro || false
     );
-
     const { setSkillSelectedData, skillSelectedData } =
         useContext(MainPageContext);
+
+    const { skills } = creatorData;
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSkill, setCurrentSkill] = useState(
+        skillSelectedData || skills[0]
+    );
 
     useEffect(() => {
         if (isTransition) {
@@ -24,13 +29,13 @@ function SkillsList({ disableIntro }) {
         }
     }, [isTransition]);
 
-    const { skills } = creatorData;
-
-    const [currentSkill, setCurrentSkill] = useState(
-        skillSelectedData || skills[0]
-    );
-
-    const [currentSlide, setCurrentSlide] = useState(0);
+    // Preload Images
+    useEffect(() => {
+        skills.forEach((skill) => {
+            const img = new Image();
+            img.src = skill.img;
+        });
+    }, [skills]);
 
     return (
         <main className="relative min-h-screen w-full max-w-[1920px] mx-auto flex flex-col overflow-hidden color-bg-details-third-gradient-top">

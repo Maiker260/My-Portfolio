@@ -43,11 +43,11 @@ function SkillDetailsBox({
             buttonPressed={buttonPressed}
             setButtonPressed={setButtonPressed}
             className={
-                "w-full h-full  ml-7 border-3 border-main color-bg-details-secund p-2 origin-top-left text-white"
+                "size-full  ml-7 border-3 border-main color-bg-details-secund p-2 origin-top-left text-white"
             }
         >
-            <article className="w-full h-full">
-                <div className="grid grid-cols-2 grid-rows-5 w-full h-full">
+            <article className="size-full">
+                <div className="grid grid-cols-2 grid-rows-5 size-full">
                     {/* Top Bar */}
                     <div className="relative mb-2 color-text-details-fourth col-span-2 font-rodin flex justify-center content-center items-center">
                         {/* Line behind the Title */}
@@ -68,13 +68,13 @@ function SkillDetailsBox({
                             ${
                                 skill.name === "NONE" &&
                                 "pointer-events-none text-[#5c5c5c]"
-                            } w-full h-full text-lg flex justify-center items-center font-rodin rounded`}
+                            } size-full text-lg flex justify-center items-center font-rodin rounded`}
                             onMouseEnter={() => setHoveredSkill(skill.name)}
                             onMouseLeave={() => setHoveredSkill(null)}
                         >
                             {hoveredSkill === skill.name &&
                             skill.name !== "NONE" ? (
-                                <p className="flex justify-center items-center w-full h-full bg-menu-select-white rounded">
+                                <p className="flex justify-center items-center size-full bg-menu-select-white rounded">
                                     {skill.name}
                                 </p>
                             ) : (

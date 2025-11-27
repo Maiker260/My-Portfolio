@@ -4,7 +4,7 @@ function DiagonalTopBox() {
             <svg
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"
-                className="absolute -inset-0 w-full h-full"
+                className="absolute -inset-0 size-full"
             >
                 {/* Main Diagonal Background */}
                 <polygon

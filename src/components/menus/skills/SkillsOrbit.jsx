@@ -24,7 +24,7 @@ function SkillsOrbit({
     return (
         <div className="relative w-screen h-screen flex justify-center items-center">
             <svg
-                className="w-full h-full"
+                className="size-full"
                 viewBox={`0 0 ${size} ${size}`} // defines SVG coordinate system
                 preserveAspectRatio="xMidYMid meet"
             >
@@ -138,7 +138,7 @@ function SkillsOrbit({
                     <Intro
                         start={{ scale: 0, opacity: 0 }}
                         end={{ scale: 1, opacity: 1 }}
-                        className={"relative w-full h-full"}
+                        className={"relative size-full"}
                     >
                         <SkillCardFlip
                             skillSelected={skillSelected}

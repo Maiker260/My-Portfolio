@@ -13,7 +13,6 @@ function SkillCardFlip({
         skillSelected.name.toUpperCase()
     );
     const [rotation, setRotation] = useState(180);
-    const [showFront, setShowFront] = useState(true);
 
     useEffect(() => {
         if (!changeContent) return;
@@ -21,24 +20,19 @@ function SkillCardFlip({
         setRotation((prev) => prev + 360);
 
         setTimeout(() => {
-            setShowFront(false);
-
-            const nextImg = new Image();
-            nextImg.src = skillSelected.img;
-            nextImg.onload = () => setFrontImageData(skillSelected.img);
-
+            setFrontImageData(skillSelected.img);
             setSkillName(skillSelected.name.toUpperCase());
-        }, 400);
+        }, 210);
 
         setTimeout(() => {
-            setShowFront(true);
             setChangeContent(false);
+            setIsCardFlipping(false);
         }, 400);
-    }, [changeContent, setChangeContent, skillSelected]);
+    }, [changeContent, setChangeContent, skillSelected, setIsCardFlipping]);
 
     return (
         <div
-            className={`relative w-full h-full p-3 ${className}`}
+            className={`relative size-full p-3 ${className}`}
             style={{
                 perspective: "1000px",
             }}
@@ -50,14 +44,11 @@ function SkillCardFlip({
                 style={{
                     transformStyle: "preserve-3d",
                 }}
-                onAnimationComplete={() => {
-                    setIsCardFlipping(false);
-                }}
-                className="w-full h-full"
+                className="size-full"
             >
                 {/* BACK SIDE */}
                 <div
-                    className="absolute w-full h-full rounded-lg backface-hidden"
+                    className="absolute size-full rounded-lg backface-hidden"
                     style={{
                         backfaceVisibility: "hidden",
                     }}
@@ -66,33 +57,31 @@ function SkillCardFlip({
                         src="/other/card.webp"
                         alt="card back"
                         draggable={false}
-                        className="rounded-lg w-full h-full object-cover"
+                        className="rounded-lg size-full object-cover"
                     />
                 </div>
 
                 {/* FRONT SIDE */}
                 <div
-                    className="absolute w-full h-full rounded-lg backface-hidden"
+                    className="absolute size-full rounded-lg backface-hidden"
                     style={{
                         transform: "rotateY(180deg)",
                         backfaceVisibility: "hidden",
                     }}
                 >
-                    {showFront && (
-                        <article className="flex flex-col items-center justify-center h-full gap-4 p-4 text-lg font-semibold color-bg-details-eight rounded-lg shadow-md">
-                            <div className="w-full h-full color-bg-details-seventh p-4 rounded-lg">
-                                <img
-                                    src={frontImageData}
-                                    alt="card front"
-                                    draggable={false}
-                                    className="w-full h-full object-contain rounded-lg"
-                                />
-                            </div>
-                            <span className="text-menu-cyan-main text-center">
-                                {skillName}
-                            </span>
-                        </article>
-                    )}
+                    <article className="flex flex-col items-center justify-center h-full gap-4 p-4 text-lg font-semibold color-bg-details-eight rounded-lg shadow-md">
+                        <div className="size-full color-bg-details-seventh p-4 rounded-lg">
+                            <img
+                                src={frontImageData}
+                                alt="card front"
+                                draggable={false}
+                                className="size-full object-contain rounded-lg"
+                            />
+                        </div>
+                        <span className="text-menu-cyan-main text-center">
+                            {skillName}
+                        </span>
+                    </article>
                 </div>
             </Motion.div>
         </div>

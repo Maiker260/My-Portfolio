@@ -18,21 +18,21 @@ function CentralDiamond({ buttonPressed, setButtonPressed }) {
         <section className="absolute -top-22 -right-30 h-[120%] w-[70vw] flex items-center justify-center z-40">
             {/* External Diamond Container */}
             <div
-                className="relative w-full h-full color-bg-details-third flex p-6"
+                className="relative size-full color-bg-details-third flex p-6"
                 style={{
                     clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
                 }}
             >
                 {/* Internal Diamond 1 Container */}
                 <div
-                    className="relative w-full h-full color-bg-details-third-gradient flex items-center justify-center p-2"
+                    className="relative size-full color-bg-details-third-gradient flex items-center justify-center p-2"
                     style={{
                         clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
                     }}
                 >
                     {/* Inner Diamond 2 container */}
                     <div
-                        className="relative w-full h-full flex items-center justify-center overflow-hidden color-bg-details-secund"
+                        className="relative size-full flex items-center justify-center overflow-hidden color-bg-details-secund"
                         style={{
                             clipPath:
                                 "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",

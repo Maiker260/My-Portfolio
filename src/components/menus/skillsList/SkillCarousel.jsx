@@ -82,7 +82,7 @@ function SkillCarousel({
                                 <img
                                     src={`/skillsLogos/${skill.img}`}
                                     alt={`${skill.name} image`}
-                                    className="w-full h-full object-contain transition"
+                                    className="size-full object-contain transition"
                                 />
                             </div>
                         </div>

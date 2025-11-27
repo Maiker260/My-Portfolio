@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
 import Intro from "../components/menus/projects/animations/Intro.jsx";
@@ -15,6 +15,17 @@ function Experiences() {
     const { id } = useParams();
     const { experiences } = creatorData;
     const totalExperiences = experiences.length;
+
+    // Preload Images
+    useEffect(() => {
+        experiences.forEach((exp) => {
+            const img = new Image();
+            img.src = exp.logo;
+        });
+
+        const back = new Image();
+        back.src = "/other/card.webp";
+    }, [experiences]);
 
     return (
         <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin">
