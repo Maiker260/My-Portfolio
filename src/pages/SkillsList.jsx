@@ -33,8 +33,12 @@ function SkillsList({ disableIntro }) {
     useEffect(() => {
         skills.forEach((skill) => {
             const img = new Image();
-            img.src = skill.img;
+            img.src = `/skillsLogos/${skill.img}`;
         });
+
+        // Preload card back image
+        const back = new Image();
+        back.src = "/other/card.webp";
     }, [skills]);
 
     return (
