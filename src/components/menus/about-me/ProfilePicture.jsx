@@ -5,11 +5,7 @@ function ProfilePicture() {
 
     return (
         <div className="size-full">
-            <svg
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                className="absolute -inset-0 size-full"
-            >
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
                 {/* Line Behind Profile Picture */}
                 <polygon
                     points="20,0 48,0 46,18 48,52 30,100 0,100 0,53 9,11"
@@ -43,14 +39,14 @@ function ProfilePicture() {
             </div>
 
             {/* Lower Left Info */}
-            <div className="absolute bottom-15 left-0 flex flex-col gap-7 z-50 font-skipstdb">
-                <div className="flex flex-col w-[10vw] -left-3 -rotate-7">
+            <div className="absolute bottom-15 -left-1 flex flex-col gap-7 z-50 font-skipstdb">
+                <div className="flex flex-col w-[12vw] left-0 -rotate-7">
                     <span className="self-end mr-5 text-black text-[1.2vw] select-none">
                         Currently
                     </span>
                     <div className="h-1 flex justify-center items-center overflow-hidden bg-black"></div>
                 </div>
-                <ul className="flex flex-col gap-5 list-disc w-[25vw] ml-17 text-white">
+                <ul className="flex flex-col gap-5 list-disc w-[25vw] ml-25 text-white">
                     {author.workingOn.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}

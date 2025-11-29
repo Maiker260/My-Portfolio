@@ -1,6 +1,6 @@
 import { motion as Motion } from "motion/react";
 
-function Intro({ children, start, end, duration, className }) {
+function Intro({ children, start, end, className }) {
     const animationClasses = className
         ? className
         : "relative flex flex-col items-center";
@@ -10,7 +10,7 @@ function Intro({ children, start, end, duration, className }) {
             initial={{ ...start, opacity: 0 }}
             animate={{ ...end, opacity: 1 }}
             transition={{
-                duration: duration || 0.5,
+                duration: 0.5,
                 ease: [0.33, 1, 0.68, 1],
             }}
             className={animationClasses}

@@ -5,9 +5,14 @@ function Intro({
     className,
     delay = 0,
     start,
+    duration,
     end,
     isAnimationDisable,
 }) {
+    const animationClasses = className
+        ? className
+        : "relative flex flex-col items-center";
+
     return (
         <>
             <Motion.div
@@ -17,12 +22,12 @@ function Intro({
                     isAnimationDisable
                         ? undefined
                         : {
-                              duration: 0.4,
+                              duration: duration || 0.5,
                               ease: [0.33, 1, 0.68, 1],
                               delay: delay * 0.1,
                           }
                 }
-                className={`relative flex flex-col items-center ${className}`}
+                className={animationClasses}
             >
                 {children}
             </Motion.div>

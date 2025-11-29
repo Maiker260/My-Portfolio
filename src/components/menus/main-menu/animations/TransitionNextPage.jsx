@@ -10,15 +10,21 @@ function TransitionNextPage({ NextPage, nextUrl }) {
     const [secondTransition, setSecondTransition] = useState(false);
 
     useEffect(() => {
-        // Delay to show the second animation
-        const delay = 100;
-        const timer = setTimeout(() => setSecondTransition(true), delay);
-        return () => clearTimeout(timer);
-    }, []);
+        // secondTransition starts after 80ms
+        const showTimer = setTimeout(() => {
+            setSecondTransition(true);
 
-    const handleSecondTransition = () => {
-        if (nextUrl) navigate(nextUrl, { state: { cameFromTransition: true } });
-    };
+            // navigation starts 700ms after animation begins
+            const navTimer = setTimeout(() => {
+                if (nextUrl)
+                    navigate(nextUrl, { state: { cameFromTransition: true } });
+            }, 700);
+
+            return () => clearTimeout(navTimer);
+        }, 80);
+
+        return () => clearTimeout(showTimer);
+    }, [secondTransition, nextUrl, navigate]);
 
     return (
         <div className="fixed w-full max-w-[1920px] mx-auto inset-0 z-[9999] pointer-events-none overflow-hidden">
@@ -34,25 +40,22 @@ function TransitionNextPage({ NextPage, nextUrl }) {
 
             {/* Second Transition */}
             {secondTransition && (
-                <div
+                <Motion.div
                     className="absolute inset-0 flex items-center justify-center"
                     style={{
                         maskImage: "url(/other/abstract-form.svg)",
                         WebkitMaskImage: "url(/other/abstract-form.svg)",
-
                         maskRepeat: "no-repeat",
-                        WebkitMaskRepeat: "no-repeat",
                         maskPosition: "40% 40%",
-                        WebkitMaskPosition: "40% 40%",
+
                         animation:
                             "transitionNextPage 0.8s forwards ease-in-out",
                     }}
-                    onAnimationEnd={handleSecondTransition}
                 >
                     <div className="size-full">
                         <NextPage />
                     </div>
-                </div>
+                </Motion.div>
             )}
         </div>
     );

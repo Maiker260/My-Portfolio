@@ -10,7 +10,7 @@ export const creatorData = {
         profilePicture: "/other/avatar.webp",
         profileData: [
             "Experienced Tech Support Engineer with 7+ years of experience in Networking, Server Administration, Troubleshooting, Customer Service, etc.",
-            "Over time, I discovered a strong passion for coding and problem-solving. I'm now developing my skills in modern web technologies, including JavaScript, React, and Tailwind, with a focus on building clean, responsive, and user-friendly interfaces.",
+            "Over time, I discovered a strong passion for coding. I'm now developing my skills in modern web technologies, including JavaScript, React, and Tailwind, with a focus on building clean, responsive, and user-friendly interfaces.",
         ],
         workingOn: [
             "Actively exploring opportunities in web development",
@@ -66,12 +66,5 @@ export const creatorData = {
             url: "/aboutme",
             titleType: "main",
         },
-        // ???????????????????????????????
-        // {
-        //     name: "CONTACT",
-        //     component: "Contact",
-        //     url: "/contact",
-        //     titleType: "sec",
-        // },
     ],
 };

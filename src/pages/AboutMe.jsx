@@ -19,9 +19,24 @@ function AboutMe({ disableIntro }) {
 
     return (
         <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top">
-            <HorizontalBanner />
+            <Intro
+                start={{ y: "-150%" }}
+                end={{ y: "0" }}
+                delay={0.7}
+                className="absolute -inset-0 size-full z-10"
+                isAnimationDisable={isTransition}
+            >
+                <ProfilePicture isAnimationDisable={isTransition} />
+            </Intro>
 
-            <ProfilePicture />
+            <Intro
+                start={{ y: "100%" }}
+                end={{ y: "0" }}
+                className={"absolute -inset-0 size-full"}
+                isAnimationDisable={isTransition}
+            >
+                <HorizontalBanner />
+            </Intro>
 
             <Intro
                 start={{ x: "100%" }}

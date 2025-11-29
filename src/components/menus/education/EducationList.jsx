@@ -8,7 +8,7 @@ function EducationList() {
     const [optionSelected, setOptionSelected] = useState(null);
 
     return (
-        <article className="absolute top-[27%] left-[5%] flex flex-col gap-12 w-full max-w-[60vw] text-white font-skipstdb">
+        <article className="flex flex-col gap-6 text-white font-skipstdb">
             <div className="flex flex-col gap-1 text-lg italic">
                 <div className="flex select-none text-center">
                     <span className="flex-[1]">Date</span>

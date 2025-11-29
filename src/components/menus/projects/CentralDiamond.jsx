@@ -15,7 +15,7 @@ function CentralDiamond({ buttonPressed, setButtonPressed }) {
     const { screenshots, livePreviewURL } = project;
 
     return (
-        <section className="absolute -top-22 -right-30 h-[120%] w-[70vw] flex items-center justify-center z-40">
+        <section className="size-full">
             {/* External Diamond Container */}
             <div
                 className="relative size-full color-bg-details-third flex p-6"

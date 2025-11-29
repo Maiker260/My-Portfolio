@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
-import Intro from "../components/menus/projects/animations/Intro.jsx";
+import Intro from "../components/menus/experiences/animations/Intro.jsx";
 import UpperLeft from "../components/menus/experiences/UpperLeft.jsx";
 import LowerRight from "../components/menus/experiences/LowerRight.jsx";
 import CardFlip from "../components/layout/CardFlip.jsx";
@@ -19,18 +19,24 @@ function Experiences() {
     return (
         <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin">
             {/* White Background Line */}
-            <svg
-                className="absolute inset-0 size-full overflow-hidden"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
+            <Intro
+                start={{ x: "-5%", scale: 1.1 }}
+                end={{ x: "0", scale: 1 }}
+                className="absolute inset-0 size-full obverflow-hidden"
             >
-                <polygon
-                    points="100 0, 100 80, 85 100, 10 100, 90 0"
-                    fill="#f3f1f2"
-                />
-            </svg>
+                <svg
+                    className="size-full"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                >
+                    <polygon
+                        points="100 0, 100 80, 85 100, 10 100, 90 0"
+                        fill="#f3f1f2"
+                    />
+                </svg>
+            </Intro>
 
-            {/* Job Data */}
+            {/* Job Info */}
             <Intro
                 start={{ x: "-100%" }}
                 end={{ x: "0" }}

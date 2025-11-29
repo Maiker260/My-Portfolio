@@ -59,7 +59,7 @@ function NavigationSection({
 
     return (
         <article
-            className={`flex flex-col gap-3 font-rodin text-shadow-back-info text-white ${className}`}
+            className={`flex flex-col gap-3 font-rodin text-shadow-back-info text-white select-none ${className}`}
         >
             {hasText && (
                 <div className="flex flex-col justify-start select-none">

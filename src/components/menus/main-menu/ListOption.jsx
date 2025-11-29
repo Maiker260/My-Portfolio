@@ -38,8 +38,11 @@ function ListOption({
 
     return (
         <div
-            className="relative inline-block cursor-pointer"
+            className={`relative inline-block ${
+                showTransition ? null : "cursor-pointer"
+            }`}
             onMouseEnter={() => setIsHovered(true)}
+            b
             onMouseLeave={() => setIsHovered(false)}
             onClick={onClick}
         >

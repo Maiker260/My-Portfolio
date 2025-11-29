@@ -71,9 +71,9 @@ function SkillCarousel({
             <div className="w-full max-w-[65vw]">
                 <Slider ref={sliderRef} {...settings} className="relative">
                     {skills.map((skill, index) => (
-                        <div key={index} className=" px-4">
+                        <div key={index} className="px-4">
                             <div
-                                className="skill-card h-96 p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer"
+                                className="skill-card h-96 p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer group"
                                 onClick={() => {
                                     handleClick(skill.name, index);
                                 }}
@@ -82,7 +82,7 @@ function SkillCarousel({
                                 <img
                                     src={`/skillsLogos/${skill.img}`}
                                     alt={`${skill.name} image`}
-                                    className="size-full object-contain transition"
+                                    className="size-full object-contain transition group-hover:scale-102 pointer-events-none"
                                 />
                             </div>
                         </div>

@@ -66,8 +66,8 @@ function MainPage() {
                                 isAnimationDisable={backHomeTransition}
                             />
                             <div>
-                                <p className="text-sm ">
-                                    {/* Inspired by Persona 3 Reload. */}
+                                <p className="text-sm text-gray-400 select-none">
+                                    Design inspired by Persona 3 Reload.
                                 </p>
                             </div>
                         </section>

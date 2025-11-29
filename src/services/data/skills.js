@@ -96,4 +96,20 @@ export const skillsData = [
             },
         ],
     },
+    {
+        name: "Languages",
+        img: "languages-icon.webp",
+        description:
+            "Communicating effectively across different languages to collaborate, support users, and work confidently in multicultural environments.",
+        abilities: [
+            {
+                name: "Spanish",
+                img: "/skillsLogos/abilities/languages/spanish.webp",
+            },
+            {
+                name: "English",
+                img: "/skillsLogos/abilities/languages/english.webp",
+            },
+        ],
+    },
 ];

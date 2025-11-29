@@ -17,11 +17,12 @@ function Projects() {
     return (
         <ProjectDataContext.Provider value={projects}>
             <main className="relative min-h-screen w-full max-w-[1920px] mx-auto color-bg-details-third-gradient-top overflow-hidden">
-                {/* <main className="relative min-h-screen w-full max-w-[1920px] mx-auto color-bg-details-third overflow-hidden"> */}
+                {/* Layout */}
                 <DiagonalBottomBox />
 
                 <DiagonalTopBox />
 
+                {/* Upper Left Info */}
                 <Intro
                     start={{ y: "-100%" }}
                     end={{ y: "0" }}
@@ -37,11 +38,19 @@ function Projects() {
                     />
                 </Intro>
 
-                <CentralDiamond
-                    buttonPressed={buttonPressed}
-                    setButtonPressed={setButtonPressed}
-                />
+                {/* Diamond Image Carousel */}
+                <Intro
+                    start={{ x: "50%" }}
+                    end={{ x: "0" }}
+                    className="absolute -top-22 -right-30 h-[120%] w-[70vw] flex items-center justify-center z-40"
+                >
+                    <CentralDiamond
+                        buttonPressed={buttonPressed}
+                        setButtonPressed={setButtonPressed}
+                    />
+                </Intro>
 
+                {/* Skill Info Box */}
                 <Intro
                     start={{ y: "150%" }}
                     end={{ y: "0" }}
@@ -55,13 +64,13 @@ function Projects() {
                     />
                 </Intro>
 
-                <Intro start={{ x: "20%" }} end={{ x: "0" }}>
-                    <NavigationSection
-                        className={"absolute bottom-8 right-3 z-50"}
-                        hasBlackButton
-                        hasHomeButton
-                        backTo={"/projects"}
-                    />
+                {/* Back Button */}
+                <Intro
+                    start={{ x: "20%" }}
+                    end={{ x: "0" }}
+                    className={"absolute bottom-8 right-3 z-50"}
+                >
+                    <NavigationSection backTo={"/projects"} hasHomeButton />
                 </Intro>
             </main>
         </ProjectDataContext.Provider>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import AnimatedBump from "../animations/AnimatedBump.jsx";
+import Intro from "../animations/Intro.jsx";
 
 function ImageCarousel({ screenshots, buttonPressed, setButtonPressed }) {
     const [currentIndex, setCurrentIndex] = useState(0);

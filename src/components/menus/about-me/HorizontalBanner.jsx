@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { creatorData } from "../../../services/data/creatorData.js";
+import Intro from "./animations/Intro.jsx";
 
-function HorizontalBanner({ className }) {
+function HorizontalBanner() {
     const { author, contact } = creatorData;
 
     return (
-        <div className={`${className} size-full`}>
+        <div className={"size-full"}>
             <svg
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"

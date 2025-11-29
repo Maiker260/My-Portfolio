@@ -52,6 +52,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
                 }
                 isAnimationDisable={isTransition}
             />
+
             <Intro
                 start={{ x: "20%" }}
                 end={{ x: "0" }}
