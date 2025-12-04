@@ -59,18 +59,20 @@ function NavigationSection({
 
     return (
         <article
-            className={`flex flex-col gap-3 font-rodin text-shadow-back-info text-white select-none ${className}`}
+            className={`w-full px-4 sm:w-auto flex flex-col gap-3 font-rodin text-shadow-back-info text-white select-none ${className}`}
         >
             {hasText && (
-                <div className="flex flex-col justify-start select-none">
-                    <span className="text-2xl pr-8">{description}</span>
+                <div className="flex flex-col justify-start gap-1 sm:gap-0 select-none">
+                    <span className="text-base sm:text-2xl sm:pr-8">
+                        {description}
+                    </span>
                     <div className="flex items-center gap-1">
                         <span className="text-xs">Guide</span>
                         <div className="w-full h-0.5 flex justify-center items-center overflow-hidden bg-white"></div>
                     </div>
                 </div>
             )}
-            <div className="flex items-center gap-4 self-end pr-8 w-fit text-shadow-back-info">
+            <div className="flex items-center gap-4 self-center sm:self-end pr-8 w-fit text-shadow-back-info">
                 {hasHomeButton && (
                     <button
                         onClick={handleHomeButton}

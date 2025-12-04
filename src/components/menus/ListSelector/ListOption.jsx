@@ -4,7 +4,7 @@ import Roman from "roman-numerals";
 import CardNumberIcon from "../../icons/CardNumberIcon.jsx";
 
 function ListOption({ item, index }) {
-    const { name, title, years } = item;
+    const { name, listName, title, years } = item;
     const innerRef = useRef(null);
     const [size, setSize] = useState({ width: 0, height: 0 });
 
@@ -15,26 +15,32 @@ function ListOption({ item, index }) {
         }
     }, []);
 
-    const externalContClasses = { height: `${size.height}px` };
+    const offset =
+        index === 0
+            ? "0"
+            : window.innerWidth < 640
+            ? `${(index + 1) * 0.2}em` // mobile
+            : `${(index + 1) * 0.8}em`; // desktop
 
     return (
         <Link
             to={`${index}`}
             className={`relative flex flex-col h-fit w-[90%] snap-start group hover:cursor-pointer`}
-            style={{ marginLeft: `${(index + 1) * 1}em` }}
+            style={{ marginLeft: offset }}
         >
             {/* External Container used for Hover */}
             <div
-                className={"w-full group-hover:bg-red-500"}
+                className={"hidden md:block w-full group-hover:bg-red-500"}
                 style={{
-                    ...externalContClasses,
+                    height: `${size.height}px`,
                     clipPath: "polygon(0 0, 99% 0, 100% 100%, 1% 100%)",
                 }}
-            ></div>
+            />
+
             {/* Inner Container */}
             <div
                 ref={innerRef}
-                className="transition absolute top-1 -left-2 w-full h-fit px-4 py-2 color-bg-details-eight group-hover:bg-white group-hover:text-black"
+                className="transition w-full h-fit relative px-4 py-2 md:absolute md:top-1 md:-left-2 color-bg-details-eight group-hover:bg-white group-hover:text-black"
                 style={{
                     clipPath: "polygon(0 0, 99% 0, 100% 100%, 1% 100%)",
                 }}
@@ -44,23 +50,24 @@ function ListOption({ item, index }) {
                     <div className="flex justify-between items-center">
                         <div className="flex gap-2 items-center">
                             <CardNumberIcon number={Roman.toRoman(index + 1)} />
-                            <span className="color-text-details-fourth text-3xl group-hover:text-black">
-                                {name}
+                            <span className="text-base md:text-3xl color-text-details-fourth group-hover:text-black">
+                                {listName || name}
                             </span>
                         </div>
                         {years && (
-                            <div className="self-end flex gap-2">
-                                <span className="self-end color-text-details-fourth text-3xl group-hover:text-black">
+                            <div className="self-end items-center flex gap-2">
+                                <span className="text-base md:text-3xl self-end color-text-details-fourth group-hover:text-black">
                                     Years
                                 </span>
-                                <span className="self-end color-text-details-fourth text-5xl group-hover:text-black">
+                                <span className="text-xl md:text-5xl self-end color-text-details-fourth group-hover:text-black">
                                     {years}
                                 </span>
                             </div>
                         )}
                     </div>
+
                     {/* Bottom */}
-                    <span className="border color-bg-details-seventh text-center text-2xl group-hover:text-white group-hover:bg-black">
+                    <span className="text-base md:text-2xl px-1 border color-bg-details-seventh text-center group-hover:text-white group-hover:bg-black">
                         {title}
                     </span>
                 </div>

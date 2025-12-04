@@ -1,6 +1,7 @@
 export const experienceData = [
     {
         name: "VMware/Omnissa",
+        listName: "Omnissa",
         title: "Technical Support Engineer",
         years: 3,
         description:
@@ -15,7 +16,7 @@ export const experienceData = [
     },
     {
         name: "Sykes",
-        title: "Tier 2 Cisco Network Engineer",
+        title: "T2 Cisco Network Engineer",
         years: 2,
         description:
             "Provided advanced voice and collaboration support for enterprise customers, ensuring reliability and performance across Cisco Unified Communications environments.",
@@ -29,7 +30,7 @@ export const experienceData = [
     },
     {
         name: "Concentrix",
-        title: "Technical Support Advisor",
+        title: "T2 Technical Support Advisor",
         years: 2,
         description:
             "Provided technical support for a wide range of electronic devices, including computers, tablets, and smartphones. Focused on delivering efficient troubleshooting and accurate documentation.",

@@ -22,7 +22,7 @@ function AboutMe({ disableIntro }) {
             <Intro
                 start={{ y: "-150%" }}
                 end={{ y: "0" }}
-                delay={0.7}
+                delay={0.4}
                 className="absolute -inset-0 size-full z-10"
                 isAnimationDisable={isTransition}
             >

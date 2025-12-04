@@ -11,11 +11,11 @@ function List({ data, className, isAnimationDisable }) {
                 end={{ x: "0" }}
                 isAnimationDisable={isAnimationDisable}
             >
-                <div className="h-full w-full flex flex-col gap-2 ">
-                    <h1 className="text-6xl color-text-details-main font-rodin font-extrabold tracking-[-0.06em]">
+                <div className="size-full flex flex-col gap-2 ">
+                    <h1 className="text-4xl sm:text-6xl tracking-[-0.06em] color-text-details-main font-rodin font-extrabold">
                         LIST
                     </h1>
-                    <section className="h-full w-full p-1 flex flex-col gap-3 ml-4 overflow-y-auto font-skipstdb hide-scrollbar snap-y snap-mandatory scroll-smooth">
+                    <section className="sm:ml-4 sm:p-1 size-full flex flex-col gap-1 overflow-y-auto hide-scrollbar snap-y snap-mandatory scroll-smooth font-skipstdb">
                         {items.map((item, index) => (
                             <Intro
                                 key={item.name + index}

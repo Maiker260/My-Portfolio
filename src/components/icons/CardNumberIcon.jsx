@@ -2,13 +2,12 @@ export function CardNumberIcon({
     number = "",
     rotation = 20,
     color = "#98fcfe",
-    className,
 }) {
     return (
         <svg
             viewBox="0 0 100 120"
             xmlns="http://www.w3.org/2000/svg"
-            className={`w-16 h-20 ${className}`}
+            className={"w-8 h-10 md:w-16 md:h-20"}
             style={{ transform: `rotate(${rotation}deg)` }}
         >
             {/* Card Shape */}

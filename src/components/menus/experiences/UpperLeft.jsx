@@ -19,7 +19,7 @@ function UpperLeft({
     const job = data[id];
 
     return (
-        <section className="flex flex-col h-full w-full font-rodin">
+        <section className="flex flex-col size-full font-rodin">
             <h1 className="relative top-0 left-5 text-7xl tracking-[-0.1em] leading-[0.9] align-top p-0 select-none text-white">
                 EXPERIENCE
             </h1>
