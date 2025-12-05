@@ -19,8 +19,8 @@ function ListOption({ item, index }) {
         index === 0
             ? "0"
             : window.innerWidth < 640
-            ? `${(index + 1) * 0.2}em` // mobile
-            : `${(index + 1) * 0.8}em`; // desktop
+            ? `${(index + 1) * 0.1}em` // mobile
+            : `${(index + 1) * 0.6}em`; // desktop
 
     return (
         <Link
@@ -50,16 +50,16 @@ function ListOption({ item, index }) {
                     <div className="flex justify-between items-center">
                         <div className="flex gap-2 items-center">
                             <CardNumberIcon number={Roman.toRoman(index + 1)} />
-                            <span className="text-base md:text-3xl color-text-details-fourth group-hover:text-black">
+                            <span className="text-base lg:text-2xl xl:text-3xl color-text-details-fourth group-hover:text-black">
                                 {listName || name}
                             </span>
                         </div>
                         {years && (
                             <div className="self-end items-center flex gap-2">
-                                <span className="text-base md:text-3xl self-end color-text-details-fourth group-hover:text-black">
+                                <span className="text-base lg:text-2xl xl:text-3xl self-end color-text-details-fourth group-hover:text-black">
                                     Years
                                 </span>
-                                <span className="text-xl md:text-5xl self-end color-text-details-fourth group-hover:text-black">
+                                <span className="text-xl lg:text-4xl xl:text-5xl self-end color-text-details-fourth group-hover:text-black">
                                     {years}
                                 </span>
                             </div>
@@ -67,7 +67,7 @@ function ListOption({ item, index }) {
                     </div>
 
                     {/* Bottom */}
-                    <span className="text-base md:text-2xl px-1 border color-bg-details-seventh text-center group-hover:text-white group-hover:bg-black">
+                    <span className="text-base lg:text-xl xl:text-2xl px-1 border color-bg-details-seventh text-center group-hover:text-white group-hover:bg-black">
                         {title}
                     </span>
                 </div>

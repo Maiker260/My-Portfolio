@@ -7,7 +7,7 @@ export function CardNumberIcon({
         <svg
             viewBox="0 0 100 120"
             xmlns="http://www.w3.org/2000/svg"
-            className={"w-8 h-10 md:w-16 md:h-20"}
+            className={"w-8 h-10 lg:w-14 lg:h-18"}
             style={{ transform: `rotate(${rotation}deg)` }}
         >
             {/* Card Shape */}

@@ -19,7 +19,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
     const titleName = name.toUpperCase();
 
     return (
-        <main className="relative min-h-screen w-full md:px-4 max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top">
             {/* Diagonal White Line with Name */}
             <svg
                 width="100%"
@@ -49,7 +49,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
             <List
                 data={data}
                 className={
-                    "relative w-full h-auto p-4 z-50 origin-top-left sm:w-[60vw] sm:absolute sm:top-[7%] sm:left-[4%] sm:h-[78%] xl:w-[40vw]"
+                    "relative w-full h-auto p-3 z-50 origin-top-left sm:w-[60vw] sm:absolute sm:top-[7%] sm:left-[4%] sm:h-[78%] lg:max-w-[40vw]"
                 }
                 isAnimationDisable={isTransition}
             />
@@ -61,7 +61,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
             >
                 <NavigationSection
                     className={
-                        "fixed bottom-4 left-1/2 -translate-x-1/2 sm:absolute sm:bottom-8 sm:right-3 sm:left-auto sm:translate-x-0"
+                        "fixed bottom-6 left-1/2 -translate-x-1/2 sm:absolute sm:bottom-8 sm:right-3 sm:left-auto sm:translate-x-0"
                     }
                     hasText
                     description={guideMessage}
