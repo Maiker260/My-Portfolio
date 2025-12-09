@@ -9,13 +9,13 @@ function EducationInfo({ optionSelected }) {
     ].filter((item) => item.value != null);
 
     return (
-        <section className="flex flex-col gap-6 m-auto w-full max-w-[30vw] font-skipstdb">
+        <section className="font-skipstdb flex flex-col gap-6 w-full m-auto pt-6 pb-40 md:max-w-[30vw]">
             {infoItems.map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-2">
-                    <h3 className="text-3xl color-text-details-fourth">
+                    <h3 className="text-xl md:text-3xl color-text-details-fourth">
                         {label}
                     </h3>
-                    <li className="text-xl ml-10">{value}</li>
+                    <li className="text-lg md:text-xl ml-10">{value}</li>
                 </div>
             ))}
         </section>

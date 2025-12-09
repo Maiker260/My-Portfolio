@@ -42,7 +42,6 @@ function ListOption({
                 showTransition ? null : "cursor-pointer"
             }`}
             onMouseEnter={() => setIsHovered(true)}
-            b
             onMouseLeave={() => setIsHovered(false)}
             onClick={onClick}
         >

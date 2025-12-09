@@ -12,7 +12,7 @@ export const educationData = [
         area: "Course",
         institution: "The Odin Project",
         description:
-            "Full-stack development curriculum focusing on modern web technologies.",
+            "Full-stack development curriculum focused on modern web technologies.",
         status: "In Progress",
     },
     {

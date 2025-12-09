@@ -1,11 +1,11 @@
 function EducationListOption({ item, setOptionSelected }) {
     return (
         <li
-            className="flex pt-2 text-black text-xl rounded-sm group hover:bg-red-500 hover:cursor-"
+            className="flex pt-2 text-black text-xl rounded-sm group hover:bg-red-500"
             onMouseEnter={() => setOptionSelected(item)}
             onMouseLeave={() => setOptionSelected(null)}
         >
-            <div className="flex w-full p-2 text-center color-text-details-fourth group-hover:bg-white group-hover:text-black rounded-sm">
+            <div className="flex gap-1 w-full p-2 text-center text-base rounded-sm color-text-details-fourth group-hover:bg-white group-hover:text-black md:text-xl">
                 <span className="flex-[1]">{item.date}</span>
                 <span className="flex-[2]">{item.field}</span>
                 <div className="flex-[1]">
