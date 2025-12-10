@@ -10,7 +10,8 @@ function EducationList() {
 
     return (
         <article className="flex flex-col gap-6 text-white font-skipstdb">
-            <ul className="block md:hidden space-y-4">
+            {/* Mobile */}
+            <ul className="block lg:hidden space-y-4">
                 {educationData.map((item, index) => (
                     <EducationListOptionMobile
                         key={index}
@@ -22,14 +23,14 @@ function EducationList() {
             </ul>
 
             {/* Desktop */}
-            <div className="hidden md:block overflow-x-auto">
-                <div className="flex flex-col gap-1 text-lg italic">
+            <div className="hidden lg:block overflow-x-auto">
+                <div className="flex flex-col gap-1 text-base italic">
                     <div className="flex select-none text-center">
                         <span className="flex-[1]">Date</span>
                         <span className="flex-[2]">Field</span>
                         <span className="flex-[1]">Status</span>
                     </div>
-                    <div className="overflow-x-auto md:overflow-visible w-full">
+                    <div className="overflow-x-auto lg:overflow-visible w-full">
                         <ul className="min-w-[500px] list-none">
                             {educationData.map((item, index) => (
                                 <EducationListOption
@@ -43,9 +44,11 @@ function EducationList() {
                     </div>
                 </div>
             </div>
-            {optionSelected && (
-                <EducationInfo optionSelected={optionSelected} />
-            )}
+            <div className="hidden lg:block">
+                {optionSelected && (
+                    <EducationInfo optionSelected={optionSelected} />
+                )}
+            </div>
         </article>
     );
 }

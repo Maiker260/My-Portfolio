@@ -5,7 +5,7 @@ function EducationListOption({ item, setOptionSelected }) {
             onMouseEnter={() => setOptionSelected(item)}
             onMouseLeave={() => setOptionSelected(null)}
         >
-            <div className="flex gap-1 w-full p-2 text-center text-base rounded-sm color-text-details-fourth group-hover:bg-white group-hover:text-black md:text-xl">
+            <div className="flex gap-1 w-full p-2 text-center text-base rounded-sm color-text-details-fourth group-hover:bg-white group-hover:text-black lg:text-lg">
                 <span className="flex-[1]">{item.date}</span>
                 <span className="flex-[2]">{item.field}</span>
                 <div className="flex-[1]">
