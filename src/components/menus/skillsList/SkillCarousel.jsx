@@ -68,12 +68,12 @@ function SkillCarousel({
 
     return (
         <section className="w-full flex justify-center items-center py-8">
-            <div className="w-full max-w-[65vw]">
+            <div className="w-full max-w-[80vw] md:max-w-[90vw] lg:max-w-[80vw] xl:max-w-[65vw]">
                 <Slider ref={sliderRef} {...settings} className="relative">
                     {skills.map((skill, index) => (
-                        <div key={index} className="px-4">
+                        <div key={index} className="lg:px-4">
                             <div
-                                className="skill-card h-96 p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer group"
+                                className="skill-card h-[21vh] p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer group md:h-[30vh] xl:h-[40vh]"
                                 onClick={() => {
                                     handleClick(skill.name, index);
                                 }}

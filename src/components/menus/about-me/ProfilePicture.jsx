@@ -24,7 +24,7 @@ function ProfilePicture() {
             <div className="rounded-full">
                 <img
                     src={author.profilePicture}
-                    className="absolute top-[4%] left-[9%] w-[30vw] h-[60vh] object-contain rounded-full"
+                    className="absolute top-[4%] left-[9%] w-[30vw] h-[60vh] object-contain rounded-full select-none"
                     draggable={false}
                     alt="Profile Avatar"
                 />

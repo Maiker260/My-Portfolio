@@ -42,12 +42,12 @@ function SkillsList({ disableIntro }) {
     }, [skills]);
 
     return (
-        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto flex flex-col overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto flex flex-col overflow-x-hidden color-bg-details-third-gradient-top">
             <Intro
                 start={{ x: "-100%" }}
                 end={{ x: "0" }}
                 isAnimationDisable={isTransition}
-                className={"mt-15 px-10 font-rodin"}
+                className={"mt-10 px-5 lg:mt-15 lg:px-10 font-rodin"}
             >
                 <Header />
             </Intro>
@@ -81,7 +81,9 @@ function SkillsList({ disableIntro }) {
                 start={{ x: "-100%" }}
                 end={{ x: "0" }}
                 isAnimationDisable={isTransition}
-                className={"h-[10vh] absolute bottom-8 left-20"}
+                className={
+                    "hidden md:block md:absolute md:bottom-8 md:left-14 md:h-[10vh]"
+                }
             >
                 <SkillCarouselPaging
                     skills={skills}
@@ -95,7 +97,9 @@ function SkillsList({ disableIntro }) {
                 start={{ x: "100%" }}
                 end={{ x: "0" }}
                 isAnimationDisable={isTransition}
-                className={"absolute bottom-8 right-3"}
+                className={
+                    "absolute bottom-8 w-full sm:w-auto sm:bottom-8 sm:right-3"
+                }
             >
                 <NavigationSection
                     hasText
