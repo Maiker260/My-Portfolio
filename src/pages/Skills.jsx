@@ -35,11 +35,11 @@ function Skills() {
     }, []);
 
     return (
-        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto flex flex-col overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] p-3 mx-auto flex flex-col gap-7 overflow-hidden color-bg-details-third-gradient-top lg:p-0 lg:gap-0">
             <Intro id={id} start={{ x: "-60%" }} end={{ x: "0" }}>
                 <Header
                     skill={skill.name}
-                    classname={"absolute top-16 left-10"}
+                    classname={"lg:absolute lg:top-14 lg:left-10"}
                 />
             </Intro>
             <SkillsOrbit
@@ -54,9 +54,11 @@ function Skills() {
             />
 
             <Intro
-                start={{ x: "-60%" }}
+                start={{ x: "-100%" }}
                 end={{ x: "0" }}
-                className={"absolute bottom-12 left-13"}
+                className={
+                    "relative mx-auto md:absolute md:bottom-12 md:left-13"
+                }
             >
                 <SkillCarouselPaging
                     skills={allSkills}
@@ -71,7 +73,9 @@ function Skills() {
             <Intro
                 start={{ x: "100%" }}
                 end={{ x: "0" }}
-                className={"absolute bottom-8 right-3"}
+                className={
+                    "absolute bottom-8 w-full sm:w-auto sm:bottom-8 sm:right-3"
+                }
             >
                 <NavigationSection
                     hasText

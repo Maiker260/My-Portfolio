@@ -73,7 +73,7 @@ function SkillCarousel({
                     {skills.map((skill, index) => (
                         <div key={index} className="lg:px-4">
                             <div
-                                className="skill-card h-[21vh] p-6 flex items-center justify-center rounded-md shadow-lg cursor-pointer group md:h-[30vh] xl:h-[40vh]"
+                                className="skill-card h-[21vh] p-3 flex items-center justify-center rounded-md shadow-lg cursor-pointer group md:p-6 md:h-[30vh] xl:h-[40vh]"
                                 onClick={() => {
                                     handleClick(skill.name, index);
                                 }}

@@ -16,9 +16,9 @@ function SkillCarouselPaging({
             {skills?.map((skill, i) => (
                 <button
                     key={i}
-                    className={`w-15 h-20 p-2 rotate-15 ${cardSelectedClasses(
+                    className={`w-[13vw] h-[10vh] p-2 rotate-15 ${cardSelectedClasses(
                         skill
-                    )} rounded-md flex items-center bg-white justify-center cursor-pointer`}
+                    )} rounded-md flex items-center bg-white justify-center cursor-pointer md:w-15 md:h-20`}
                     onClick={() => {
                         if (!isCardFlipping && skill !== currentSkill) {
                             setSkillSelected(skill.abilities[0]);

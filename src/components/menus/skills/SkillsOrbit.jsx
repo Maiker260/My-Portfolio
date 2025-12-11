@@ -22,7 +22,7 @@ function SkillsOrbit({
     const centerCardSize = { width: 220, height: 320 };
 
     return (
-        <div className="relative w-screen h-screen flex justify-center items-center">
+        <div className="relative w-[90vw] h-full mx-auto flex justify-center items-center sm:w-[80vw] lg:w-[90vw] lg:h-screen xl:w-screen xl:mx-0">
             <svg
                 className="size-full"
                 viewBox={`0 0 ${size} ${size}`} // defines SVG coordinate system

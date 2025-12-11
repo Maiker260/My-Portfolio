@@ -4,7 +4,7 @@ function MiddleTitle({ currentSkill, isAnimationDisable }) {
     const { name, description } = currentSkill;
 
     return (
-        <section className="flex flex-col gap-6 md:gap-5 items-center w-full h-[25vh] font-skipstdb text-white">
+        <section className="flex flex-col gap-6 items-center w-full h-[25vh] font-skipstdb text-white md:gap-5 ">
             <div className="relative w-full flex flex-col justify-center">
                 <Intro
                     key={currentSkill.name}
@@ -17,7 +17,7 @@ function MiddleTitle({ currentSkill, isAnimationDisable }) {
                         {name.toUpperCase()}
                     </h2>
                 </Intro>
-                <div className="w-[80%] md:w-[65%] h-1 flex justify-center self-end items-center overflow-hidden bg-white" />
+                <div className="w-[80%] lg:w-[65%] h-1 flex justify-center self-end items-center overflow-hidden bg-white" />
             </div>
             <div className="w-full relative origin-center lg:left-[40%] lg:top-1.5 ">
                 <Intro
