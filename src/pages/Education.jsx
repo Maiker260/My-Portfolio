@@ -75,7 +75,7 @@ function Education({ disableIntro }) {
                     end={{ y: "0" }}
                     delay={3}
                     className={
-                        "size-full flex flex-col gap-4 lg:block lg:absolute lg:top-[27%] lg:left-[5%] lg:w-full lg:max-w-[60vw]"
+                        "size-full flex flex-col gap-4 lg:block lg:absolute lg:top-[27%] lg:left-[5%] lg:w-full lg:max-w-[60%]"
                     }
                     isAnimationDisable={isTransition}
                 >
