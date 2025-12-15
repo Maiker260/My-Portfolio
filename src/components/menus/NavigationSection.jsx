@@ -18,7 +18,7 @@ function NavigationSection({
         useContext(MainPageContext);
 
     useEffect(() => {
-        const handleBKey = (e) => {
+        const handleReturnKeys = (e) => {
             if (e.key.toLowerCase() === "b") {
                 if (backTo === "/") {
                     setCurrentPage(parentSection);
@@ -27,11 +27,13 @@ function NavigationSection({
                 } else {
                     navigate(backTo);
                 }
+            } else if (e.key === "Escape" || e.key === "Home") {
+                navigate("/");
             }
         };
 
-        window.addEventListener("keydown", handleBKey);
-        return () => window.removeEventListener("keydown", handleBKey);
+        window.addEventListener("keydown", handleReturnKeys);
+        return () => window.removeEventListener("keydown", handleReturnKeys);
     }, [
         navigate,
         setBackHomeTransition,

@@ -25,7 +25,7 @@ function SkillsOrbit({
         <div className="relative w-[90vw] h-full mx-auto flex justify-center items-center sm:w-[80vw] lg:w-[90vw] lg:h-screen xl:w-full">
             <svg
                 className="size-full"
-                viewBox={`0 0 ${size} ${size}`} // defines SVG coordinate system
+                viewBox={`0 0 ${size} ${size}`}
                 preserveAspectRatio="xMidYMid meet"
             >
                 {/* Orbiting circles */}

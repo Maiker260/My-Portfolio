@@ -17,6 +17,8 @@ function AboutMe({ disableIntro }) {
         }
     }, [isTransition]);
 
+    const isMobile = window.innerWidth < 1024 ? true : false;
+
     return (
         <main className="relative min-h-screen w-full max-w-[1920px] flex flex-col mx-auto overflow-hidden color-bg-details-third-gradient-top">
             {/* Profile Picture */}
@@ -25,7 +27,6 @@ function AboutMe({ disableIntro }) {
                 end={{ y: "0" }}
                 delay={0.4}
                 className="relative flex flex-col items-center lg:absolute lg:-inset-0 size-full lg:z-10"
-                // className="absolute -inset-0 size-full z-10"
                 isAnimationDisable={isTransition}
             >
                 <ProfilePicture isAnimationDisable={isTransition} />
@@ -36,9 +37,8 @@ function AboutMe({ disableIntro }) {
                 start={{ y: "100%" }}
                 end={{ y: "0" }}
                 className={
-                    "hidden lg:block lg:absolute lg:-inset-0 lg:size-full"
+                    "relative lg:absolute lg:top-[42%] lg:left-[20%] lg:w-full"
                 }
-                // className="absolute -inset-0 size-full"
                 isAnimationDisable={isTransition}
             >
                 <HorizontalBanner />
@@ -51,9 +51,12 @@ function AboutMe({ disableIntro }) {
                 className={
                     "absolute bottom-8 w-full sm:w-auto sm:bottom-8 sm:right-3"
                 }
-                // className={"absolute bottom-8 right-3"}
             >
-                <NavigationSection backTo={"/"} parentSection={"AboutMe"} />
+                <NavigationSection
+                    backTo={"/"}
+                    parentSection={"AboutMe"}
+                    hasBlackButton={isMobile}
+                />
             </Intro>
         </main>
     );
