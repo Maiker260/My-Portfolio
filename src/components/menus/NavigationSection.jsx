@@ -28,7 +28,11 @@ function NavigationSection({
                     navigate(backTo);
                 }
             } else if (e.key === "Escape" || e.key === "Home") {
-                navigate("/");
+                if (hasHomeButton) {
+                    e.preventDefault();
+                    setBackHomeTransition(false);
+                    navigate("/");
+                }
             }
         };
 
@@ -40,6 +44,7 @@ function NavigationSection({
         setCurrentPage,
         backTo,
         parentSection,
+        hasHomeButton,
     ]);
 
     const handleBackButton = (e) => {

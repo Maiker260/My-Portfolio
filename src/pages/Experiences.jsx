@@ -17,12 +17,12 @@ function Experiences() {
     const totalExperiences = experiences.length;
 
     return (
-        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin">
+        <main className="relative min-h-screen w-full max-w-[1920px] p-4 mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin lg:p-0">
             {/* White Background Line */}
             <Intro
                 start={{ x: "-5%", scale: 1.1 }}
                 end={{ x: "0", scale: 1 }}
-                className="absolute inset-0 size-full obverflow-hidden"
+                className="hidden lg:block absolute inset-0 size-full obverflow-hidden"
             >
                 <svg
                     className="size-full"
@@ -40,7 +40,10 @@ function Experiences() {
             <Intro
                 start={{ x: "-100%" }}
                 end={{ x: "0" }}
-                className={"absolute top-15 left-0 h-[25vh] w-[40vw]"}
+                className={
+                    "relative lg:absolute lg:top-15 lg:left-0 lg:h-[25vh] lg:w-[40vw]"
+                }
+                // className={"absolute top-15 left-0 h-[25vh] w-[40vw]"}
             >
                 <UpperLeft
                     id={id}
@@ -88,7 +91,10 @@ function Experiences() {
             <Intro
                 start={{ x: "100%" }}
                 end={{ x: "0" }}
-                className={"absolute bottom-8 right-3 z-50"}
+                className={
+                    "absolute bottom-8 w-full sm:w-auto sm:bottom-8 sm:right-3"
+                }
+                // className={"absolute bottom-8 right-3 z-50"}
             >
                 <NavigationSection backTo={"/experience"} hasHomeButton />
             </Intro>

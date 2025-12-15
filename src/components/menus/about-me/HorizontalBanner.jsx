@@ -40,7 +40,7 @@ function HorizontalBanner() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 key={index}
-                                className="flex flex-col bg-black p-1 group lg:w-fit hover:cursor-pointer"
+                                className="flex flex-col bg-black p-1 group hover:cursor-pointer"
                             >
                                 <div className="flex-1 flex items-center justify-center color-bg-details-nineth group-hover:bg-white">
                                     <method.icon className="w-full h-auto color-text-details-fourth group-hover:text-black p-3 pointer-events-none" />

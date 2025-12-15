@@ -460,3 +460,9 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     z-index: 10;
 }
+
+@layer utilities {
+    .clip-diagonal {
+        clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    }
+}
