@@ -5,7 +5,7 @@ export const experienceData = [
         title: "Technical Support Engineer",
         years: 3,
         description:
-            "Provided Technical Support for enterprise customers in virtualized environments. Focused on diagnosing complexxs issues and maintaining high availability across VMware and Omnissa platforms.",
+            "Provided Technical Support for enterprise customers in virtualized environments. Focused on diagnosing complex issues and maintaining high availability across VMware and Omnissa platforms.",
         responsabilities: [
             "Managed and troubleshoot VMware/Omnissa products, including Horizon Connection Servers and Unified Access Gateways.",
             "Deployed, configured, and maintained Windows, macOS, and Linux virtual machines.",

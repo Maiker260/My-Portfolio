@@ -23,7 +23,7 @@ function ItemNavButton({
         <button
             className={`${className} flex ${
                 name === "next" && "flex-row-reverse"
-            } items-center text-[2vw] text-white group transition hover:cursor-pointer hover:scale-110 `}
+            } items-center text-white group transition lg:text-[2vw] hover:cursor-pointer hover:scale-110`}
             onClick={() => {
                 if (!isFlipping) {
                     setIsFlipping(true);
