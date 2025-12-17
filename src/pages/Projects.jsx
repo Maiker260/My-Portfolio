@@ -8,6 +8,7 @@ import TextTop from "../components/menus/projects/TextTop.jsx";
 import { creatorData } from "../services/data/creatorData.js";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
 import Intro from "../components/menus/projects/animations/Intro.jsx";
+import ImageCarouselMobile from "../components/menus/projects/ImageCarouselMobile.jsx";
 
 function Projects() {
     const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -16,18 +17,22 @@ function Projects() {
 
     return (
         <ProjectDataContext.Provider value={projects}>
-            <main className="relative min-h-screen w-full max-w-[1920px] mx-auto color-bg-details-third-gradient-top overflow-hidden">
+            <main className="relative min-h-screen w-full max-w-[1920px] flex flex-col gap-10 mx-auto p-4 pb-50 color-bg-details-third-gradient-top overflow-x-hidden lg:overflow-hidden lg:gap-0 xl:p-0">
                 {/* Layout */}
-                <DiagonalBottomBox />
+                <div className="hidden lg:block">
+                    <DiagonalBottomBox />
+                </div>
 
-                <DiagonalTopBox />
+                <div className="hidden lg:block">
+                    <DiagonalTopBox />
+                </div>
 
                 {/* Upper Left Info */}
                 <Intro
                     start={{ y: "-100%" }}
                     end={{ y: "0" }}
                     className={
-                        "absolute origin-top-left top-[6vh] left-[5vw] z-50"
+                        "relative w-fit mx-auto lg:absolute lg:origin-top-left lg:z-50 lg:top-[8%] lg:left-[2vw] xl:top-[6%] 2xl:top-[8%]"
                     }
                 >
                     <TextTop
@@ -38,11 +43,11 @@ function Projects() {
                     />
                 </Intro>
 
-                {/* Diamond Image Carousel */}
+                {/* Diamond Image Carousel (Desktop Mode) */}
                 <Intro
                     start={{ x: "50%" }}
                     end={{ x: "0" }}
-                    className="absolute -top-22 -right-30 h-[120%] w-[70vw] flex items-center justify-center z-40"
+                    className="hidden lg:flex lg:items-center lg:justify-center lg:absolute lg:-top-22 lg:-right-30 lg:h-[120%] lg:w-[70vw] lg:z-40"
                 >
                     <CentralDiamond
                         buttonPressed={buttonPressed}
@@ -50,11 +55,22 @@ function Projects() {
                     />
                 </Intro>
 
+                {/* Image Carousel (Mobile Only)  */}
+                <Intro
+                    start={{ x: "50%" }}
+                    end={{ x: "0" }}
+                    className={
+                        "relative w-full h-[30vh] mx-auto sm:max-w-[50vw] lg:hidden"
+                    }
+                >
+                    <ImageCarouselMobile />
+                </Intro>
+
                 {/* Skill Info Box */}
                 <Intro
                     start={{ y: "150%" }}
                     end={{ y: "0" }}
-                    className="absolute top-[55%] left-0 h-[30vh] w-[45vw] z-50"
+                    className="w-full h-[30vh] mx-auto sm:max-w-[70vw] lg:absolute lg:top-[55%] lg:left-0 lg:h-[30vh] lg:w-[45vw] lg:z-50"
                 >
                     <SkillDetailsBox
                         hoveredSkill={hoveredSkill}
@@ -68,7 +84,9 @@ function Projects() {
                 <Intro
                     start={{ x: "20%" }}
                     end={{ x: "0" }}
-                    className={"absolute bottom-8 right-3 z-50"}
+                    className={
+                        "absolute bottom-8 w-full sm:w-auto sm:bottom-8 sm:right-3 lg:z-50"
+                    }
                 >
                     <NavigationSection backTo={"/projects"} hasHomeButton />
                 </Intro>

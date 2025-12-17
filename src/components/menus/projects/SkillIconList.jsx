@@ -4,7 +4,7 @@ function SkillIconList({ skills, hoveredSkill, setHoveredSkill, className }) {
             {skills.map(({ name, icon: Icon }, index) => (
                 <div
                     key={index}
-                    className="size-full max-w-[60px] rounded-full bg-main-color-details flex items-center justify-center"
+                    className="size-full max-w-[40px] rounded-full bg-main-color-details flex items-center justify-center md:max-w-[50px] 2xl:max-w-[60px]"
                     title={name}
                     onMouseEnter={() => setHoveredSkill(name)}
                     onMouseLeave={() => setHoveredSkill(null)}

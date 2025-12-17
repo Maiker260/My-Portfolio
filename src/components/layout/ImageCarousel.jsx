@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import AnimatedBump from "../animations/AnimatedBump.jsx";
-import Intro from "../animations/Intro.jsx";
 
-function ImageCarousel({ screenshots, buttonPressed, setButtonPressed }) {
+function ImageCarousel({
+    screenshots,
+    buttonPressed,
+    setButtonPressed,
+    className,
+}) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const prevSlide = () => {
@@ -31,7 +35,7 @@ function ImageCarousel({ screenshots, buttonPressed, setButtonPressed }) {
         <AnimatedBump
             buttonPressed={buttonPressed}
             setButtonPressed={setButtonPressed}
-            className="relative size-full overflow-hidden rounded-lg"
+            className={`relative size-full mx-auto overflow-hidden rounded-lg ${className}`}
         >
             {/* Slides */}
             {screenshots.map((image, index) => (
@@ -41,18 +45,18 @@ function ImageCarousel({ screenshots, buttonPressed, setButtonPressed }) {
                         index === currentIndex
                             ? "opacity-100 z-10"
                             : "opacity-0 z-0"
-                    }`}
+                    } mx-auto sm:w-[50vw]`}
                 >
                     <img
                         src={image.src}
                         alt={image.alt}
-                        className=" size-full object-cover"
+                        className="size-full object-contain xl:object-cover"
                     />
                 </div>
             ))}
 
             {/* Navigation */}
-            <div className="absolute inset-0 flex justify-between items-center px-4 z-50">
+            <div className="absolute inset-0 mx-auto flex justify-between items-center px-4 z-50 sm:w-[50vw]">
                 {/* Left arrow */}
                 <button
                     onClick={prevSlide}

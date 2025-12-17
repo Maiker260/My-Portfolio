@@ -10,8 +10,6 @@ function CentralDiamond({ buttonPressed, setButtonPressed }) {
     const projectData = useContext(ProjectDataContext);
     const project = projectData[Number(id)];
 
-    if (!project) return <p>Project not found</p>;
-
     const { screenshots, livePreviewURL } = project;
 
     return (

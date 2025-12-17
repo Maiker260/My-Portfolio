@@ -43,23 +43,26 @@ function SkillDetailsBox({
             buttonPressed={buttonPressed}
             setButtonPressed={setButtonPressed}
             className={
-                "size-full  ml-7 border-3 border-main color-bg-details-secund p-2 origin-top-left text-white"
+                "size-full p-2 border-3 border-main text-white color-bg-details-secund origin-top-left lg:ml-7"
             }
         >
             <article className="size-full">
                 <div className="grid grid-cols-2 grid-rows-5 size-full">
                     {/* Top Bar */}
-                    <div className="relative mb-2 color-text-details-fourth col-span-2 font-rodin flex justify-center content-center items-center">
+                    <div className="relative flex justify-center content-center items-center col-span-2 mb-2 color-text-details-fourth font-rodin">
                         {/* Line behind the Title */}
                         <div className="absolute w-full h-2 color-bg-details-seventh flex justify-center items-center overflow-hidden"></div>
+
                         {/* Title */}
                         <div className="relative z-10 flex justify-center items-center h-full">
-                            <span className="absolute text-[2.3vw] px-8 bg-black z-40 color-text-details-fourth">
-                                SKILLS<span className="text-[2vw]">&</span>
+                            <span className="absolute text-xl px-8 color-bg-details-secund color-text-details-fourth z-40 lg:text-[2.3vw]">
+                                SKILLS
+                                <span className="text-sm lg:text-[2vw]">&</span>
                                 TOOLS
                             </span>
                         </div>
                     </div>
+
                     {/* Grid */}
                     {filledSkills.map((skill, index) => (
                         <div
@@ -68,31 +71,32 @@ function SkillDetailsBox({
                             ${
                                 skill.name === "NONE" &&
                                 "pointer-events-none text-[#5c5c5c]"
-                            } size-full text-lg flex justify-center items-center font-rodin rounded`}
+                            } size-full flex justify-center items-center text-sm rounded font-rodin lg:text-lg`}
                             onMouseEnter={() => setHoveredSkill(skill.name)}
                             onMouseLeave={() => setHoveredSkill(null)}
                         >
                             {hoveredSkill === skill.name &&
                             skill.name !== "NONE" ? (
-                                <p className="flex justify-center items-center size-full bg-menu-select-white rounded">
+                                <span className="size-full flex justify-center items-center rounded bg-menu-select-white">
                                     {skill.name}
-                                </p>
+                                </span>
                             ) : (
-                                <p>{skill.name}</p>
+                                <span>{skill.name}</span>
                             )}
                         </div>
                     ))}
                 </div>
             </article>
+
             {/* Github button */}
-            <div className="w-full mt-10 flex justify-center font-rodin">
+            <div className="w-full flex justify-center font-rodin mt-10">
                 <Link
                     to={codeURL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group"
                 >
-                    <div className="p-2 color-text-details-fourth color-bg-details-secund flex gap-2 items-center rounded text-2xl transition group-hover:color-bg-details-fifth">
+                    <div className="flex gap-2 items-center text-2xl p-2 rounded color-text-details-fourth color-bg-details-secund transition group-hover:color-bg-details-fifth">
                         <span className="transition group-hover:text-neutral">
                             Code
                         </span>
