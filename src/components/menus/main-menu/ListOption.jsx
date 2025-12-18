@@ -30,22 +30,22 @@ function ListOption({
 
     const listClasses = isAnimationDisable
         ? `font-rodin text-menu-cyan-${titleType} tracking-[-0.12em] ${
-              !showTransition && "hover:text-black"
+              !showTransition && "group-hover:text-black"
           } `
         : `font-rodin text-menu-cyan-${titleType} opacity-0 animate-[fade-up_600ms_linear_forwards] tracking-[-0.12em] ${
-              !showTransition && "hover:text-black"
+              !showTransition && "group-hover:text-black"
           }`;
 
     return (
         <div
             className={`relative inline-block ${
                 showTransition ? null : "cursor-pointer"
-            }`}
+            } group`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={onClick}
         >
-            <div className="relative inline-block font-bold text-7_5xl leading-none">
+            <div className="size-full relative text-5xl inline-block font-bold leading-none lg:text-[5rem]">
                 {/* Black base text */}
                 <span
                     ref={textRef}

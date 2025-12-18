@@ -22,7 +22,7 @@ function MenuItemHoverEffect({ size, index, name }) {
         <>
             {/* Triangle in Front */}
             <span
-                className="absolute left-6 flex items-center justify-center pointer-events-none z-30 bg-menu-select-rose"
+                className="absolute left-6 flex items-center justify-center bg-menu-select-rose z-30 pointer-events-none select-none"
                 style={{
                     ...triangleStyle,
                     top: "-70px",
@@ -30,14 +30,14 @@ function MenuItemHoverEffect({ size, index, name }) {
             >
                 {/* Red text (normal size, centered in triangle) and inner triangle */}
                 <span
-                    className="absolute -left-6 text-menu-select-red text-7_5xl font-rodin tracking-[-0.12em] whitespace-nowrap"
+                    className="absolute -left-6 text-5xl text-menu-select-red tracking-[-0.12em] whitespace-nowrap font-rodin pointer-events-none select-none lg:text-[5rem]"
                     style={{
                         top: "70px",
                     }}
                 >
                     {name}
                     <span
-                        className={`${innerTriangleTWStyle} opacity-90 -z-10`}
+                        className={`${innerTriangleTWStyle} opacity-90 -z-10 pointer-events-none select-none`}
                         style={{
                             ...innerTriangleStyle,
                         }}

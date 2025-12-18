@@ -26,7 +26,7 @@ export default function BackgroundVideo({ isAnimationDisable }) {
     }, [isAnimationDisable]);
 
     return (
-        <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="hidden lg:block lg:absolute lg:inset-0 lg:-z-10 lg:overflow-hidden">
             {/* Intro video (plays once) */}
 
             <video

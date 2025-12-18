@@ -2,17 +2,18 @@ function IconWithName({ icon: IconComponent, name }) {
     const paddingClass = name === "LinkedIn" ? "px-3" : "px-5";
 
     return (
-        <div className="flex flex-col relative cursor-pointer group hover:scale-105 rotate-5">
-            <div className="bg-menu-blue-icons-gradient w-20 h-20 p-2 shrink-0 grow-0 flex items-center justify-center rounded-full border-3 border-menu-blue relative group-hover:color-select-icons">
+        <div className="w-full flex flex-col relative cursor-pointer group lg:rotate-5 hover:scale-105 ">
+            <div className="relative w-20 h-20 p-2 flex items-center justify-center shrink-0 grow-0 rounded-full border-3 border-menu-blue bg-menu-blue-icons-gradient group-hover:color-select-icons">
                 <IconComponent
-                    className={"rounded -rotate-20 w-[85%] h-[85%]"}
+                    className={"rounded w-[85%] h-[85%] lg:-rotate-20"}
                 />
 
                 {/* Cover the border where the text box will touch it */}
-                <div className="absolute bottom-1 right-1_5 w-11 h-2 bg-menu-blue-icons rotate-[-20deg] rounded-t-[25%] z-20"></div>
+                <div className="absolute bottom-0 w-11 h-2 rounded-t-[25%] bg-menu-blue-icons z-20 lg:bottom-1 lg:right-1_5 lg:rotate-[-20deg]"></div>
             </div>
+
             <div
-                className={`font-rodin border-3 border-menu-blue p-1 ${paddingClass} absolute -right-25 -bottom-7 -rotate-20 bg-menu-blue-icons color-text-details-main group-hover:text-menu-cyan-main`}
+                className={`absolute -right-3 -bottom-7 p-1 ${paddingClass} border-3 border-menu-blue bg-menu-blue-icons color-text-details-main font-rodin lg:-right-25 lg:-bottom-7 lg:-rotate-20 group-hover:text-menu-cyan-main`}
             >
                 <span className="">{name}</span>
             </div>

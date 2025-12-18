@@ -24,7 +24,7 @@ function List({
 
     return (
         <>
-            <section className="flex flex-col text-center gap-2 -rotate-4 ">
+            <section className="flex flex-col text-center lg:gap-0 lg:-rotate-4 ">
                 {menuList.map((item, i) => {
                     // bottom element appears first
                     const delay = `${650 + (total - 1 - i) * stagger}ms`;

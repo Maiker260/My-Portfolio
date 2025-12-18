@@ -49,7 +49,7 @@ function AboutMe({ disableIntro }) {
                 end={{ x: "0" }}
                 isAnimationDisable={isTransition}
                 className={
-                    "absolute bottom-8 w-full sm:w-auto sm:bottom-8 sm:right-3"
+                    "absolute bottom-8 w-full z-50 sm:w-auto sm:bottom-8 sm:right-3"
                 }
             >
                 <NavigationSection
