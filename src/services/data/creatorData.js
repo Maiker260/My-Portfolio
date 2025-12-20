@@ -6,7 +6,8 @@ import { educationData } from "./education.js";
 
 export const creatorData = {
     author: {
-        name: "Miker Gutierrez",
+        name: "Miker Gutierrez S.",
+        jobPosition: "Technical Support Engineer",
         profilePicture: "/other/avatar.webp",
         profileData: [
             "Experienced Tech Support Engineer with 7+ years of experience in Networking, Server Administration, Troubleshooting, Customer Service, etc.",
