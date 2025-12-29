@@ -20,7 +20,7 @@ function AboutMe({ disableIntro }) {
     const isMobile = window.innerWidth < 1024 ? true : false;
 
     return (
-        <main className="relative min-h-screen w-full max-w-[1920px] flex flex-col mx-auto overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] flex flex-col mx-auto overflow-hidden color-bg-details-third-gradient-top">
             {/* Profile Picture */}
             <Intro
                 start={{ y: "-150%" }}
@@ -37,7 +37,7 @@ function AboutMe({ disableIntro }) {
                 start={{ y: "100%" }}
                 end={{ y: "0" }}
                 className={
-                    "relative lg:absolute lg:top-[42%] lg:left-[20%] lg:w-full"
+                    "relative lg:absolute lg:top-[42%] lg:left-[20%] lg:w-full 2xl:left-[21%] 3xl:left-[23%]"
                 }
                 isAnimationDisable={isTransition}
             >

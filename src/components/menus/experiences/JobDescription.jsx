@@ -8,10 +8,10 @@ function JobDescription({ id, data, changeContent, setChangeContent }) {
             changeContent={changeContent}
             setChangeContent={setChangeContent}
             component={"lowerRight"}
-            className={"h-full"}
+            className={"h-full 2xl:h-fit"}
         >
             <article
-                className="flex flex-col gap-3 w-full color-bg-details-tenth px-10 pt-2 pb-4 font-skipstdb 2xl:px-12"
+                className="flex flex-col gap-3 w-full color-bg-details-tenth px-10 pt-2 pb-4 font-skipstdb 2xl:h-fit 2xl:px-14 3xl:px-16"
                 style={{
                     clipPath: "polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)",
                 }}

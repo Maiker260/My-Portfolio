@@ -17,7 +17,7 @@ function Projects() {
 
     return (
         <ProjectDataContext.Provider value={projects}>
-            <main className="relative min-h-screen w-full max-w-[1920px] flex flex-col gap-10 mx-auto p-4 pb-50 color-bg-details-third-gradient-top overflow-x-hidden lg:overflow-hidden lg:gap-0 xl:p-0">
+            <main className="relative min-h-screen w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] flex flex-col gap-10 mx-auto p-4 pb-50 color-bg-details-third-gradient-top overflow-x-hidden lg:overflow-hidden lg:gap-0 xl:p-0">
                 {/* Layout */}
                 <div className="hidden lg:block">
                     <DiagonalBottomBox />
@@ -88,7 +88,11 @@ function Projects() {
                         "absolute bottom-8 w-full sm:w-auto sm:bottom-8 sm:right-3 lg:z-50"
                     }
                 >
-                    <NavigationSection backTo={"/projects"} hasHomeButton />
+                    <NavigationSection
+                        backTo={"/projects"}
+                        hasHomeButton
+                        hasArrows
+                    />
                 </Intro>
             </main>
         </ProjectDataContext.Provider>

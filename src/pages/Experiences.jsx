@@ -19,7 +19,7 @@ function Experiences() {
     const job = experiences[id];
 
     return (
-        <main className="flex flex-col gap-10 relative min-h-screen w-full max-w-[1920px] p-4 mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin lg:gap-0 lg:p-0">
+        <main className="flex flex-col gap-10 relative min-h-screen w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] p-4 mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin lg:gap-0 lg:p-0">
             {/* White Background Line */}
             <Intro
                 start={{ x: "-5%", scale: 1.1 }}
@@ -80,7 +80,7 @@ function Experiences() {
                 start={{ x: "100%" }}
                 end={{ x: "0" }}
                 className={
-                    "w-full m-auto sm:max-w-[80%] lg:absolute lg:bottom-18 lg:right-15 lg:h-[20vh] lg:w-[45vw] xl:bottom-22 xl:right-10 2xl:w-[40vw]"
+                    "w-full m-auto sm:max-w-[80%] lg:absolute lg:bottom-18 lg:right-15 lg:h-[20vh] lg:w-[45vw] xl:bottom-22 xl:right-10 2xl:w-[40%] 2xl:h-fit"
                 }
             >
                 <JobDescription
@@ -107,7 +107,11 @@ function Experiences() {
                     "absolute bottom-8 w-full sm:w-auto sm:bottom-8 sm:right-3"
                 }
             >
-                <NavigationSection backTo={"/experience"} hasHomeButton />
+                <NavigationSection
+                    backTo={"/experience"}
+                    hasHomeButton
+                    hasArrows
+                />
             </Intro>
         </main>
     );

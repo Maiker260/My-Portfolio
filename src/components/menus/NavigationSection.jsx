@@ -3,16 +3,20 @@ import { MainPageContext } from "../../context/MainPageContext.jsx";
 import { useNavigate } from "react-router-dom";
 import { BackButton } from "../icons/BackButton.jsx";
 import { Home } from "../icons/Home.jsx";
+import { icons } from "../icons/icons.js";
 
 function NavigationSection({
     className,
     hasText = false,
     hasBlackButton,
     hasHomeButton,
+    hasArrows,
     description,
     backTo = null,
     parentSection = null,
 }) {
+    const { HorizontalArrows } = icons;
+
     const navigate = useNavigate();
     const { setBackHomeTransition, setCurrentPage } =
         useContext(MainPageContext);
@@ -80,6 +84,20 @@ function NavigationSection({
                 </div>
             )}
             <div className="flex items-center gap-4 self-center sm:self-end pr-8 w-fit text-shadow-back-info">
+                {hasArrows && (
+                    <button className="flex items-center gap-0.5 text-2xl">
+                        <div
+                            className={`${
+                                hasBlackButton ? "bg-black" : "bg-white"
+                            } w-7 h-7 p-0.5 rounded-full flex items-center justify-center`}
+                        >
+                            <HorizontalArrows
+                                color={`${hasBlackButton ? "white" : "black"} `}
+                            />
+                        </div>
+                        Move
+                    </button>
+                )}
                 {hasHomeButton && (
                     <button
                         onClick={handleHomeButton}

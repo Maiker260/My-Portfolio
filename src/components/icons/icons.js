@@ -3,6 +3,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { LuGithub } from "react-icons/lu";
 import { RiJavascriptFill } from "react-icons/ri";
 import { MdOutlineArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { TbArrowsMoveHorizontal } from "react-icons/tb";
 
 import {
     SiTailwindcss,
@@ -34,4 +35,6 @@ export const icons = {
 
     BackArrow: MdOutlineArrowBackIos,
     ForwardArrow: MdArrowForwardIos,
+
+    HorizontalArrows: TbArrowsMoveHorizontal,
 };

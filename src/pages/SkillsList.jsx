@@ -42,7 +42,7 @@ function SkillsList({ disableIntro }) {
     }, [skills]);
 
     return (
-        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto flex flex-col overflow-x-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] mx-auto flex flex-col overflow-x-hidden color-bg-details-third-gradient-top">
             <Intro
                 start={{ x: "-100%" }}
                 end={{ x: "0" }}
@@ -103,6 +103,7 @@ function SkillsList({ disableIntro }) {
             >
                 <NavigationSection
                     hasText
+                    hasArrows
                     description={"Select a Skill Card"}
                     backTo={"/"}
                     parentSection={"Skills"}

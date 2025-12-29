@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import { skillCarouselSettings } from "../../../utils/skillCarouselSettings.js";
 import { creatorData } from "../../../services/data/creatorData.js";
+import useArrowNavigation from "../../../hooks/useArrowNavigation.js";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,8 +32,8 @@ function SkillCarousel({
         },
     };
 
-    const goNext = () => sliderRef.current?.slickNext();
     const goPrev = () => sliderRef.current?.slickPrev();
+    const goNext = () => sliderRef.current?.slickNext();
 
     const renderSlideButton = (index) => {
         const lastIndex = skills.length - 1;
@@ -65,6 +66,11 @@ function SkillCarousel({
             navigate(`${index}`);
         }
     };
+
+    useArrowNavigation({
+        onLeft: goPrev,
+        onRight: goNext,
+    });
 
     return (
         <section className="w-full flex justify-center items-center py-8">

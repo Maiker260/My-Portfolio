@@ -9,7 +9,7 @@ function EducationList() {
     const [optionSelected, setOptionSelected] = useState(null);
 
     return (
-        <article className="flex flex-col gap-6 text-white font-skipstdb">
+        <article className="flex flex-col gap-6 text-white font-skipstdb 2xl:gap-12">
             {/* Mobile */}
             <ul className="block lg:hidden space-y-4">
                 {educationData.map((item, index) => (

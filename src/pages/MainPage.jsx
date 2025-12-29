@@ -38,7 +38,7 @@ function MainPage() {
         <>
             {backHomeTransition && <TransitionToMainPage />}
             <div
-                className={`relative min-h-screen max-w-[1920px] mx-auto ${
+                className={`relative min-h-screen mx-auto max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] ${
                     isDesktop ? null : "color-bg-details-third-gradient-top"
                 }`}
             >

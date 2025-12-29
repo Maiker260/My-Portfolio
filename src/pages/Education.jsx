@@ -17,7 +17,7 @@ function Education({ disableIntro }) {
     }, [isTransition]);
 
     return (
-        <div className="relative min-h-screen w-full max-w-[1920px] mx-auto p-3 overflow-hidden color-bg-details-third-gradient-top lg:p-0">
+        <div className="relative min-h-screen w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] mx-auto p-3 overflow-hidden color-bg-details-third-gradient-top lg:p-0">
             {/* Big White Parallelogram */}
             <Intro
                 start={{ y: "-50%" }}

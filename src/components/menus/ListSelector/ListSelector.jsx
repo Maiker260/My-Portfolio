@@ -19,7 +19,7 @@ function ListSelector({ name, data, guideMessage, disableIntro }) {
     const titleName = name.toUpperCase();
 
     return (
-        <main className="relative min-h-screen w-full max-w-[1920px] mx-auto overflow-hidden color-bg-details-third-gradient-top">
+        <main className="relative min-h-screen w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] mx-auto overflow-hidden color-bg-details-third-gradient-top">
             {/* Diagonal White Line with Name */}
             <svg
                 width="100%"

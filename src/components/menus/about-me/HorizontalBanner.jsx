@@ -32,7 +32,7 @@ function HorizontalBanner() {
                 </div>
 
                 {/* Contact Area */}
-                <article className=" gap-3 mx-auto z-10 font-skipstdb lg:block lg:w-full lg:absolute lg:-top-18">
+                <article className="gap-3 mx-auto z-10 font-skipstdb lg:block lg:w-full lg:absolute lg:-top-18">
                     <div className="grid grid-cols-2 gap-3 w-fit">
                         {contact.map((method, index) => (
                             <Link
