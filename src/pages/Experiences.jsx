@@ -7,6 +7,7 @@ import JobDescription from "../components/menus/experiences/JobDescription.jsx";
 import CardFlip from "../components/layout/CardFlip.jsx";
 import { creatorData } from "../services/data/creatorData.js";
 import JobResponsabilities from "../components/menus/experiences/JobResponsabilities.jsx";
+import NotFound from "./NotFound.jsx";
 
 function Experiences() {
     const [buttonPressed, setButtonPressed] = useState(false);
@@ -17,6 +18,10 @@ function Experiences() {
     const { experiences } = creatorData;
     const totalExperiences = experiences.length;
     const job = experiences[id];
+
+    if (!job) {
+        return <NotFound />;
+    }
 
     return (
         <main className="flex flex-col gap-10 relative min-h-screen w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] p-4 mx-auto overflow-hidden color-bg-details-third-gradient-top font-rodin lg:gap-0 lg:p-0">

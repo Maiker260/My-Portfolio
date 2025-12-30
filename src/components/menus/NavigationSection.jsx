@@ -14,6 +14,7 @@ function NavigationSection({
     description,
     backTo = null,
     parentSection = null,
+    disableBackButton,
 }) {
     const { HorizontalArrows } = icons;
 
@@ -117,17 +118,19 @@ function NavigationSection({
                         Home
                     </button>
                 )}
-                <button
-                    className="flex items-center gap-0.5 text-2xl hover:scale-110 hover:cursor-pointer"
-                    onClick={handleBackButton}
-                >
-                    <BackButton
-                        className={`w-7 ${
-                            hasBlackButton ? "fill-black" : "fill-white"
-                        } `}
-                    />
-                    Back
-                </button>
+                {!disableBackButton && (
+                    <button
+                        className="flex items-center gap-0.5 text-2xl hover:scale-110 hover:cursor-pointer"
+                        onClick={handleBackButton}
+                    >
+                        <BackButton
+                            className={`w-7 ${
+                                hasBlackButton ? "fill-black" : "fill-white"
+                            } `}
+                        />
+                        Back
+                    </button>
+                )}
             </div>
         </article>
     );

@@ -6,13 +6,15 @@ import Intro from "../components/menus/skills/animations/Intro.jsx";
 import { creatorData } from "../services/data/creatorData.js";
 import Header from "../components/menus/skills/Header.jsx";
 import SkillCarouselPaging from "../components/menus/skillsList/SkillCarouselPaging.jsx";
+import NotFound from "./NotFound.jsx";
 
 function Skills() {
     const navigate = useNavigate();
     const { id } = useParams();
     const allSkills = creatorData.skills;
     const skill = allSkills[id];
-    const [skillSelected, setSkillSelected] = useState(skill.abilities[0]);
+
+    const [skillSelected, setSkillSelected] = useState(skill?.abilities?.[0]);
     const [isCardFlipping, setIsCardFlipping] = useState(false);
     const [changeContent, setChangeContent] = useState(false);
 
@@ -33,6 +35,10 @@ function Skills() {
         const back = new Image();
         back.src = "/other/card.webp";
     }, []);
+
+    if (!skill) {
+        return <NotFound />;
+    }
 
     return (
         <main className="relative min-h-screen w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] p-3 mx-auto flex flex-col gap-7 overflow-hidden color-bg-details-third-gradient-top lg:p-0 lg:gap-0">

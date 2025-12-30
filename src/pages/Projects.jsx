@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { ProjectDataContext } from "../context/ProjectDataContext.jsx";
 import DiagonalTopBox from "../components/menus/projects/DiagonalTopBox.jsx";
 import DiagonalBottomBox from "../components/menus/projects/DiagonalBottomBox.jsx";
@@ -9,11 +10,19 @@ import { creatorData } from "../services/data/creatorData.js";
 import NavigationSection from "../components/menus/NavigationSection.jsx";
 import Intro from "../components/menus/projects/animations/Intro.jsx";
 import ImageCarouselMobile from "../components/menus/projects/ImageCarouselMobile.jsx";
+import NotFound from "./NotFound.jsx";
 
 function Projects() {
     const [hoveredSkill, setHoveredSkill] = useState(null);
     const [buttonPressed, setButtonPressed] = useState(null);
     const { projects } = creatorData;
+
+    const { id } = useParams();
+    const project = projects[id];
+
+    if (!project) {
+        return <NotFound />;
+    }
 
     return (
         <ProjectDataContext.Provider value={projects}>

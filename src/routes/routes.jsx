@@ -7,6 +7,7 @@ import SkillsList from "../pages/SkillsList.jsx";
 import Skills from "../pages/Skills.jsx";
 import Education from "../pages/Education.jsx";
 import AboutMe from "../pages/AboutMe.jsx";
+import NotFound from "../pages/NotFound.jsx";
 
 const routes = [
     {
@@ -46,8 +47,8 @@ const routes = [
         element: <AboutMe />,
     },
     {
-        path: "/contact",
-        // element: <Contact />,
+        path: "*",
+        element: <NotFound />,
     },
 ];
 
