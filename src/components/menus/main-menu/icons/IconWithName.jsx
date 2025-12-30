@@ -9,7 +9,7 @@ function IconWithName({ icon: IconComponent, name }) {
                 />
 
                 {/* Cover the border where the text box will touch it */}
-                <div className="absolute bottom-0 w-11 h-2 rounded-t-[25%] bg-menu-blue-icons z-20 lg:bottom-1 lg:right-1_5 lg:rotate-[-20deg]"></div>
+                <div className="absolute bottom-0 w-11 h-2 rounded-t-[25%] bg-menu-blue-icons z-20 lg:bottom-1 lg:right-1 lg:rotate-[-20deg]"></div>
             </div>
 
             <div
