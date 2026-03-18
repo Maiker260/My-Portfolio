@@ -20,10 +20,10 @@ function ItemNavButton({
 
     const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const changeContent = (name) => {
+    const changeContent = (btnName) => {
         if (!isFlipping) {
             setIsFlipping(true);
-            setButtonPressed(name);
+            setButtonPressed(btnName);
             changeItem(page, totalItems, navigate, location);
             moreActions();
         }
@@ -39,7 +39,7 @@ function ItemNavButton({
             className={`${className} flex ${
                 name === "next" && "flex-row-reverse"
             } items-center text-white group transition lg:text-[2vw] hover:cursor-pointer hover:scale-110`}
-            onClick={changeContent}
+            onClick={() => changeContent(name)}
         >
             <NavSymbol />
             <h2>{capitalizedName}</h2>

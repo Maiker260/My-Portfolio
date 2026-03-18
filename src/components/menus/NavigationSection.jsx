@@ -90,7 +90,7 @@ function NavigationSection({
                         <div
                             className={`${
                                 hasBlackButton ? "bg-black" : "bg-white"
-                            } w-7 h-7 p-0.5 rounded-full flex items-center justify-center`}
+                            } w-7 h-7 p-0.5 rounded-full border-2 border-[#000250] flex items-center justify-center`}
                         >
                             <HorizontalArrows
                                 color={`${hasBlackButton ? "white" : "black"} `}
@@ -107,7 +107,7 @@ function NavigationSection({
                         <div
                             className={`${
                                 hasBlackButton ? "bg-black" : "bg-white"
-                            } w-7 h-7 p-1.5 rounded-full flex items-center justify-center`}
+                            } w-7 h-7 p-1.5 rounded-full flex items-center justify-center border-2 border-[#000250]`}
                         >
                             <Home
                                 className={`w-fit ${
@@ -124,7 +124,7 @@ function NavigationSection({
                         onClick={handleBackButton}
                     >
                         <BackButton
-                            className={`w-7 ${
+                            className={`w-7 rounded-full border-2 border-[#000250] ${
                                 hasBlackButton ? "fill-black" : "fill-white"
                             } `}
                         />

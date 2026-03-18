@@ -75,7 +75,7 @@ function TextTop({
                     hoveredSkill={hoveredSkill}
                     setHoveredSkill={setHoveredSkill}
                     className={
-                        "flex gap-x-4 gap-y-2 items-center justify-center flex-wrap lg:justify-start"
+                        "flex gap-x-4 gap-y-2 items-center justify-center flex-wrap lg:ml-3 lg:justify-start"
                     }
                 />
             </AnimatedBump>

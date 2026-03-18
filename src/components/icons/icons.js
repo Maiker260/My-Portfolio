@@ -1,4 +1,4 @@
-import { FaReact, FaNodeJs, FaAws, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAws, FaCss3Alt, FaPython } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { LuGithub } from "react-icons/lu";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -32,6 +32,7 @@ export const icons = {
     EJS: SiEjs,
     Javascript: RiJavascriptFill,
     CSS: FaCss3Alt,
+    Python: FaPython,
 
     BackArrow: MdOutlineArrowBackIos,
     ForwardArrow: MdArrowForwardIos,
