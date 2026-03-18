@@ -22,6 +22,10 @@ export const skillsData = [
                 name: "HTML",
                 img: "/skillsLogos/abilities/programming/html.webp",
             },
+            {
+                name: "Python",
+                img: "/skillsLogos/abilities/programming/python.webp",
+            },
         ],
     },
     {

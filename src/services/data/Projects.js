@@ -19,6 +19,10 @@ export const projectData = [
                 src: "/screenshots/horizon-report-generator/Third.webp",
                 alt: "Third",
             },
+            {
+                src: "/screenshots/horizon-report-generator/Fourth.webp",
+                alt: "Fourth",
+            },
         ],
         livePreviewURL: "",
         codeURL: "https://github.com/Maiker260/horizon_report_generator",
