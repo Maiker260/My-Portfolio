@@ -1,4 +1,4 @@
-import ReferenceOption from "./references/referenceOption.jsx";
+import ReferenceOption from "./references/ReferenceOption.jsx";
 import { creatorData } from "../../services/data/creatorData.js";
 
 export default function ReferencesModal({ openModal, setOpenModal }) {

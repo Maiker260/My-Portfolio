@@ -1,7 +1,6 @@
 export default function ReferenceOption({ index, total, item }) {
     const { section, url, refType } = item;
     const MOONPHASES = 8;
-
     const moonIndex = ((index - 1) % MOONPHASES) + 1;
 
     return (
