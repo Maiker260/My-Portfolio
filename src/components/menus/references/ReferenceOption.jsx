@@ -27,7 +27,7 @@ export default function ReferenceOption({ index, total, item }) {
                     <img
                         width="86"
                         height="86"
-                        src={`/public/other/references/moonPhases/${moonIndex}.webp`}
+                        src={`/other/references/moonPhases/${moonIndex}.webp`}
                         alt="full-moon"
                     />
                 </div>
