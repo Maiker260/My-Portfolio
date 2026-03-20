@@ -17,7 +17,10 @@ export const skillsData = [
                 name: "Tailwind",
                 img: "/skillsLogos/abilities/programming/tailwind.webp",
             },
-            { name: "CSS", img: "/skillsLogos/abilities/programming/css.webp" },
+            {
+                name: "CSS",
+                img: "/skillsLogos/abilities/programming/css.webp",
+            },
             {
                 name: "HTML",
                 img: "/skillsLogos/abilities/programming/html.webp",

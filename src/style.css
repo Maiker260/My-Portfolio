@@ -13,6 +13,7 @@
     --color-text-details-fourth: #98fcfe;
     --color-text-details-fifth: #a7a7a7;
     --color-text-details-sixth: #000254;
+    --color-text-details-seventh: #81a9f1;
 
     --color-text-neutral: #262626;
 
@@ -39,6 +40,7 @@
     --color-bg-details-eight: #0e0e50;
     --color-bg-details-nineth: #183291;
     --color-bg-details-tenth: #000254;
+    --color-bg-details-eleventh: #1a1c50;
 
     --color-bg-details-neutral: #262626;
 
@@ -128,6 +130,10 @@ body {
 
     .color-text-details-sixth {
         color: var(--color-text-details-sixth);
+    }
+
+    .color-text-details-seventh {
+        color: var(--color-text-details-seventh);
     }
 
     .text-shadow-main {
@@ -340,6 +346,10 @@ body {
 
     .color-bg-details-tenth {
         background-color: var(--color-bg-details-tenth);
+    }
+
+    .color-bg-details-eleventh {
+        background-color: var(--color-bg-details-eleventh);
     }
 
     .color-bg-details-neutral {

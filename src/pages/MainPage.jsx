@@ -9,12 +9,14 @@ import { pageComponents } from "../services/data/pageComponents.js";
 import TransitionNextPage from "../components/menus/main-menu/animations/TransitionNextPage.jsx";
 import TransitionToMainPage from "../components/menus/main-menu/animations/TransitionToMainPage.jsx";
 import useIsDesktop from "../../hooks/useIsDesktop.js";
+import ReferencesModal from "../components/menus/ReferencesModal.jsx";
 
 function MainPage() {
     const [showContent, setShowContent] = useState(false);
     const [showTransition, setShowTransition] = useState(false);
     const [nextContent, setNextContent] = useState(null);
     const [nextUrl, setNextUrl] = useState(null);
+    const [openModal, setOpenModal] = useState(false);
 
     const { backHomeTransition } = useContext(MainPageContext);
 
@@ -87,11 +89,16 @@ function MainPage() {
                             />
                         </section>
 
-                        <div className="pb-20 mx-auto lg:z-50 lg:absolute lg:bottom-10 lg:right-0 lg:max-w-[15ch] lg:p-0 lg:m-0">
+                        <button
+                            className="pb-20 mx-auto lg:z-50 lg:absolute lg:bottom-10 lg:right-0 lg:max-w-[15ch] lg:p-0 lg:m-0"
+                            onClick={() => {
+                                setOpenModal(true);
+                            }}
+                        >
                             <p className="text-sm text-gray-400 cursor-pointer hover:underline">
                                 Design inspired by Persona 3 Reload.
                             </p>
-                        </div>
+                        </button>
 
                         <div className="absolute bottom-0 left-0 w-full text-2xl px-3 text-center mx-auto bg-white text-neutral-800 lg:hidden">
                             <p>
@@ -101,6 +108,13 @@ function MainPage() {
                         </div>
                     </div>
                 </main>
+
+                {/* References Modal */}
+
+                <ReferencesModal
+                    openModal={openModal}
+                    setOpenModal={setOpenModal}
+                />
 
                 {/* Transition to the Next Page */}
                 {showTransition && (

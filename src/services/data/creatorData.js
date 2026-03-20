@@ -3,6 +3,8 @@ import { projectData } from "./Projects.js";
 import { experienceData } from "./experiences.js";
 import { skillsData } from "./skills.js";
 import { educationData } from "./education.js";
+import { mainPageInfo } from "./mainPageInfo.js";
+import { referencesData } from "./references.js";
 
 export const creatorData = {
     author: {
@@ -36,36 +38,6 @@ export const creatorData = {
     experiences: experienceData,
     skills: skillsData,
     education: educationData,
-    infoList: [
-        {
-            name: "PROJECTS",
-            component: "Projects",
-            url: "/projects",
-            titleType: "main",
-        },
-        {
-            name: "EXPERIENCE",
-            component: "Experience",
-            url: "/experience",
-            titleType: "third",
-        },
-        {
-            name: "SKILLS",
-            component: "Skills",
-            url: "/skills",
-            titleType: "sec",
-        },
-        {
-            name: "EDUCATION",
-            component: "Education",
-            url: "/education",
-            titleType: "third",
-        },
-        {
-            name: "ABOUT ME",
-            component: "AboutMe",
-            url: "/aboutme",
-            titleType: "main",
-        },
-    ],
+    infoList: mainPageInfo,
+    references: referencesData,
 };
