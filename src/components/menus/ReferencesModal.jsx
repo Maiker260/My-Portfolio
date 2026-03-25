@@ -8,7 +8,7 @@ export default function ReferencesModal({ openModal, setOpenModal }) {
         <>
             {openModal && (
                 <section className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 overflow-hidden">
-                    <div className="w-[60%] h-[80%] max-w-[1920px] rounded-2xl relative overflow-auto">
+                    <div className="w-[60%] h-[80%] max-w-[1920px] relative overflow-auto">
                         {/* Close Button */}
                         <button
                             onClick={() => setOpenModal(false)}
@@ -22,7 +22,7 @@ export default function ReferencesModal({ openModal, setOpenModal }) {
                                 REFERENCES
                             </h2>
 
-                            <div className="flex-1 overflow-y-auto flex flex-col gap-3 w-full overflow-x-hidden">
+                            <div className="flex-1 overflow-y-auto flex flex-col gap-3 w-full pb-4 overflow-x-hidden hide-scrollbar">
                                 {references.map((item, idx) => (
                                     <ReferenceOption
                                         key={idx}

@@ -89,13 +89,14 @@ function MainPage() {
                             />
                         </section>
 
+                        {/* Desktop */}
                         <button
-                            className="pb-20 mx-auto lg:z-50 lg:absolute lg:bottom-10 lg:right-0 lg:max-w-[15ch] lg:p-0 lg:m-0"
+                            className=" pb-20 mx-auto lg:z-50 lg:absolute lg:bottom-10 lg:right-0 lg:max-w-[15ch] lg:p-0 lg:m-0"
                             onClick={() => {
-                                setOpenModal(true);
+                                isDesktop ? setOpenModal(true) : null;
                             }}
                         >
-                            <p className="text-sm text-gray-400 cursor-pointer hover:underline">
+                            <p className="text-sm mx-auto text-gray-400 cursor-pointer hover:underline">
                                 Design inspired by Persona 3 Reload.
                             </p>
                         </button>

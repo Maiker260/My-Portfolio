@@ -8,28 +8,46 @@ function ImageCarousel({
     className,
 }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [resetKey, setResetKey] = useState(0);
+
+    // Preload images
+    useEffect(() => {
+        screenshots.forEach((image) => {
+            const img = new Image();
+            img.src = image.src;
+        });
+    }, [screenshots]);
 
     const prevSlide = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? screenshots.length - 1 : prevIndex - 1
+            prevIndex === 0 ? screenshots.length - 1 : prevIndex - 1,
         );
+        setResetKey((k) => k + 1);
     };
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === screenshots.length - 1 ? 0 : prevIndex + 1
+            prevIndex === screenshots.length - 1 ? 0 : prevIndex + 1,
         );
+        setResetKey((k) => k + 1);
     };
 
+    // Reset the image key when project changes
+    useEffect(() => {
+        setCurrentIndex(0);
+        setResetKey((k) => k + 1);
+    }, [screenshots]);
+
+    // Autoplay
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentIndex((prevIndex) =>
-                prevIndex === screenshots.length - 1 ? 0 : prevIndex + 1
+                prevIndex === screenshots.length - 1 ? 0 : prevIndex + 1,
             );
         }, 5000);
 
         return () => clearInterval(intervalId);
-    }, [screenshots.length]);
+    }, [screenshots, resetKey]);
 
     return (
         <AnimatedBump
@@ -50,7 +68,11 @@ function ImageCarousel({
                     <img
                         src={image.src}
                         alt={image.alt}
-                        className="size-full object-contain xl:object-cover"
+                        loading={index === 0 ? "eager" : "lazy"}
+                        onLoad={(e) =>
+                            e.currentTarget.classList.add("opacity-100")
+                        }
+                        className="size-full object-contain xl:object-cover opacity-0 transition-opacity duration-500"
                     />
                 </div>
             ))}

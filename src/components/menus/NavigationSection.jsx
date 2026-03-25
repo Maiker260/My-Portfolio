@@ -101,13 +101,13 @@ function NavigationSection({
                 )}
                 {hasHomeButton && (
                     <button
-                        onClick={handleHomeButton}
                         className="flex items-center gap-0.5 text-2xl hover:scale-110 hover:cursor-pointer"
+                        onClick={handleHomeButton}
                     >
                         <div
                             className={`${
                                 hasBlackButton ? "bg-black" : "bg-white"
-                            } w-7 h-7 p-1.5 rounded-full flex items-center justify-center border-2 border-[#000250]`}
+                            } w-7 h-7 p-1.5 rounded-full border-2 border-[#000250] flex items-center justify-center`}
                         >
                             <Home
                                 className={`w-fit ${

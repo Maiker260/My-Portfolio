@@ -24,7 +24,7 @@ function TransitionNextPage({ NextPage, nextUrl }) {
         }, 80);
 
         return () => clearTimeout(showTimer);
-    }, [secondTransition, nextUrl, navigate]);
+    }, [nextUrl, navigate]);
 
     return (
         <div className="fixed w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] mx-auto inset-0 z-[9999] pointer-events-none overflow-hidden">
