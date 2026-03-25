@@ -10,5 +10,4 @@ export const pageComponents = {
     Skills: SkillsList,
     Education: Education,
     AboutMe: AboutMe,
-    // Contact: Contact
 };
