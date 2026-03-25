@@ -23,6 +23,11 @@ function MainPage() {
     const isDesktop = useIsDesktop(); // lg breakpoint (1024px)
     const disableIntroAnimation = !isDesktop;
 
+    // Preload Transition SVG
+    useEffect(() => {
+        fetch("/other/abstract-form.svg");
+    }, []);
+
     useEffect(() => {
         if (!isDesktop || backHomeTransition) {
             setShowContent(true);
