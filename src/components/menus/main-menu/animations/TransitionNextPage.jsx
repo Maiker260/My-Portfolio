@@ -1,7 +1,6 @@
+import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
 import { motion as Motion } from "motion/react";
-
 import { AbstractForm } from "../../../icons/AbstractForm.jsx";
 
 function TransitionNextPage({ NextPage, nextUrl }) {
@@ -26,6 +25,10 @@ function TransitionNextPage({ NextPage, nextUrl }) {
         return () => clearTimeout(showTimer);
     }, [nextUrl, navigate]);
 
+    const MemoizedNextPage = useMemo(() => {
+        return NextPage ? <NextPage /> : null;
+    }, [NextPage]);
+
     return (
         <div className="fixed w-full max-w-[1920px] 2xl:max-w-[2200px] 3xl:max-w-[2560px] mx-auto inset-0 z-[9999] pointer-events-none overflow-hidden">
             {/* First Transition */}
@@ -33,7 +36,11 @@ function TransitionNextPage({ NextPage, nextUrl }) {
                 initial={{ scale: 10, opacity: 0 }}
                 animate={{ scale: 500, opacity: 1 }}
                 transition={{ duration: 0.7, ease: [0.33, 1, 0.68, 1] }}
-                className="absolute w-2.5 h-2.5 top-[40%] left-[40%]"
+                className="absolute w-2.5 h-2.5 top-[40%] left-[40%] will-change-transform transform-gpu"
+                // className="absolute w-2.5 h-2.5 top-[40%] left-[40%]"
+                style={{
+                    transform: "translateZ(0)",
+                }}
             >
                 <AbstractForm fillColor="#0517c4B3" />
             </Motion.div>
@@ -41,7 +48,8 @@ function TransitionNextPage({ NextPage, nextUrl }) {
             {/* Second Transition */}
             {secondTransition && (
                 <Motion.div
-                    className="absolute inset-0 flex items-center justify-center"
+                    className="absolute inset-0 flex items-center justify-center will-change-transform transform-gpu"
+                    // className="absolute inset-0 flex items-center justify-center"
                     style={{
                         maskImage: "url(/other/abstract-form.svg)",
                         WebkitMaskImage: "url(/other/abstract-form.svg)",
@@ -53,7 +61,8 @@ function TransitionNextPage({ NextPage, nextUrl }) {
                     }}
                 >
                     <div className="size-full">
-                        <NextPage />
+                        {/* <NextPage /> */}
+                        {MemoizedNextPage}
                     </div>
                 </Motion.div>
             )}

@@ -17,6 +17,7 @@ function MainPage() {
     const [nextContent, setNextContent] = useState(null);
     const [nextUrl, setNextUrl] = useState(null);
     const [openModal, setOpenModal] = useState(false);
+    const [preloadedPage, setPreloadedPage] = useState(null);
 
     const { backHomeTransition } = useContext(MainPageContext);
 
@@ -68,6 +69,7 @@ function MainPage() {
                         <Intro
                             showContent={showContent}
                             component={List}
+                            setPreloadedPage={setPreloadedPage}
                             showTransition={showTransition}
                             setShowTransition={setShowTransition}
                             setNextContent={setNextContent}
@@ -121,9 +123,10 @@ function MainPage() {
                 {showTransition && (
                     <TransitionNextPage
                         nextUrl={nextUrl}
-                        NextPage={
-                            nextContent ? pageComponents[nextContent] : null
-                        }
+                        NextPage={preloadedPage}
+                        // NextPage={
+                        //     nextContent ? pageComponents[nextContent] : null
+                        // }
                     />
                 )}
             </div>

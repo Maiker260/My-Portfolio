@@ -47,7 +47,6 @@ function TextTop({
                     }
                 >
                     <h2 className="w-fit text-2xl text-center color-text-details-secund opacity-80 lg:w-[16ch] lg:text-3xl xl:text-4xl">
-                        {/* <h2 className="w-fit text-2xl color-text-details-secund opacity-80 lg:text-3xl xl:text-4xl"> */}
                         {title}
                     </h2>
                     <h1 className="w-fit text-3xl text-center leading-tight font-bold color-text-details-fourth lg:w-[16ch] lg:text-4xl xl:text-5xl">
