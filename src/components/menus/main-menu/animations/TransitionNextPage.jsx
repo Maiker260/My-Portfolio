@@ -37,7 +37,6 @@ function TransitionNextPage({ NextPage, nextUrl }) {
                 animate={{ scale: 500, opacity: 1 }}
                 transition={{ duration: 0.7, ease: [0.33, 1, 0.68, 1] }}
                 className="absolute w-2.5 h-2.5 top-[40%] left-[40%] will-change-transform transform-gpu"
-                // className="absolute w-2.5 h-2.5 top-[40%] left-[40%]"
                 style={{
                     transform: "translateZ(0)",
                 }}
@@ -49,7 +48,6 @@ function TransitionNextPage({ NextPage, nextUrl }) {
             {secondTransition && (
                 <Motion.div
                     className="absolute inset-0 flex items-center justify-center will-change-transform transform-gpu"
-                    // className="absolute inset-0 flex items-center justify-center"
                     style={{
                         maskImage: "url(/other/abstract-form.svg)",
                         WebkitMaskImage: "url(/other/abstract-form.svg)",
@@ -60,10 +58,7 @@ function TransitionNextPage({ NextPage, nextUrl }) {
                             "transitionNextPage 0.8s forwards ease-in-out",
                     }}
                 >
-                    <div className="size-full">
-                        {/* <NextPage /> */}
-                        {MemoizedNextPage}
-                    </div>
+                    <div className="size-full">{MemoizedNextPage}</div>
                 </Motion.div>
             )}
         </div>

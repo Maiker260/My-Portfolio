@@ -6,7 +6,6 @@ function List({
     showContent,
     showTransition,
     setShowTransition,
-    setNextContent,
     setNextUrl,
     isAnimationDisable,
     setPreloadedPage,
@@ -23,21 +22,12 @@ function List({
         const nextComponent = pageComponents[item.component];
 
         setPreloadedPage(() => nextComponent);
-        setNextContent(item.component);
         setNextUrl(item.url);
 
         setTimeout(() => {
             setShowTransition(true);
         }, 50);
     };
-    // const handleClick = (e, item) => {
-    //     if (!showTransition) {
-    //         e.preventDefault();
-    //         setNextContent(item.component);
-    //         setNextUrl(item.url);
-    //         setShowTransition(true);
-    //     }
-    // };
 
     const preloadPage = (key) => {
         const componentImport = {

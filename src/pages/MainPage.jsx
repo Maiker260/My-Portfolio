@@ -5,7 +5,6 @@ import Intro from "../components/menus/main-menu/animations/Intro.jsx";
 import MainTitle from "../components/menus/main-menu/MainTitle.jsx";
 import BackgroundVideo from "../components/layout/BackgroundVideo.jsx";
 import SocialMediaIcons from "../components/menus/main-menu/SocialMediaIcons.jsx";
-import { pageComponents } from "../services/data/pageComponents.js";
 import TransitionNextPage from "../components/menus/main-menu/animations/TransitionNextPage.jsx";
 import TransitionToMainPage from "../components/menus/main-menu/animations/TransitionToMainPage.jsx";
 import useIsDesktop from "../../hooks/useIsDesktop.js";
@@ -14,7 +13,6 @@ import ReferencesModal from "../components/menus/ReferencesModal.jsx";
 function MainPage() {
     const [showContent, setShowContent] = useState(false);
     const [showTransition, setShowTransition] = useState(false);
-    const [nextContent, setNextContent] = useState(null);
     const [nextUrl, setNextUrl] = useState(null);
     const [openModal, setOpenModal] = useState(false);
     const [preloadedPage, setPreloadedPage] = useState(null);
@@ -72,7 +70,6 @@ function MainPage() {
                             setPreloadedPage={setPreloadedPage}
                             showTransition={showTransition}
                             setShowTransition={setShowTransition}
-                            setNextContent={setNextContent}
                             setNextUrl={setNextUrl}
                             cameFromTransition={
                                 disableIntroAnimation || backHomeTransition
@@ -124,9 +121,6 @@ function MainPage() {
                     <TransitionNextPage
                         nextUrl={nextUrl}
                         NextPage={preloadedPage}
-                        // NextPage={
-                        //     nextContent ? pageComponents[nextContent] : null
-                        // }
                     />
                 )}
             </div>
