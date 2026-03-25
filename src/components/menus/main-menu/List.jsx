@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ListOption from "./ListOption.jsx";
 import { creatorData } from "../../../services/data/creatorData.js";
 
@@ -12,6 +13,11 @@ function List({
     const menuList = creatorData.infoList;
     const total = menuList.length;
     const stagger = 90;
+
+    // Preload Transition SVG
+    useEffect(() => {
+        fetch("/other/abstract-form.svg");
+    }, []);
 
     const handleClick = (e, item) => {
         if (!showTransition) {
