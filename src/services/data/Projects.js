@@ -20,7 +20,7 @@ export const projectData = [
             },
         ],
         livePreviewURL: "",
-        codeURL: "https://github.com/Maiker260/alexa_pc_control_voice",
+        codeURL: "https://github.com/Maiker260/alexa_pc_control_voice#alexa-pc-voice-control",
     },
     {
         name: "Log Report Generator",
@@ -48,7 +48,7 @@ export const projectData = [
             },
         ],
         livePreviewURL: "",
-        codeURL: "https://github.com/Maiker260/horizon_report_generator",
+        codeURL: "https://github.com/Maiker260/horizon_report_generator#horizon-log-report-generator",
     },
     {
         name: "File Uploader",
@@ -77,6 +77,6 @@ export const projectData = [
             },
         ],
         livePreviewURL: "https://file-uploader-6gao.onrender.com",
-        codeURL: "https://github.com/Maiker260/File-Uploader/",
+        codeURL: "https://github.com/Maiker260/File-Uploader/#express--prisma-file-uploader-project",
     }
 ];

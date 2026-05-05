@@ -98,7 +98,7 @@ function SkillDetailsBox({
                 >
                     <div className="flex gap-2 items-center text-2xl p-2 rounded color-text-details-fourth color-bg-details-secund transition group-hover:color-bg-details-fifth">
                         <span className="transition group-hover:text-neutral">
-                            Code
+                            View Project
                         </span>
                         <OpenInNew
                             className={
