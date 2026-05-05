@@ -49,13 +49,6 @@ This portfolio was built to showcase practical, real-world projects focused on:
 It reflects my ability to design and build solutions that improve efficiency and simplify technical workflows.
 
 
-## Future Improvements
-
-- Add more backend-focused projects
-- Improve animations and transitions
-- Integrate additional interactive elements
-- Enhance performance and accessibility
-
 ## Author
 
 [@Maiker260](https://github.com/Maiker260)
