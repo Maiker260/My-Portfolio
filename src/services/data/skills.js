@@ -1,7 +1,35 @@
 export const skillsData = [
     {
-        name: "Programming",
-        img: "programming-icon.webp",
+        name: "Backend & Automation",
+        img: "backend-automation.webp",
+        description:
+            "Building APIs, automation tools, and backend systems focused on solving real-world infrastructure and system challenges.",
+        abilities: [
+            {
+                name: "Python",
+                img: "/skillsLogos/abilities/backend-automation/python.webp",
+            },
+            {
+                name: "Automation",
+                img: "/skillsLogos/abilities/backend-automation/automation.webp",
+            },
+            {
+                name: "FastAPI",
+                img: "/skillsLogos/abilities/backend-automation/FastAPI.webp",
+            },
+            {
+                name: "Rest API",
+                img: "/skillsLogos/abilities/backend-automation/restAPI.webp",
+            },
+            {
+                name: "Scripting",
+                img: "/skillsLogos/abilities/backend-automation/scripting.webp",
+            },
+        ],
+    },
+    {
+        name: "Frontend",
+        img: "frontend.webp",
         description:
             "Building efficient, scalable, and maintainable software solutions using modern web technologies.",
         abilities: [
@@ -24,10 +52,6 @@ export const skillsData = [
             {
                 name: "HTML",
                 img: "/skillsLogos/abilities/programming/html.webp",
-            },
-            {
-                name: "Python",
-                img: "/skillsLogos/abilities/programming/python.webp",
             },
         ],
     },

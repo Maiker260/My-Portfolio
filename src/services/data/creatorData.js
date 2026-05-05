@@ -1,6 +1,6 @@
 import { author } from "./author.js";
 import { contact } from "./contact.js";
-import { projectData } from "./Projects.js";
+import { projectData } from "./projects.js";
 import { experienceData } from "./experiences.js";
 import { skillsData } from "./skills.js";
 import { educationData } from "./education.js";

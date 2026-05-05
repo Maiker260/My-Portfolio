@@ -1,15 +1,15 @@
 export const author = {
-    name: "Miker Gutierrez S.",
-    jobPosition: "Technical Support Engineer",
+    name: "Miker Gutierrez Soto",
+    jobPosition: "Backend & Automation Engineer",
     profilePicture: "/other/avatar.webp",
     profileData: [
-        "Experienced Tech Support Engineer with 7+ years of experience in Networking, Server Administration, Troubleshooting, Customer Service.",
-        "Over time, I discovered a strong passion for coding. I'm now developing my skills in modern web technologies, including JavaScript, React, and Tailwind, with a focus on building clean, responsive, and user-friendly interfaces.",
+        "Backend & Automation - Technical Support Engineer with 7+ years of experience in networking, system administration, and troubleshooting.",
+        "Passionate about building Python-based tools, APIs, and automation solutions focused on solving real-world system and infrastructure challenges.",
     ],
     workingOn: [
-        "Actively exploring opportunities in web development",
-        "Building projects with JavaScript, React, and Tailwind",
-        "Strengthening backend fundamentals with Python",
-        "Expanding my portfolio with real-world, problem-solving projects",
+        "Actively exploring backend and automation engineering opportunities",
+        "Building Python-based tools, REST APIs, and system automation projects",
+        "Strengthening backend fundamentals and API design",
+        "Developing real-world solutions focused on system efficiency and troubleshooting",
     ],
 };

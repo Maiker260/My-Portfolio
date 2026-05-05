@@ -44,7 +44,7 @@ function EducationListOptionMobile({
                                 Field:
                             </span>
                             <span
-                                className={`break-all max-w-[19ch] text-pretty ${dataColor} font-skipstdb`}
+                                className={`max-w-[18ch] text-pretty ${dataColor} font-skipstdb`}
                             >
                                 {item.field}
                             </span>
@@ -55,8 +55,8 @@ function EducationListOptionMobile({
                             </span>
                             <span
                                 className={`px-2 py-1 rounded-sm ${
-                                    item.status === "In Progress"
-                                        ? "bg-green-400"
+                                    item.status === "Ongoing"
+                                        ? "bg-green-400 px-5"
                                         : "color-bg-details-seventh"
                                 } color-text-details-sixth font-skipstdb`}
                             >

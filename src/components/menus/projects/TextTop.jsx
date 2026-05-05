@@ -26,7 +26,7 @@ function TextTop({
 
     return (
         <div className="relative flex flex-col gap-2 mx-auto font-rodin z-50 lg:gap-8 lg:max-w-[50vw]">
-            <div className="w-fit h-fit flex gap-4 items-center m-auto lg:ml-3 lg:gap-10">
+            <div className="w-fit h-fit flex gap-4 items-center m-auto lg:ml-3">
                 <ItemNavButton
                     name="prev"
                     setButtonPressed={setButtonPressed}

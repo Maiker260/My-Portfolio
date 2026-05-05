@@ -7,13 +7,22 @@ export const educationData = [
         status: "Completed",
     },
     {
+        date: "2024-Current",
+        field: "Python & Backend Development",
+        area: "Self-Directed Learning",
+        institution: "Independent Study",
+        description:
+            "Focused on building automation tools, REST APIs, and system-level applications using Python.",
+        status: "Ongoing",
+    },
+    {
         date: "2023-Current",
         field: "Web Development",
-        area: "Course",
+        area: "Self-Directed Learning",
         institution: "The Odin Project",
         description:
             "Full-stack development curriculum focused on modern web technologies.",
-        status: "In Progress",
+        status: "Completed",
     },
     {
         date: "2022",

@@ -9,7 +9,7 @@ export const experienceData = [
         responsabilities: [
             "Managed and troubleshoot VMware/Omnissa products, including Horizon Connection Servers and Unified Access Gateways.",
             "Deployed, configured, and maintained Windows, macOS, and Linux virtual machines.",
-            " Diagnosed and resolved server, guest OS, SSL certificate, and networking issues using CLI tools and Wireshark.",
+            "Developed Python-based automation tools to streamline log analysis and reduce manual troubleshooting.",
         ],
         logo: "/companyLogos/vmware-omnissa-logo.webp",
         url: "https://www.linkedin.com/in/mikergs26/#:~:text=Experience-,Technical%20Support%20Engineer,-Technical%20Support%20Engineer",

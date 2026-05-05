@@ -2,9 +2,44 @@ import { icons } from "../../components/icons/icons.js";
 
 export const projectData = [
     {
-        name: "Report Generator",
+        name: "Voice PC Automation",
         title: "Back-End",
-        skills: [{ name: "Python", icon: icons.Python }],
+        skills: [
+            { name: "Python", icon: icons.Python },
+            { name: "AWS Lambda", icon: icons.Aws },
+            { name: "AWS API Gateway", icon: icons.Aws },
+            { name: "AWS DynamoDB", icon: icons.Aws },
+            { name: "Cloudflare Tunneling", icon: icons.Cloudflare },
+            { name: "FastAPI", icon: icons.FastAPI }
+        ],
+        screenshots: [
+            // {
+            //     src: "/screenshots/alexa-pc-control/First.webp",
+            //     alt: "First",
+            // },
+            // {
+            //     src: "/screenshots/alexa-pc-control/Second.webp",
+            //     alt: "Second",
+            // },
+            // {
+            //     src: "/screenshots/alexa-pc-control/Third.webp",
+            //     alt: "Third",
+            // },
+            // {
+            //     src: "/screenshots/alexa-pc-control/Fourth.webp",
+            //     alt: "Fourth",
+            // },
+        ],
+        livePreviewURL: "",
+        codeURL: "https://github.com/Maiker260/alexa_pc_control_voice",
+    },
+    {
+        name: "Log Analysis Tool",
+        title: "Back-End",
+        skills: [
+            { name: "Python", icon: icons.Python },
+            { name: "Automation", icon: icons.Automation }
+        ],
         screenshots: [
             {
                 src: "/screenshots/horizon-report-generator/First.webp",
@@ -54,75 +89,5 @@ export const projectData = [
         ],
         livePreviewURL: "https://file-uploader-6gao.onrender.com",
         codeURL: "https://github.com/Maiker260/File-Uploader/",
-    },
-    {
-        name: "Shopping Cart",
-        title: "Front-End",
-        skills: [
-            { name: "React", icon: icons.React },
-            { name: "JavaScript", icon: icons.Javascript },
-            { name: "CSS", icon: icons.CSS },
-        ],
-        screenshots: [
-            { src: "/screenshots/shopping-cart/Home.webp", alt: "Home" },
-            { src: "/screenshots/shopping-cart/Cart.webp", alt: "Cart" },
-            {
-                src: "/screenshots/shopping-cart/Categories.webp",
-                alt: "Categories",
-            },
-            { src: "/screenshots/shopping-cart/Search.webp", alt: "Search" },
-        ],
-        livePreviewURL: "https://shopping-cart-c43.pages.dev/",
-        codeURL: "https://github.com/Maiker260/Shopping-Cart",
-    },
-    {
-        name: "My Blog",
-        title: "Full-Stack",
-        skills: [
-            { name: "React", icon: icons.React },
-            { name: "Tailwind", icon: icons.Tailwind },
-            { name: "Node.js", icon: icons["Node.js"] },
-            { name: "Express", icon: icons.Express },
-            { name: "Prisma", icon: icons.Prisma },
-            { name: "JWT", icon: icons.JWT },
-            { name: "Passport.js", icon: icons["Passport.js"] },
-        ],
-        screenshots: [
-            { src: "/screenshots/my-blog/Admin-Main.webp", alt: "Admin-Main" },
-            {
-                src: "/screenshots/my-blog/Admin-Editor.webp",
-                alt: "Admin-Editor",
-            },
-            {
-                src: "/screenshots/my-blog/Public-Main.webp",
-                alt: "Public-Main",
-            },
-            {
-                src: "/screenshots/my-blog/Public-Article.webp",
-                alt: "Public-Article",
-            },
-        ],
-        livePreviewURL: "https://my-blog-805.pages.dev/",
-        codeURL: "https://github.com/Maiker260/My-Blog",
-    },
-    {
-        name: "Members Only",
-        title: "Back-End",
-        skills: [
-            { name: "Node.js", icon: icons["Node.js"] },
-            { name: "Express", icon: icons.Express },
-            { name: "PostgreSQL", icon: icons.Postgresql },
-            { name: "Passport.js", icon: icons["Passport.js"] },
-        ],
-        screenshots: [
-            { src: "/screenshots/members-only/Home.webp", alt: "Home" },
-            {
-                src: "/screenshots/members-only/Login-SignUp.webp",
-                alt: "Login-SignUp",
-            },
-            { src: "/screenshots/members-only/Main.webp", alt: "Main" },
-        ],
-        livePreviewURL: "https://members-only-h8am.onrender.com/",
-        codeURL: "https://github.com/Maiker260/Members-Only",
-    },
+    }
 ];

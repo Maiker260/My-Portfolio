@@ -1,10 +1,9 @@
-import { FaReact, FaNodeJs, FaAws, FaCss3Alt, FaPython } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAws, FaCss3Alt, FaPython, FaCloudflare } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { LuGithub } from "react-icons/lu";
 import { RiJavascriptFill } from "react-icons/ri";
 import { MdOutlineArrowBackIos, MdArrowForwardIos } from "react-icons/md";
-import { TbArrowsMoveHorizontal } from "react-icons/tb";
-
+import { TbArrowsMoveHorizontal, TbSettingsAutomation } from "react-icons/tb";
 import {
     SiTailwindcss,
     SiExpress,
@@ -14,6 +13,7 @@ import {
     SiWebpack,
     SiPostgresql,
     SiEjs,
+    SiFastapi
 } from "react-icons/si";
 
 export const icons = {
@@ -32,7 +32,11 @@ export const icons = {
     EJS: SiEjs,
     Javascript: RiJavascriptFill,
     CSS: FaCss3Alt,
+    
     Python: FaPython,
+    Automation: TbSettingsAutomation,
+    Cloudflare: FaCloudflare,
+    FastAPI: SiFastapi,
 
     BackArrow: MdOutlineArrowBackIos,
     ForwardArrow: MdArrowForwardIos,

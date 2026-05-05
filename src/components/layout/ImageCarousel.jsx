@@ -44,7 +44,7 @@ function ImageCarousel({
             setCurrentIndex((prevIndex) =>
                 prevIndex === screenshots.length - 1 ? 0 : prevIndex + 1,
             );
-        }, 5000);
+        }, 7000);
 
         return () => clearInterval(intervalId);
     }, [screenshots, resetKey]);
