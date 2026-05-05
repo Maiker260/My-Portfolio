@@ -46,8 +46,6 @@ This portfolio was built to showcase practical, real-world projects focused on:
 - Automation tools
 - System-level problem solving
 
-It reflects my ability to design and build solutions that improve efficiency and simplify technical workflows.
-
 
 ## Author
 
