@@ -6,35 +6,24 @@ export const projectData = [
         title: "Back-End",
         skills: [
             { name: "Python", icon: icons.Python },
+            { name: "FastAPI", icon: icons.FastAPI },
+            { name: "Alexa Dev Console", icon: icons.Alexa },
             { name: "AWS Lambda", icon: icons.Aws },
             { name: "AWS API Gateway", icon: icons.Aws },
             { name: "AWS DynamoDB", icon: icons.Aws },
             { name: "Cloudflare Tunneling", icon: icons.Cloudflare },
-            { name: "FastAPI", icon: icons.FastAPI }
         ],
         screenshots: [
-            // {
-            //     src: "/screenshots/alexa-pc-control/First.webp",
-            //     alt: "First",
-            // },
-            // {
-            //     src: "/screenshots/alexa-pc-control/Second.webp",
-            //     alt: "Second",
-            // },
-            // {
-            //     src: "/screenshots/alexa-pc-control/Third.webp",
-            //     alt: "Third",
-            // },
-            // {
-            //     src: "/screenshots/alexa-pc-control/Fourth.webp",
-            //     alt: "Fourth",
-            // },
+            {
+                src: "/screenshots/alexa-pc-control/voice-control-automation-demo.gif",
+                alt: "demo",
+            },
         ],
         livePreviewURL: "",
         codeURL: "https://github.com/Maiker260/alexa_pc_control_voice",
     },
     {
-        name: "Log Analysis Tool",
+        name: "Log Report Generator",
         title: "Back-End",
         skills: [
             { name: "Python", icon: icons.Python },

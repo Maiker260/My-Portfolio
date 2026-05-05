@@ -9,6 +9,7 @@ function ImageCarousel({
 }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [resetKey, setResetKey] = useState(0);
+    const isDemo = screenshots[0].alt === "demo"
 
     // Preload images
     useEffect(() => {
@@ -77,40 +78,47 @@ function ImageCarousel({
                 </div>
             ))}
 
-            {/* Navigation */}
-            <div className="absolute inset-0 mx-auto flex justify-between items-center px-4 z-50 sm:w-[50vw]">
-                {/* Left arrow */}
-                <button
-                    onClick={prevSlide}
-                    className={
-                        "color-bg-details-fifth text-neutral p-2 rounded-xl transition hover:text-[#65dcfb] hover:bg-neutral-800 hover:cursor-pointer"
-                    }
-                >
-                    &#10094;
-                </button>
-                {/* Right arrow */}
-                <button
-                    onClick={nextSlide}
-                    className="color-bg-details-fifth text-neutral p-2 rounded-full transition hover:text-[#65dcfb] hover:bg-neutral-800 hover:cursor-pointer"
-                >
-                    &#10095;
-                </button>
-            </div>
+            {!isDemo && (
+                <>
+                    {/* Navigation */}
+                    <div className="absolute inset-0 mx-auto flex justify-between items-center px-4 z-50 sm:w-[50vw]">
+                        {/* Left arrow */}
+                        <button
+                            onClick={prevSlide}
+                            className="color-bg-details-fifth text-neutral p-2 rounded-xl transition hover:text-[#65dcfb] hover:bg-neutral-800 hover:cursor-pointer"
+                        >
+                            &#10094;
+                        </button>
 
-            {/* Dots Indicators */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 rounded flex space-x-2 z-50 color-bg-details-fifth p-1">
-                {screenshots.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setCurrentIndex(index)}
-                        className={`w-3 h-3 rounded-full ${
-                            index === currentIndex
-                                ? "bg-neutral-800"
-                                : "bg-white/50"
-                        } hover:cursor-pointer hover:bg-white/80 `}
-                    />
-                ))}
-            </div>
+                        {/* Right arrow */}
+                        <button
+                            onClick={nextSlide}
+                            className="color-bg-details-fifth text-neutral p-2 rounded-full transition hover:text-[#65dcfb] hover:bg-neutral-800 hover:cursor-pointer"
+                        >
+                            &#10095;
+                        </button>
+                    </div>
+                </>
+            )}
+
+            {!isDemo && (
+                <>
+                    {/* Dots Indicators */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 rounded flex space-x-2 z-50 color-bg-details-fifth p-1">
+                        {screenshots.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentIndex(index)}
+                                className={`w-3 h-3 rounded-full ${
+                                    index === currentIndex
+                                        ? "bg-neutral-800"
+                                        : "bg-white/50"
+                                } hover:cursor-pointer hover:bg-white/80 `}
+                            />
+                        ))}
+                    </div>
+                </>
+            )}
         </AnimatedBump>
     );
 }

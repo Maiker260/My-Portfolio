@@ -4,6 +4,7 @@ import { LuGithub } from "react-icons/lu";
 import { RiJavascriptFill } from "react-icons/ri";
 import { MdOutlineArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { TbArrowsMoveHorizontal, TbSettingsAutomation } from "react-icons/tb";
+import { BsAlexa } from "react-icons/bs";
 import {
     SiTailwindcss,
     SiExpress,
@@ -37,6 +38,7 @@ export const icons = {
     Automation: TbSettingsAutomation,
     Cloudflare: FaCloudflare,
     FastAPI: SiFastapi,
+    Alexa: BsAlexa,
 
     BackArrow: MdOutlineArrowBackIos,
     ForwardArrow: MdArrowForwardIos,
