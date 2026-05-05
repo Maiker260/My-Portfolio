@@ -31,6 +31,10 @@ export const projectData = [
         ],
         screenshots: [
             {
+                src: "/screenshots/horizon-report-generator/Fourth.webp",
+                alt: "Windows Menu",
+            },
+            {
                 src: "/screenshots/horizon-report-generator/First.webp",
                 alt: "First",
             },
@@ -41,10 +45,6 @@ export const projectData = [
             {
                 src: "/screenshots/horizon-report-generator/Third.webp",
                 alt: "Third",
-            },
-            {
-                src: "/screenshots/horizon-report-generator/Fourth.webp",
-                alt: "Fourth",
             },
         ],
         livePreviewURL: "",
