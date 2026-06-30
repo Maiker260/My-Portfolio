@@ -1,15 +1,15 @@
 export const author = {
     name: "Miker Gutierrez Soto",
-    jobPosition: "Backend & Automation Engineer",
+    jobPosition: "Technical Support Engineer",
     profilePicture: "/other/avatar.webp",
     profileData: [
-        "Backend & Automation - Technical Support Engineer with 7+ years of experience in networking, system administration, and troubleshooting.",
-        "Passionate about building Python-based tools, APIs, and automation solutions focused on solving real-world system and infrastructure challenges.",
+        "Technical Support Engineer with 7+ years of experience in enterprise infrastructure, virtualization, networking, and troubleshooting.",
+        "I enjoy building Python tools and automation projects that simplify troubleshooting, improve workflows, and solve real-world infrastructure challenges.",
     ],
     workingOn: [
-        "Actively exploring backend and automation engineering opportunities",
-        "Building Python-based tools, REST APIs, and system automation projects",
-        "Strengthening backend fundamentals and API design",
-        "Developing real-world solutions focused on system efficiency and troubleshooting",
-    ],
+        "Building Python tools and automation projects for enterprise support",
+        "Developing REST APIs with FastAPI",
+        "Experimenting with new technologies through personal projects",
+        "Creating practical solutions to improve troubleshooting and operational efficiency",
+    ]
 };

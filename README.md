@@ -10,9 +10,9 @@ https://www.mikergsportfolio.dev/
 
 ## Overview
 
-This is my personal portfolio website, inspired by the visual style of *Persona 3 Reload*. It showcases my projects, experience, and technical skills with a strong focus on backend development and automation.
+This is my personal portfolio website, inspired by the visual style of *Persona 3 Reload*. It showcases my professional experience, technical skills, and personal projects focused on enterprise support, automation, and software development.
 
-The goal of this portfolio is to present real-world projects and demonstrate my transition from technical support into backend and automation engineering.
+The goal of this portfolio is to highlight practical, real-world solutions that improve troubleshooting, automate repetitive tasks, and solve infrastructure-related challenges through software.
 
 ## Features
 
@@ -39,12 +39,15 @@ The goal of this portfolio is to present real-world projects and demonstrate my 
 
 ## Purpose
 
-This portfolio was built to showcase practical, real-world projects focused on:
+This portfolio showcases practical, real-world projects focused on improving enterprise support and infrastructure through software development and automation.
 
-- Backend development
+Projects include:
+
+- Python tools
 - REST APIs
-- Automation tools
-- System-level problem solving
+- Automation solutions
+- System administration and troubleshooting
+- Infrastructure-focused problem solving
 
 
 ## Author
